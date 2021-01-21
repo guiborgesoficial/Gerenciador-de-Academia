@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88D21475-27FF-4D84-8E76-6CE4EF530748}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formulários\frm_Sistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Sistema.Designer.cs">
+      <DependentUpon>frm_Sistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RCFitnessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCFitnessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Charts\USC_chtFaturamento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Charts\USC_chtFaturamento.Designer.cs">
+      <DependentUpon>USC_chtFaturamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Charts\USC_chtAlunos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Charts\USC_chtAlunos.Designer.cs">
+      <DependentUpon>USC_chtAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\USC_dadosAluno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\USC_dadosAluno.Designer.cs">
+      <DependentUpon>USC_dadosAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\USC_fichaTreino.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\USC_fichaTreino.Designer.cs">
+      <DependentUpon>USC_fichaTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\USC_matriculados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\USC_matriculados.Designer.cs">
+      <DependentUpon>USC_matriculados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\USC_medidasAluno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\USC_medidasAluno.Designer.cs">
+      <DependentUpon>USC_medidasAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\USC_novoAluno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\USC_novoAluno.Designer.cs">
+      <DependentUpon>USC_novoAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\USC_pesoAluno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\USC_pesoAluno.Designer.cs">
+      <DependentUpon>USC_pesoAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerificadorDeCampos.cs" />
+    <EmbeddedResource Include="Formulários\frm_Sistema.resx">
+      <DependentUpon>frm_Sistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\Charts\USC_chtFaturamento.resx">
+      <DependentUpon>USC_chtFaturamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Charts\USC_chtAlunos.resx">
+      <DependentUpon>USC_chtAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\USC_dadosAluno.resx">
+      <DependentUpon>USC_dadosAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\USC_fichaTreino.resx">
+      <DependentUpon>USC_fichaTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\USC_matriculados.resx">
+      <DependentUpon>USC_matriculados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\USC_medidasAluno.resx">
+      <DependentUpon>USC_medidasAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\USC_novoAluno.resx">
+      <DependentUpon>USC_novoAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\USC_pesoAluno.resx">
+      <DependentUpon>USC_pesoAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RCFitnessDataSet.xsc">
+      <DependentUpon>RCFitnessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RCFitnessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RCFitnessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RCFitnessDataSet.xss">
+      <DependentUpon>RCFitnessDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BotãoDinamico\BotãoDinamico.csproj">
+      <Project>{f92174ec-e7cf-45b6-b5d7-1ca2aecd8276}</Project>
+      <Name>BotãoDinamico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{c3b5f485-3cfb-453b-bc1b-de10b317b0d7}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
