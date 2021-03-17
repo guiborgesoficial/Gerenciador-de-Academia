@@ -73,11 +73,11 @@
     <Compile Include="UserControls\Charts\USC_chtAlunos.Designer.cs">
       <DependentUpon>USC_chtAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\USC_dadosAluno.cs">
+    <Compile Include="UserControls\USC_emailSender.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\USC_dadosAluno.Designer.cs">
-      <DependentUpon>USC_dadosAluno.cs</DependentUpon>
+    <Compile Include="UserControls\USC_emailSender.Designer.cs">
+      <DependentUpon>USC_emailSender.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\USC_fichaTreino.cs">
       <SubType>UserControl</SubType>
@@ -129,8 +129,8 @@
     <EmbeddedResource Include="UserControls\Charts\USC_chtAlunos.resx">
       <DependentUpon>USC_chtAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\USC_dadosAluno.resx">
-      <DependentUpon>USC_dadosAluno.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\USC_emailSender.resx">
+      <DependentUpon>USC_emailSender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\USC_fichaTreino.resx">
       <DependentUpon>USC_fichaTreino.cs</DependentUpon>
