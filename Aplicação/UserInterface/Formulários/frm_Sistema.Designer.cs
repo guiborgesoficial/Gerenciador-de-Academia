@@ -40,18 +40,18 @@
             this.btn_novoAluno = new BotãoDinamico.CustomBotãoImage();
             this.pictbox_logo = new System.Windows.Forms.PictureBox();
             this.pnl_UserControl = new System.Windows.Forms.Panel();
-            this.usC_chtFaturamento1 = new RCFitness.UserControls.Charts.USC_chtFaturamento();
-            this.usC_chtAlunos = new RCFitness.UserControls.Charts.USC_chtAlunos();
             this.lbl_longData = new System.Windows.Forms.Label();
             this.lbl_datalonga = new System.Windows.Forms.Label();
             this.lbl_dataCurta = new System.Windows.Forms.Label();
+            this.timer_dataCurta = new System.Windows.Forms.Timer(this.components);
+            this.usC_chtFaturamento1 = new RCFitness.UserControls.Charts.USC_chtFaturamento();
+            this.usC_chtAlunos = new RCFitness.UserControls.Charts.USC_chtAlunos();
             this.usC_dadosAluno1 = new RCFitness.UserControls.USC_dadosAluno();
             this.usC_medidasAluno1 = new RCFitness.UserControls.USC_medidasAluno();
             this.usC_fichaTreino1 = new RCFitness.UserControls.USC_fichaTreino();
             this.usC_pesoAluno1 = new RCFitness.UserControls.USC_pesoAluno();
             this.usC_matriculados1 = new RCFitness.UserControls.USC_matriculados();
             this.usC_novoAluno1 = new RCFitness.UserControls.USC_novoAluno();
-            this.timer_dataCurta = new System.Windows.Forms.Timer(this.components);
             this.pnl_menuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customBotãoImage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_dados)).BeginInit();
@@ -209,21 +209,6 @@
             this.pnl_UserControl.Size = new System.Drawing.Size(782, 451);
             this.pnl_UserControl.TabIndex = 1;
             // 
-            // usC_chtFaturamento1
-            // 
-            this.usC_chtFaturamento1.Location = new System.Drawing.Point(3, 49);
-            this.usC_chtFaturamento1.Name = "usC_chtFaturamento1";
-            this.usC_chtFaturamento1.Size = new System.Drawing.Size(429, 266);
-            this.usC_chtFaturamento1.TabIndex = 11;
-            // 
-            // usC_chtAlunos
-            // 
-            this.usC_chtAlunos.Location = new System.Drawing.Point(435, 49);
-            this.usC_chtAlunos.MaximumSize = new System.Drawing.Size(545, 389);
-            this.usC_chtAlunos.Name = "usC_chtAlunos";
-            this.usC_chtAlunos.Size = new System.Drawing.Size(335, 250);
-            this.usC_chtAlunos.TabIndex = 9;
-            // 
             // lbl_longData
             // 
             this.lbl_longData.AutoSize = true;
@@ -258,6 +243,26 @@
             this.lbl_dataCurta.Size = new System.Drawing.Size(70, 17);
             this.lbl_dataCurta.TabIndex = 6;
             this.lbl_dataCurta.Text = "data curta";
+            // 
+            // timer_dataCurta
+            // 
+            this.timer_dataCurta.Enabled = true;
+            this.timer_dataCurta.Tick += new System.EventHandler(this.timer_dataCurta_Tick);
+            // 
+            // usC_chtFaturamento1
+            // 
+            this.usC_chtFaturamento1.Location = new System.Drawing.Point(3, 49);
+            this.usC_chtFaturamento1.Name = "usC_chtFaturamento1";
+            this.usC_chtFaturamento1.Size = new System.Drawing.Size(429, 266);
+            this.usC_chtFaturamento1.TabIndex = 11;
+            // 
+            // usC_chtAlunos
+            // 
+            this.usC_chtAlunos.Location = new System.Drawing.Point(435, 49);
+            this.usC_chtAlunos.MaximumSize = new System.Drawing.Size(545, 389);
+            this.usC_chtAlunos.Name = "usC_chtAlunos";
+            this.usC_chtAlunos.Size = new System.Drawing.Size(335, 250);
+            this.usC_chtAlunos.TabIndex = 9;
             // 
             // usC_dadosAluno1
             // 
@@ -301,11 +306,6 @@
             this.usC_novoAluno1.Name = "usC_novoAluno1";
             this.usC_novoAluno1.Size = new System.Drawing.Size(668, 451);
             this.usC_novoAluno1.TabIndex = 0;
-            // 
-            // timer_dataCurta
-            // 
-            this.timer_dataCurta.Enabled = true;
-            this.timer_dataCurta.Tick += new System.EventHandler(this.timer_dataCurta_Tick);
             // 
             // frm_Sistema
             // 

@@ -82,7 +82,7 @@ namespace RCFitness.UserControls
 			verificador.VerificaCamposPreenchidos(this);
 
 			//VERIFICADOR É 17 CORRIGIR ERRO DO CMBBOXVALOR
-			if (verificador.verificadorDeCamposPreenchidos == 16)
+			if (verificador.verificadorDeCamposPreenchidos == 17)
 			{
 				verificador.VerificaCamposTempoReal.Stop();
 				string Whatsaap;
@@ -107,7 +107,7 @@ namespace RCFitness.UserControls
 					msktbox_outroValor.Text = "0000";
 				}
 
-				cadastrarNovoAluno.InserindoNovoAluno(txtbox_nome.Text, msktbox_dtNascimento.Text, cmbbox_sexo.Text, msktbox_rg.Text, mstkbox_cpf.Text, msktbox_telefone.Text, Whatsaap, txtbox_endereco.Text, txtbox_numero.Text, txtbox_bairro.Text, cmbbox_uf.Text, msktbox_cep.Text, cmbbox_cidade.Text, msktbox_dtMatricula.Text, cmbbox_marketing.Text);
+				cadastrarNovoAluno.InserindoNovoAluno(txtbox_nome.Text, msktbox_dtNascimento.Text, cmbbox_sexo.Text, msktbox_rg.Text, mstkbox_cpf.Text, msktbox_telefone.Text, Whatsaap, txtbox_endereco.Text, txtbox_numero.Text, txtbox_bairro.Text, cmbbox_uf.Text, msktbox_cep.Text, cmbbox_cidade.Text, msktbox_dtMatricula.Text, cmbbox_marketing.Text, txtbox_email.Text);
 				if(cadastrarNovoAluno.IdRetorno != 0)
 				{
 					if (chckbox_pago.Checked)
@@ -180,6 +180,7 @@ namespace RCFitness.UserControls
 					cmbbox_marketing.Text = consultandoCadastrados.MARKETING;
 					cmbbox_plano.Text = consultandoCadastrados.PLANO;
 					cmbbox_valor.Text = consultandoCadastrados.VALOR.ToString();
+					txtbox_email.Text = consultandoCadastrados.EMAIL.ToString();
 					if (consultandoCadastrados.WHATSAPP == "S")
 						chckbox_whatsaap.Checked = true;
 				}
@@ -209,7 +210,7 @@ namespace RCFitness.UserControls
 					{
 						cmbbox_valor.Text = msktbox_outroValor.Text;
 					}
-					atualizarCadastrados.AtualizandoNovoAluno(lbl_id.Text, txtbox_nome.Text, msktbox_dtNascimento.Text, cmbbox_sexo.Text, msktbox_rg.Text, mstkbox_cpf.Text, msktbox_telefone.Text, Whatsaap, txtbox_endereco.Text, txtbox_numero.Text, txtbox_bairro.Text, cmbbox_uf.Text, msktbox_cep.Text, cmbbox_cidade.Text, msktbox_dtMatricula.Text, cmbbox_marketing.Text);
+					atualizarCadastrados.AtualizandoNovoAluno(lbl_id.Text, txtbox_nome.Text, msktbox_dtNascimento.Text, cmbbox_sexo.Text, msktbox_rg.Text, mstkbox_cpf.Text, msktbox_telefone.Text, Whatsaap, txtbox_endereco.Text, txtbox_numero.Text, txtbox_bairro.Text, cmbbox_uf.Text, msktbox_cep.Text, cmbbox_cidade.Text, msktbox_dtMatricula.Text, cmbbox_marketing.Text, txtbox_email.Text);
 				}
 				else
 				{

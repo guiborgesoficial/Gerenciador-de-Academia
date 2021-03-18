@@ -26,6 +26,7 @@ namespace RCFitness.UserControls
 
         private void USC_dadosAluno_Load(object sender, EventArgs e)
         {
+            groupBox_Configurações.Visible = false;
             this.Visible = false;
         }
 
@@ -54,6 +55,25 @@ namespace RCFitness.UserControls
             CS_Matriculados retornarItensArray = new CS_Matriculados();
             retornarItensArray.ConsultaParaComboBox();
             cmbbox_aluno.Items.AddRange(retornarItensArray.tabela.ToArray());
+        }
+
+        private void bnt_config_Click(object sender, EventArgs e)
+        {
+            groupBox_Configurações.Visible = true;
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            DialogResult confirmar = MessageBox.Show("Deseja confirmar as alterações?", "Salvar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(confirmar == DialogResult.Yes)
+            {
+                groupBox_Configurações.Visible = false;
+            }
+        }
+
+        private void btn_enviar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

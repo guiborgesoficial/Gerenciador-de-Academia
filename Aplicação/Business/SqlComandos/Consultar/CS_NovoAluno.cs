@@ -29,6 +29,7 @@ namespace Business.SqlComandos.Consultar
         public string MARKETING { get; set; }
         public string PLANO { get; set; }
         public string VALOR { get; set; }
+        public string EMAIL { get; set; }
         Conexão conectar = new Conexão();
         public void ConsultandoNovoAluno(string msktbox_rg, string mstkbox_cpf)
         {
@@ -60,6 +61,7 @@ namespace Business.SqlComandos.Consultar
                     CIDADE = leitor["CIDADE"].ToString();
                     DT_MATRÍC = Convert.ToDateTime(leitor["DT_MATRÍC"].ToString());
                     MARKETING = leitor["MARKETING"].ToString();
+                    EMAIL = leitor["EMAIL"].ToString();
                 }
             }
             catch(Exception erro)

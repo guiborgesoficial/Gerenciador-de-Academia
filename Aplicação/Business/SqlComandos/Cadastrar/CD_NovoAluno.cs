@@ -13,10 +13,10 @@ namespace Business.SqlComandos.Cadastrar
     public class CD_NovoAluno
     {
         public int IdRetorno { get; set;}
-        public string strInserção = "INSERT INTO NovoAluno (NOME , DT_NASC, SEXO, RG, CPF, TELEFONE, WHATSAPP, ENDEREÇO, NÚMERO, BAIRRO, UF, CEP, CIDADE, DT_MATRÍC, MARKETING) VALUES (@NOME , @DT_NASC, @SEXO, @RG, @CPF, @TELEFONE, @WHATSAPP, @ENDEREÇO, @NÚMERO, @BAIRRO, @UF, @CEP, @CIDADE, @DT_MATRÍC, @MARKETING) SELECT SCOPE_IDENTITY()";
+        public string strInserção = "INSERT INTO NovoAluno (NOME , DT_NASC, SEXO, RG, CPF, TELEFONE, WHATSAPP, ENDEREÇO, NÚMERO, BAIRRO, UF, CEP, CIDADE, DT_MATRÍC, MARKETING, EMAIL) VALUES (@NOME , @DT_NASC, @SEXO, @RG, @CPF, @TELEFONE, @WHATSAPP, @ENDEREÇO, @NÚMERO, @BAIRRO, @UF, @CEP, @CIDADE, @DT_MATRÍC, @MARKETING, @EMAIL) SELECT SCOPE_IDENTITY()";
         public string strInserção2 = "INSERT INTO Pagamento (DT_PAG, DT_VENC, PRÓX_PAG, VALOR, PLANO, STATUS, ID_NOVOALUNO) VALUES (@DT_PAG, @DT_VENC, @PRÓX_PAG, @VALOR, @PLANO, @STATUS, @ID_NOVOALUNO)";
         Conexão conectar = new Conexão();
-        public void InserindoNovoAluno(string txtbox_nome, string msktbox_dtNascimento, string cmbbox_sexo, string msktbox_rg, string mstkbox_cpf, string msktbox_telefone, string Whatsapp, string txtbox_endereco, string txtbox_numero, string txtbox_bairro, string cmbbox_uf, string msktbox_cep, string cmbbox_cidade, string msktbox_dtMatricula, string cmbbox_marketing)
+        public void InserindoNovoAluno(string txtbox_nome, string msktbox_dtNascimento, string cmbbox_sexo, string msktbox_rg, string mstkbox_cpf, string msktbox_telefone, string Whatsapp, string txtbox_endereco, string txtbox_numero, string txtbox_bairro, string cmbbox_uf, string msktbox_cep, string cmbbox_cidade, string msktbox_dtMatricula, string cmbbox_marketing, string txtbox_email)
         {
             try
             {
@@ -38,6 +38,7 @@ namespace Business.SqlComandos.Cadastrar
                 objComando.Parameters.Add(new SqlParameter("@CIDADE", cmbbox_cidade.ToUpper()));
                 objComando.Parameters.Add(new SqlParameter("@DT_MATRÍC", Convert.ToDateTime(msktbox_dtMatricula)));
                 objComando.Parameters.Add(new SqlParameter("@MARKETING", cmbbox_marketing));
+                objComando.Parameters.Add(new SqlParameter("@EMAIL", txtbox_email));
                 IdRetorno = Convert.ToInt32(objComando.ExecuteScalar());
                 MessageBox.Show("Cadastro realizado com sucesso", "OPERAÇÃO BEM-SUCEDIDA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -73,6 +73,8 @@
             this.btn_cadastrar = new BotãoDinamico.CustomBotãoImage();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_idInfo = new System.Windows.Forms.Label();
+            this.txtbox_email = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_voltar)).BeginInit();
@@ -141,7 +143,7 @@
             // 
             this.blb_endereco.AutoSize = true;
             this.blb_endereco.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blb_endereco.Location = new System.Drawing.Point(88, 179);
+            this.blb_endereco.Location = new System.Drawing.Point(88, 207);
             this.blb_endereco.Name = "blb_endereco";
             this.blb_endereco.Size = new System.Drawing.Size(93, 21);
             this.blb_endereco.TabIndex = 2;
@@ -151,7 +153,7 @@
             // 
             this.lbl_rg.AutoSize = true;
             this.lbl_rg.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rg.Location = new System.Drawing.Point(88, 145);
+            this.lbl_rg.Location = new System.Drawing.Point(88, 173);
             this.lbl_rg.Name = "lbl_rg";
             this.lbl_rg.Size = new System.Drawing.Size(35, 21);
             this.lbl_rg.TabIndex = 3;
@@ -161,7 +163,7 @@
             // 
             this.lbl_cpf.AutoSize = true;
             this.lbl_cpf.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpf.Location = new System.Drawing.Point(195, 146);
+            this.lbl_cpf.Location = new System.Drawing.Point(195, 174);
             this.lbl_cpf.Name = "lbl_cpf";
             this.lbl_cpf.Size = new System.Drawing.Size(41, 21);
             this.lbl_cpf.TabIndex = 4;
@@ -171,7 +173,7 @@
             // 
             this.lbl_bairro.AutoSize = true;
             this.lbl_bairro.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bairro.Location = new System.Drawing.Point(430, 179);
+            this.lbl_bairro.Location = new System.Drawing.Point(430, 207);
             this.lbl_bairro.Name = "lbl_bairro";
             this.lbl_bairro.Size = new System.Drawing.Size(72, 21);
             this.lbl_bairro.TabIndex = 5;
@@ -181,7 +183,7 @@
             // 
             this.lbl_numero.AutoSize = true;
             this.lbl_numero.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_numero.Location = new System.Drawing.Point(354, 179);
+            this.lbl_numero.Location = new System.Drawing.Point(354, 207);
             this.lbl_numero.Name = "lbl_numero";
             this.lbl_numero.Size = new System.Drawing.Size(32, 21);
             this.lbl_numero.TabIndex = 6;
@@ -201,7 +203,7 @@
             // 
             this.lbl_telefone.AutoSize = true;
             this.lbl_telefone.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefone.Location = new System.Drawing.Point(319, 146);
+            this.lbl_telefone.Location = new System.Drawing.Point(319, 174);
             this.lbl_telefone.Name = "lbl_telefone";
             this.lbl_telefone.Size = new System.Drawing.Size(87, 21);
             this.lbl_telefone.TabIndex = 8;
@@ -211,7 +213,7 @@
             // 
             this.lbl_dtMatricula.AutoSize = true;
             this.lbl_dtMatricula.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dtMatricula.Location = new System.Drawing.Point(90, 243);
+            this.lbl_dtMatricula.Location = new System.Drawing.Point(90, 271);
             this.lbl_dtMatricula.Name = "lbl_dtMatricula";
             this.lbl_dtMatricula.Size = new System.Drawing.Size(103, 21);
             this.lbl_dtMatricula.TabIndex = 9;
@@ -221,10 +223,10 @@
             // 
             this.lbl_marketing.AutoSize = true;
             this.lbl_marketing.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_marketing.Location = new System.Drawing.Point(284, 244);
+            this.lbl_marketing.Location = new System.Drawing.Point(284, 272);
             this.lbl_marketing.Name = "lbl_marketing";
             this.lbl_marketing.Size = new System.Drawing.Size(187, 21);
-            this.lbl_marketing.TabIndex = 10;
+            this.lbl_marketing.TabIndex = 15;
             this.lbl_marketing.Text = "COMO NOS CONHECEU:";
             // 
             // lbl_sexo
@@ -241,7 +243,7 @@
             // 
             this.lbl_cidade.AutoSize = true;
             this.lbl_cidade.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cidade.Location = new System.Drawing.Point(284, 210);
+            this.lbl_cidade.Location = new System.Drawing.Point(284, 238);
             this.lbl_cidade.Name = "lbl_cidade";
             this.lbl_cidade.Size = new System.Drawing.Size(70, 21);
             this.lbl_cidade.TabIndex = 12;
@@ -251,7 +253,7 @@
             // 
             this.lbl_uf.AutoSize = true;
             this.lbl_uf.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uf.Location = new System.Drawing.Point(90, 209);
+            this.lbl_uf.Location = new System.Drawing.Point(90, 237);
             this.lbl_uf.Name = "lbl_uf";
             this.lbl_uf.Size = new System.Drawing.Size(33, 21);
             this.lbl_uf.TabIndex = 13;
@@ -261,7 +263,7 @@
             // 
             this.lbl_cep.AutoSize = true;
             this.lbl_cep.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cep.Location = new System.Drawing.Point(165, 209);
+            this.lbl_cep.Location = new System.Drawing.Point(165, 237);
             this.lbl_cep.Name = "lbl_cep";
             this.lbl_cep.Size = new System.Drawing.Size(41, 21);
             this.lbl_cep.TabIndex = 14;
@@ -271,7 +273,7 @@
             // 
             this.lbl_plano.AutoSize = true;
             this.lbl_plano.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_plano.Location = new System.Drawing.Point(90, 273);
+            this.lbl_plano.Location = new System.Drawing.Point(90, 301);
             this.lbl_plano.Name = "lbl_plano";
             this.lbl_plano.Size = new System.Drawing.Size(66, 21);
             this.lbl_plano.TabIndex = 15;
@@ -281,10 +283,10 @@
             // 
             this.lbl_valor.AutoSize = true;
             this.lbl_valor.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_valor.Location = new System.Drawing.Point(242, 273);
+            this.lbl_valor.Location = new System.Drawing.Point(242, 301);
             this.lbl_valor.Name = "lbl_valor";
             this.lbl_valor.Size = new System.Drawing.Size(64, 21);
-            this.lbl_valor.TabIndex = 16;
+            this.lbl_valor.TabIndex = 27;
             this.lbl_valor.Text = "VALOR:";
             // 
             // txtbox_nome
@@ -324,58 +326,58 @@
             // txtbox_endereco
             // 
             this.txtbox_endereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_endereco.Location = new System.Drawing.Point(176, 179);
+            this.txtbox_endereco.Location = new System.Drawing.Point(176, 207);
             this.txtbox_endereco.Name = "txtbox_endereco";
             this.txtbox_endereco.Size = new System.Drawing.Size(178, 20);
-            this.txtbox_endereco.TabIndex = 7;
+            this.txtbox_endereco.TabIndex = 8;
             // 
             // msktbox_rg
             // 
             this.msktbox_rg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.msktbox_rg.Location = new System.Drawing.Point(119, 146);
+            this.msktbox_rg.Location = new System.Drawing.Point(119, 174);
             this.msktbox_rg.Mask = "00.000.000-0";
             this.msktbox_rg.Name = "msktbox_rg";
             this.msktbox_rg.Size = new System.Drawing.Size(74, 20);
-            this.msktbox_rg.TabIndex = 3;
+            this.msktbox_rg.TabIndex = 4;
             this.msktbox_rg.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.msktbox_rg.ValidatingType = typeof(System.DateTime);
             // 
             // mstkbox_cpf
             // 
             this.mstkbox_cpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mstkbox_cpf.Location = new System.Drawing.Point(233, 146);
+            this.mstkbox_cpf.Location = new System.Drawing.Point(233, 174);
             this.mstkbox_cpf.Mask = "000.000.000-00";
             this.mstkbox_cpf.Name = "mstkbox_cpf";
             this.mstkbox_cpf.Size = new System.Drawing.Size(85, 20);
-            this.mstkbox_cpf.TabIndex = 4;
+            this.mstkbox_cpf.TabIndex = 5;
             this.mstkbox_cpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.mstkbox_cpf.ValidatingType = typeof(System.DateTime);
             // 
             // msktbox_telefone
             // 
             this.msktbox_telefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.msktbox_telefone.Location = new System.Drawing.Point(402, 147);
+            this.msktbox_telefone.Location = new System.Drawing.Point(402, 175);
             this.msktbox_telefone.Mask = "(00) 00000-0000";
             this.msktbox_telefone.Name = "msktbox_telefone";
             this.msktbox_telefone.Size = new System.Drawing.Size(92, 20);
-            this.msktbox_telefone.TabIndex = 5;
+            this.msktbox_telefone.TabIndex = 6;
             this.msktbox_telefone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // txtbox_numero
             // 
             this.txtbox_numero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_numero.Location = new System.Drawing.Point(386, 179);
+            this.txtbox_numero.Location = new System.Drawing.Point(386, 207);
             this.txtbox_numero.Name = "txtbox_numero";
             this.txtbox_numero.Size = new System.Drawing.Size(45, 20);
-            this.txtbox_numero.TabIndex = 8;
+            this.txtbox_numero.TabIndex = 9;
             // 
             // txtbox_bairro
             // 
             this.txtbox_bairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_bairro.Location = new System.Drawing.Point(500, 179);
+            this.txtbox_bairro.Location = new System.Drawing.Point(500, 207);
             this.txtbox_bairro.Name = "txtbox_bairro";
             this.txtbox_bairro.Size = new System.Drawing.Size(125, 20);
-            this.txtbox_bairro.TabIndex = 9;
+            this.txtbox_bairro.TabIndex = 10;
             // 
             // cmbbox_uf
             // 
@@ -409,19 +411,19 @@
             "SE",
             "SP",
             "TO"});
-            this.cmbbox_uf.Location = new System.Drawing.Point(119, 209);
+            this.cmbbox_uf.Location = new System.Drawing.Point(119, 237);
             this.cmbbox_uf.Name = "cmbbox_uf";
             this.cmbbox_uf.Size = new System.Drawing.Size(40, 21);
-            this.cmbbox_uf.TabIndex = 10;
+            this.cmbbox_uf.TabIndex = 11;
             // 
             // msktbox_cep
             // 
             this.msktbox_cep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.msktbox_cep.Location = new System.Drawing.Point(205, 210);
+            this.msktbox_cep.Location = new System.Drawing.Point(205, 238);
             this.msktbox_cep.Mask = "00000-000";
             this.msktbox_cep.Name = "msktbox_cep";
             this.msktbox_cep.Size = new System.Drawing.Size(70, 20);
-            this.msktbox_cep.TabIndex = 11;
+            this.msktbox_cep.TabIndex = 12;
             this.msktbox_cep.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // cmbbox_cidade
@@ -433,19 +435,19 @@
             "PIRACAIA",
             "ATIBAIA",
             "BRAGANÇA PAULISTA"});
-            this.cmbbox_cidade.Location = new System.Drawing.Point(351, 210);
+            this.cmbbox_cidade.Location = new System.Drawing.Point(351, 238);
             this.cmbbox_cidade.Name = "cmbbox_cidade";
             this.cmbbox_cidade.Size = new System.Drawing.Size(143, 21);
-            this.cmbbox_cidade.TabIndex = 12;
+            this.cmbbox_cidade.TabIndex = 13;
             // 
             // msktbox_dtMatricula
             // 
             this.msktbox_dtMatricula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.msktbox_dtMatricula.Location = new System.Drawing.Point(190, 244);
+            this.msktbox_dtMatricula.Location = new System.Drawing.Point(190, 272);
             this.msktbox_dtMatricula.Mask = "00/00/0000";
             this.msktbox_dtMatricula.Name = "msktbox_dtMatricula";
             this.msktbox_dtMatricula.Size = new System.Drawing.Size(83, 20);
-            this.msktbox_dtMatricula.TabIndex = 13;
+            this.msktbox_dtMatricula.TabIndex = 14;
             this.msktbox_dtMatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.msktbox_dtMatricula.ValidatingType = typeof(System.DateTime);
             // 
@@ -457,10 +459,10 @@
             "INDICAÇÃO DE AMIGOS",
             "REDES SOCIAIS",
             "OUTROS"});
-            this.cmbbox_marketing.Location = new System.Drawing.Point(470, 243);
+            this.cmbbox_marketing.Location = new System.Drawing.Point(470, 271);
             this.cmbbox_marketing.Name = "cmbbox_marketing";
             this.cmbbox_marketing.Size = new System.Drawing.Size(131, 21);
-            this.cmbbox_marketing.TabIndex = 14;
+            this.cmbbox_marketing.TabIndex = 16;
             // 
             // cmbbox_plano
             // 
@@ -470,10 +472,10 @@
             "MENSAL",
             "TRIMESTRAL",
             "ANUAL"});
-            this.cmbbox_plano.Location = new System.Drawing.Point(153, 272);
+            this.cmbbox_plano.Location = new System.Drawing.Point(153, 300);
             this.cmbbox_plano.Name = "cmbbox_plano";
             this.cmbbox_plano.Size = new System.Drawing.Size(83, 21);
-            this.cmbbox_plano.TabIndex = 15;
+            this.cmbbox_plano.TabIndex = 17;
             this.cmbbox_plano.SelectedIndexChanged += new System.EventHandler(this.cmbbox_plano_SelectedIndexChanged);
             // 
             // cmbbox_valor
@@ -485,40 +487,40 @@
             "R$180.00",
             "R$660.00",
             "OUTROS"});
-            this.cmbbox_valor.Location = new System.Drawing.Point(303, 273);
+            this.cmbbox_valor.Location = new System.Drawing.Point(303, 301);
             this.cmbbox_valor.Name = "cmbbox_valor";
             this.cmbbox_valor.Size = new System.Drawing.Size(83, 21);
-            this.cmbbox_valor.TabIndex = 16;
+            this.cmbbox_valor.TabIndex = 18;
             this.cmbbox_valor.SelectedIndexChanged += new System.EventHandler(this.cmbbox_valor_SelectedIndexChanged);
             // 
             // chckbox_pago
             // 
             this.chckbox_pago.AutoSize = true;
-            this.chckbox_pago.Location = new System.Drawing.Point(94, 299);
+            this.chckbox_pago.Location = new System.Drawing.Point(94, 327);
             this.chckbox_pago.Name = "chckbox_pago";
             this.chckbox_pago.Size = new System.Drawing.Size(115, 17);
-            this.chckbox_pago.TabIndex = 18;
+            this.chckbox_pago.TabIndex = 20;
             this.chckbox_pago.Text = "Marcar como pago";
             this.chckbox_pago.UseVisualStyleBackColor = true;
             // 
             // chckbox_whatsaap
             // 
             this.chckbox_whatsaap.AutoSize = true;
-            this.chckbox_whatsaap.Location = new System.Drawing.Point(500, 151);
+            this.chckbox_whatsaap.Location = new System.Drawing.Point(500, 179);
             this.chckbox_whatsaap.Name = "chckbox_whatsaap";
             this.chckbox_whatsaap.Size = new System.Drawing.Size(76, 17);
-            this.chckbox_whatsaap.TabIndex = 6;
+            this.chckbox_whatsaap.TabIndex = 7;
             this.chckbox_whatsaap.Text = "WhatsApp";
             this.chckbox_whatsaap.UseVisualStyleBackColor = true;
             // 
             // msktbox_outroValor
             // 
             this.msktbox_outroValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.msktbox_outroValor.Location = new System.Drawing.Point(392, 274);
+            this.msktbox_outroValor.Location = new System.Drawing.Point(392, 302);
             this.msktbox_outroValor.Mask = "99.99";
             this.msktbox_outroValor.Name = "msktbox_outroValor";
             this.msktbox_outroValor.Size = new System.Drawing.Size(83, 20);
-            this.msktbox_outroValor.TabIndex = 17;
+            this.msktbox_outroValor.TabIndex = 19;
             this.msktbox_outroValor.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.msktbox_outroValor.ValidatingType = typeof(System.DateTime);
             // 
@@ -586,10 +588,30 @@
             this.lbl_idInfo.Text = "ID:";
             this.lbl_idInfo.Visible = false;
             // 
+            // txtbox_email
+            // 
+            this.txtbox_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbox_email.Location = new System.Drawing.Point(146, 144);
+            this.txtbox_email.Name = "txtbox_email";
+            this.txtbox_email.Size = new System.Drawing.Size(260, 20);
+            this.txtbox_email.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(88, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 21);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "EMAIL:";
+            // 
             // USC_novoAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtbox_email);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_idInfo);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.btn_consultar);
@@ -692,5 +714,7 @@
         private BotãoDinamico.CustomBotãoImage btn_cadastrar;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Label lbl_idInfo;
+        private System.Windows.Forms.TextBox txtbox_email;
+        private System.Windows.Forms.Label label1;
     }
 }

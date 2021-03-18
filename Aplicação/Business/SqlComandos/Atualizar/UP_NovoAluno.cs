@@ -11,9 +11,9 @@ namespace Business.SqlComandos.Atualizar
 {
     public class UP_NovoAluno
     {
-        public string strAtualizar = "UPDATE NovoAluno SET NOME = @NOME, DT_NASC = @DT_NASC, SEXO = @SEXO, RG = @RG, CPF = @CPF, TELEFONE = @TELEFONE, WHATSAPP = @WHATSAPP, ENDEREÇO = @ENDEREÇO, NÚMERO = @NÚMERO, BAIRRO = @BAIRRO, UF = @UF, CEP = @CEP, CIDADE = @CIDADE, DT_MATRÍC = @DT_MATRÍC, MARKETING = @MARKETING WHERE IDNOVOALUNO = @IDNOVOALUNO";
+        public string strAtualizar = "UPDATE NovoAluno SET NOME = @NOME, DT_NASC = @DT_NASC, SEXO = @SEXO, RG = @RG, CPF = @CPF, TELEFONE = @TELEFONE, WHATSAPP = @WHATSAPP, ENDEREÇO = @ENDEREÇO, NÚMERO = @NÚMERO, BAIRRO = @BAIRRO, UF = @UF, CEP = @CEP, CIDADE = @CIDADE, DT_MATRÍC = @DT_MATRÍC, MARKETING = @MARKETING, EMAIL = @EMAIL WHERE IDNOVOALUNO = @IDNOVOALUNO";
         Conexão conectar = new Conexão();
-        public void AtualizandoNovoAluno(string lbl_id, string txtbox_nome, string msktbox_dtNascimento, string cmbbox_sexo, string msktbox_rg, string mstkbox_cpf, string msktbox_telefone, string Whatsapp, string txtbox_endereco, string txtbox_numero, string txtbox_bairro, string cmbbox_uf, string msktbox_cep, string cmbbox_cidade, string msktbox_dtMatricula, string cmbbox_marketing)
+        public void AtualizandoNovoAluno(string lbl_id, string txtbox_nome, string msktbox_dtNascimento, string cmbbox_sexo, string msktbox_rg, string mstkbox_cpf, string msktbox_telefone, string Whatsapp, string txtbox_endereco, string txtbox_numero, string txtbox_bairro, string cmbbox_uf, string msktbox_cep, string cmbbox_cidade, string msktbox_dtMatricula, string cmbbox_marketing, string txtbox_email)
         {
             try
             {
@@ -35,6 +35,7 @@ namespace Business.SqlComandos.Atualizar
                 objComando.Parameters.Add(new SqlParameter("@CIDADE", cmbbox_cidade.ToUpper()));
                 objComando.Parameters.Add(new SqlParameter("@DT_MATRÍC", Convert.ToDateTime(msktbox_dtMatricula)));
                 objComando.Parameters.Add(new SqlParameter("@MARKETING", cmbbox_marketing));
+                objComando.Parameters.Add(new SqlParameter("@EMAIL", txtbox_email));
                 objComando.ExecuteNonQuery();
                 MessageBox.Show("Atualizado com sucesso", "OPERAÇÃO BEM-SUCEDIDA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
