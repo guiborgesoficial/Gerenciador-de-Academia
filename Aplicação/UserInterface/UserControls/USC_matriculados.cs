@@ -1,16 +1,8 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Business.SqlComandos.Atualizar;
 using Business.SqlComandos.Consultar;
-using Business.SqlComandos.Atualizar;
-using Business.SqlComandos.Excluir;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace RCFitness.UserControls
 {
@@ -94,8 +86,7 @@ namespace RCFitness.UserControls
                             lbl_statusResultado.Visible = true;
                         }
                         break;
-                }
-                    
+                } 
                 MostrarCampos();
             }
         }
@@ -109,6 +100,10 @@ namespace RCFitness.UserControls
                 {
                     atualizarPagamento.AtualizarPagamento(int.Parse(lbl_idResult.Text));
                     atualizarPagamento.InserindoNovaFaturaMatriculados(int.Parse(lbl_idResult.Text), msktbox_Valor.Text, cmbbox_Plano.Text, "HAVER");
+
+                    int cmbAlunoIndex = cmbbox_aluno.SelectedIndex;
+                    cmbbox_aluno.SelectedIndex = 0;
+                    cmbbox_aluno.SelectedIndex = cmbAlunoIndex;
                 }
                 else
                 {
@@ -118,27 +113,6 @@ namespace RCFitness.UserControls
             else
             {
                 MessageBox.Show("É necessário selecionar um aluno antes de atualizar", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void btn_deletar_Click(object sender, EventArgs e)
-        {
-            DL_Matriculados deletarCliente = new DL_Matriculados();
-            if (lbl_idResult.Text != "0" && lbl_idResult.Text != "ID:")
-            {
-                DialogResult confirmar = MessageBox.Show("Você tem certeza que deseja excluir esse aluno do cadastro de clientes?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (confirmar == DialogResult.Yes)
-                {
-                    deletarCliente.DeletarMatriculados(int.Parse(lbl_idResult.Text));
-                    lbl_idResult.Text = "";
-                    lbl_idResult.Visible = false;
-                    panel_resultado.Controls.Clear();
-                    cmbbox_aluno.Text = "";
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessário selecionar um aluno antes de deletar", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -57,6 +57,7 @@
     <Compile Include="SqlComandos\Consultar\Charts\CS_ChtInadimplentes.cs" />
     <Compile Include="SqlComandos\Consultar\Charts\CS_ChtVencimentoHoje.cs" />
     <Compile Include="SqlComandos\Consultar\CS_DatarGridView_DadosPagamento.cs" />
+    <Compile Include="SqlComandos\Consultar\CS_DataGridEmailSenderPagamentosParaReceber.cs" />
     <Compile Include="SqlComandos\Consultar\CS_FichaDeTreino.cs" />
     <Compile Include="SqlComandos\Consultar\CS_Matriculados.cs" />
     <Compile Include="SqlComandos\Consultar\CS_MedidasAluno.cs" />

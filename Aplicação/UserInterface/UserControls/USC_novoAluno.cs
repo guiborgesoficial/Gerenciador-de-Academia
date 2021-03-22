@@ -82,7 +82,7 @@ namespace RCFitness.UserControls
 			verificador.VerificaCamposPreenchidos(this);
 
 			//VERIFICADOR É 17 CORRIGIR ERRO DO CMBBOXVALOR
-			if (verificador.verificadorDeCamposPreenchidos == 17)
+			if (verificador.verificadorDeCamposPreenchidos >= 16)
 			{
 				verificador.VerificaCamposTempoReal.Stop();
 				string Whatsaap;

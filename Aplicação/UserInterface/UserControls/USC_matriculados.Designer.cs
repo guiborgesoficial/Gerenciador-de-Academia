@@ -54,7 +54,6 @@
             this.msktbox_Valor = new System.Windows.Forms.MaskedTextBox();
             this.cmbbox_Plano = new System.Windows.Forms.ComboBox();
             this.dataGridView_DadosPagamento = new System.Windows.Forms.DataGridView();
-            this.btn_deletar = new BotãoDinamico.CustomBotãoImage();
             this.btn_atualizar = new BotãoDinamico.CustomBotãoImage();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).BeginInit();
@@ -62,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_resultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_deletar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_atualizar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -348,20 +346,6 @@
             this.dataGridView_DadosPagamento.TabIndex = 90;
             this.dataGridView_DadosPagamento.Visible = false;
             // 
-            // btn_deletar
-            // 
-            this.btn_deletar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("btn_deletar.Image")));
-            this.btn_deletar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_deletar.ImageHover")));
-            this.btn_deletar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_deletar.ImageNormal")));
-            this.btn_deletar.Location = new System.Drawing.Point(261, 395);
-            this.btn_deletar.Name = "btn_deletar";
-            this.btn_deletar.Size = new System.Drawing.Size(164, 30);
-            this.btn_deletar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_deletar.TabIndex = 73;
-            this.btn_deletar.TabStop = false;
-            this.btn_deletar.Click += new System.EventHandler(this.btn_deletar_Click);
-            // 
             // btn_atualizar
             // 
             this.btn_atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -389,7 +373,6 @@
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.lbl_dtUltimoPagamento);
             this.Controls.Add(this.lbl_dtMatricula);
-            this.Controls.Add(this.btn_deletar);
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.cmbbox_aluno);
             this.Controls.Add(this.lbl_aluno);
@@ -406,7 +389,6 @@
             this.panel_resultado.ResumeLayout(false);
             this.panel_resultado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_deletar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_atualizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -421,7 +403,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmbbox_aluno;
         private System.Windows.Forms.Label lbl_aluno;
-        private BotãoDinamico.CustomBotãoImage btn_deletar;
         private BotãoDinamico.CustomBotãoImage btn_atualizar;
         private System.Windows.Forms.Label lbl_dtMatricula;
         private System.Windows.Forms.Label lbl_dtUltimoPagamento;

@@ -1,6 +1,6 @@
 ﻿namespace RCFitness.UserControls
 {
-    partial class USC_dadosAluno
+    partial class USC_emailSender
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USC_dadosAluno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USC_emailSender));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictbox_novoAluno = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new BotãoDinamico.CustomBotãoImage();
@@ -39,6 +41,7 @@
             this.lbl_idResult = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
             this.groupBox_Configurações = new System.Windows.Forms.GroupBox();
+            this.checkBox_cobrançaEmail = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.textBox_senha = new System.Windows.Forms.TextBox();
@@ -46,6 +49,7 @@
             this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_senha = new System.Windows.Forms.Label();
             this.groupBox_ConfigureSuaMensagem = new System.Windows.Forms.GroupBox();
+            this.btn_enviar = new System.Windows.Forms.Button();
             this.textBox_anexo = new System.Windows.Forms.TextBox();
             this.btn_anexoBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,8 +58,12 @@
             this.lbl_escreverEmail = new System.Windows.Forms.Label();
             this.lbl_assunto = new System.Windows.Forms.Label();
             this.bnt_config = new BotãoDinamico.CustomBotãoImage();
-            this.btn_enviar = new System.Windows.Forms.Button();
-            this.checkBox_cobrançaEmail = new System.Windows.Forms.CheckBox();
+            this.btn_porquinho = new BotãoDinamico.CustomBotãoImage();
+            this.groupbox_inadimplentes = new System.Windows.Forms.GroupBox();
+            this.btn_enviarCobranças = new System.Windows.Forms.Button();
+            this.dataGridView_DadosPagamento = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_voltar)).BeginInit();
@@ -65,6 +73,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox_ConfigureSuaMensagem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_config)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_porquinho)).BeginInit();
+            this.groupbox_inadimplentes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -184,6 +195,16 @@
             this.groupBox_Configurações.TabStop = false;
             this.groupBox_Configurações.Text = "Configurações e Conta";
             // 
+            // checkBox_cobrançaEmail
+            // 
+            this.checkBox_cobrançaEmail.AutoSize = true;
+            this.checkBox_cobrançaEmail.Location = new System.Drawing.Point(8, 71);
+            this.checkBox_cobrançaEmail.Name = "checkBox_cobrançaEmail";
+            this.checkBox_cobrançaEmail.Size = new System.Drawing.Size(388, 17);
+            this.checkBox_cobrançaEmail.TabIndex = 18;
+            this.checkBox_cobrançaEmail.Text = "Ativar avisos automáticos de mensalidades e cobranças de faturas por email.";
+            this.checkBox_cobrançaEmail.UseVisualStyleBackColor = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -259,6 +280,17 @@
             this.groupBox_ConfigureSuaMensagem.TabStop = false;
             this.groupBox_ConfigureSuaMensagem.Text = "Configure Sua Mensagem";
             // 
+            // btn_enviar
+            // 
+            this.btn_enviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enviar.Location = new System.Drawing.Point(440, 169);
+            this.btn_enviar.Name = "btn_enviar";
+            this.btn_enviar.Size = new System.Drawing.Size(85, 23);
+            this.btn_enviar.TabIndex = 18;
+            this.btn_enviar.Text = "ENVIAR";
+            this.btn_enviar.UseVisualStyleBackColor = true;
+            this.btn_enviar.Click += new System.EventHandler(this.btn_enviar_Click);
+            // 
             // textBox_anexo
             // 
             this.textBox_anexo.Location = new System.Drawing.Point(186, 172);
@@ -275,6 +307,7 @@
             this.btn_anexoBuscar.TabIndex = 100;
             this.btn_anexoBuscar.Text = "BUSCAR";
             this.btn_anexoBuscar.UseVisualStyleBackColor = true;
+            this.btn_anexoBuscar.Click += new System.EventHandler(this.btn_anexoBuscar_Click);
             // 
             // label3
             // 
@@ -336,31 +369,87 @@
             this.bnt_config.TabStop = false;
             this.bnt_config.Click += new System.EventHandler(this.bnt_config_Click);
             // 
-            // btn_enviar
+            // btn_porquinho
             // 
-            this.btn_enviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_enviar.Location = new System.Drawing.Point(440, 169);
-            this.btn_enviar.Name = "btn_enviar";
-            this.btn_enviar.Size = new System.Drawing.Size(85, 23);
-            this.btn_enviar.TabIndex = 18;
-            this.btn_enviar.Text = "ENVIAR";
-            this.btn_enviar.UseVisualStyleBackColor = true;
-            this.btn_enviar.Click += new System.EventHandler(this.btn_enviar_Click);
+            this.btn_porquinho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_porquinho.Image = ((System.Drawing.Image)(resources.GetObject("btn_porquinho.Image")));
+            this.btn_porquinho.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_porquinho.ImageHover")));
+            this.btn_porquinho.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_porquinho.ImageNormal")));
+            this.btn_porquinho.Location = new System.Drawing.Point(716, 337);
+            this.btn_porquinho.Name = "btn_porquinho";
+            this.btn_porquinho.Size = new System.Drawing.Size(42, 37);
+            this.btn_porquinho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_porquinho.TabIndex = 94;
+            this.btn_porquinho.TabStop = false;
+            this.btn_porquinho.Click += new System.EventHandler(this.btn_porquinho_Click);
             // 
-            // checkBox_cobrançaEmail
+            // groupbox_inadimplentes
             // 
-            this.checkBox_cobrançaEmail.AutoSize = true;
-            this.checkBox_cobrançaEmail.Location = new System.Drawing.Point(8, 71);
-            this.checkBox_cobrançaEmail.Name = "checkBox_cobrançaEmail";
-            this.checkBox_cobrançaEmail.Size = new System.Drawing.Size(388, 17);
-            this.checkBox_cobrançaEmail.TabIndex = 18;
-            this.checkBox_cobrançaEmail.Text = "Ativar avisos automáticos de mensalidades e cobranças de faturas por email.";
-            this.checkBox_cobrançaEmail.UseVisualStyleBackColor = true;
+            this.groupbox_inadimplentes.Controls.Add(this.btn_enviarCobranças);
+            this.groupbox_inadimplentes.Controls.Add(this.dataGridView_DadosPagamento);
+            this.groupbox_inadimplentes.Location = new System.Drawing.Point(79, 68);
+            this.groupbox_inadimplentes.Name = "groupbox_inadimplentes";
+            this.groupbox_inadimplentes.Size = new System.Drawing.Size(691, 372);
+            this.groupbox_inadimplentes.TabIndex = 102;
+            this.groupbox_inadimplentes.TabStop = false;
+            this.groupbox_inadimplentes.Text = "Inadimplentes";
             // 
-            // USC_dadosAluno
+            // btn_enviarCobranças
+            // 
+            this.btn_enviarCobranças.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enviarCobranças.Location = new System.Drawing.Point(12, 321);
+            this.btn_enviarCobranças.Name = "btn_enviarCobranças";
+            this.btn_enviarCobranças.Size = new System.Drawing.Size(174, 23);
+            this.btn_enviarCobranças.TabIndex = 92;
+            this.btn_enviarCobranças.Text = "ENVIAR COBRANÇAS";
+            this.btn_enviarCobranças.UseVisualStyleBackColor = true;
+            this.btn_enviarCobranças.Click += new System.EventHandler(this.btn_enviarCobranças_Click);
+            // 
+            // dataGridView_DadosPagamento
+            // 
+            this.dataGridView_DadosPagamento.AllowUserToAddRows = false;
+            this.dataGridView_DadosPagamento.AllowUserToDeleteRows = false;
+            this.dataGridView_DadosPagamento.AllowUserToResizeColumns = false;
+            this.dataGridView_DadosPagamento.AllowUserToResizeRows = false;
+            this.dataGridView_DadosPagamento.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_DadosPagamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridView_DadosPagamento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dataGridView_DadosPagamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView_DadosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView_DadosPagamento.EnableHeadersVisualStyles = false;
+            this.dataGridView_DadosPagamento.Location = new System.Drawing.Point(12, 21);
+            this.dataGridView_DadosPagamento.Name = "dataGridView_DadosPagamento";
+            this.dataGridView_DadosPagamento.ReadOnly = true;
+            this.dataGridView_DadosPagamento.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView_DadosPagamento.RowHeadersVisible = false;
+            this.dataGridView_DadosPagamento.Size = new System.Drawing.Size(667, 294);
+            this.dataGridView_DadosPagamento.TabIndex = 91;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // USC_emailSender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_porquinho);
             this.Controls.Add(this.bnt_config);
             this.Controls.Add(this.groupBox_ConfigureSuaMensagem);
             this.Controls.Add(this.groupBox_Configurações);
@@ -370,9 +459,10 @@
             this.Controls.Add(this.cmbbox_aluno);
             this.Controls.Add(this.lbl_aluno);
             this.Controls.Add(this.panel1);
-            this.Name = "USC_dadosAluno";
+            this.Controls.Add(this.groupbox_inadimplentes);
+            this.Name = "USC_emailSender";
             this.Size = new System.Drawing.Size(805, 453);
-            this.Load += new System.EventHandler(this.USC_dadosAluno_Load);
+            this.Load += new System.EventHandler(this.USC_emailSender_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_voltar)).EndInit();
@@ -384,6 +474,9 @@
             this.groupBox_ConfigureSuaMensagem.ResumeLayout(false);
             this.groupBox_ConfigureSuaMensagem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_config)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_porquinho)).EndInit();
+            this.groupbox_inadimplentes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,5 +511,11 @@
         private BotãoDinamico.CustomBotãoImage bnt_config;
         private System.Windows.Forms.Button btn_enviar;
         private System.Windows.Forms.CheckBox checkBox_cobrançaEmail;
+        private BotãoDinamico.CustomBotãoImage btn_porquinho;
+        private System.Windows.Forms.GroupBox groupbox_inadimplentes;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridView dataGridView_DadosPagamento;
+        private System.Windows.Forms.Button btn_enviarCobranças;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

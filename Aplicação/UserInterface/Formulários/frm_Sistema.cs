@@ -79,7 +79,7 @@ namespace RCFitness
         private void btn_dados_Click(object sender, EventArgs e)
         {
             pnl_UserControl.Controls.Clear();
-            USC_dadosAluno TelaDados = new USC_dadosAluno();
+            USC_emailSender TelaDados = new USC_emailSender();
             pnl_UserControl.Controls.Add(TelaDados);
             TelaDados.Visible = true;
         }

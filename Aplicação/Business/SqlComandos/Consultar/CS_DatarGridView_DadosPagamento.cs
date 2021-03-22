@@ -1,11 +1,7 @@
-﻿using System;
-using DataBase;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
+﻿using DataBase;
+using System;
 using System.Data;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Business.SqlComandos.Consultar
@@ -15,7 +11,7 @@ namespace Business.SqlComandos.Consultar
         Conexão conectar = new Conexão();
         public void ConsultandoDadosPagamento(int ID, DataGridView dataGridView)
         {
-            string strConsultar = "SELECT * FROM PAGAMENTO WHERE ID_NOVOALUNO = '" + ID + "'";
+            string strConsultar = "SELECT * FROM Pagamento WHERE ID_NOVOALUNO = '" + ID + "'";
 
             try
             {

@@ -46,7 +46,7 @@
             this.timer_dataCurta = new System.Windows.Forms.Timer(this.components);
             this.usC_chtFaturamento1 = new RCFitness.UserControls.Charts.USC_chtFaturamento();
             this.usC_chtAlunos = new RCFitness.UserControls.Charts.USC_chtAlunos();
-            this.usC_dadosAluno1 = new RCFitness.UserControls.USC_dadosAluno();
+            this.USC_emailSender1 = new RCFitness.UserControls.USC_emailSender();
             this.usC_medidasAluno1 = new RCFitness.UserControls.USC_medidasAluno();
             this.usC_fichaTreino1 = new RCFitness.UserControls.USC_fichaTreino();
             this.usC_pesoAluno1 = new RCFitness.UserControls.USC_pesoAluno();
@@ -198,7 +198,7 @@
             this.pnl_UserControl.Controls.Add(this.lbl_longData);
             this.pnl_UserControl.Controls.Add(this.lbl_datalonga);
             this.pnl_UserControl.Controls.Add(this.lbl_dataCurta);
-            this.pnl_UserControl.Controls.Add(this.usC_dadosAluno1);
+            this.pnl_UserControl.Controls.Add(this.USC_emailSender1);
             this.pnl_UserControl.Controls.Add(this.usC_medidasAluno1);
             this.pnl_UserControl.Controls.Add(this.usC_fichaTreino1);
             this.pnl_UserControl.Controls.Add(this.usC_pesoAluno1);
@@ -266,10 +266,10 @@
             // 
             // usC_dadosAluno1
             // 
-            this.usC_dadosAluno1.Location = new System.Drawing.Point(0, 0);
-            this.usC_dadosAluno1.Name = "usC_dadosAluno1";
-            this.usC_dadosAluno1.Size = new System.Drawing.Size(668, 451);
-            this.usC_dadosAluno1.TabIndex = 5;
+            this.USC_emailSender1.Location = new System.Drawing.Point(0, 0);
+            this.USC_emailSender1.Name = "usC_dadosAluno1";
+            this.USC_emailSender1.Size = new System.Drawing.Size(668, 451);
+            this.USC_emailSender1.TabIndex = 5;
             // 
             // usC_medidasAluno1
             // 
@@ -347,7 +347,7 @@
         private UserControls.USC_pesoAluno usC_pesoAluno1;
         private UserControls.USC_fichaTreino usC_fichaTreino1;
         private UserControls.USC_medidasAluno usC_medidasAluno1;
-        private UserControls.USC_dadosAluno usC_dadosAluno1;
+        private UserControls.USC_emailSender USC_emailSender1;
         private System.Windows.Forms.Label lbl_dataCurta;
         private System.Windows.Forms.Timer timer_dataCurta;
         private System.Windows.Forms.Label lbl_datalonga;
