@@ -16,7 +16,7 @@ namespace Business.SqlComandos.Consultar
             string strConsultar = "SELECT PagamentosParaReceber.IDPagamentosParaReceber, NovoAluno.NOME, PagamentosParaReceber.PLANO, " +
                 "PagamentosParaReceber.VALOR, PagamentosParaReceber.DT_PAG, PagamentosParaReceber.STATUS, " +
                 "PagamentosParaReceber.DT_VENC, PagamentosParaReceber.ID_NOVOALUNO, NovoAluno.EMAIL FROM NovoAluno, " +
-                "PagamentosParaReceber WHERE NovoAluno.IDNOVOALUNO = PagamentosParaReceber.ID_NOVOALUNO";
+                "PagamentosParaReceber WHERE NovoAluno.IDNOVOALUNO = PagamentosParaReceber.ID_NOVOALUNO AND DT_VENC = '"+DateTime.Now.ToShortDateString()+ "'";
 
             try
             {

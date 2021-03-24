@@ -1,16 +1,10 @@
-﻿using System;
-using Business;
+﻿using Business.SqlComandos.Consultar;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Business.SqlComandos.Consultar;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
+using System.Windows.Forms;
 
 namespace RCFitness.UserControls
 {
@@ -60,9 +54,23 @@ namespace RCFitness.UserControls
             cmbbox_aluno.Items.AddRange(retornarItensArray.tabela.ToArray());
         }
 
+        int visualizarCampoConfigurações = 0;
         private void bnt_config_Click(object sender, EventArgs e)
         {
-            groupBox_Configurações.Visible = true;
+            if(visualizarCampoConfigurações == 0)
+            {
+                groupBox_Configurações.Visible = true;
+                groupbox_inadimplentes.Visible = false;
+                groupBox_ConfigureSuaMensagem.Visible = true;
+                visualizarCampoConfigurações = 1;
+            }
+            else
+            {
+                groupBox_Configurações.Visible = false;
+                groupbox_inadimplentes.Visible = false;
+                groupBox_ConfigureSuaMensagem.Visible = true;
+                visualizarCampoConfigurações = 0;
+            }
         }
 
         private void btn_salvar_Click(object sender, EventArgs e)
@@ -71,12 +79,13 @@ namespace RCFitness.UserControls
             if(confirmar == DialogResult.Yes)
             {
                 groupBox_Configurações.Visible = false;
+                visualizarCampoConfigurações = 0;
             }
         }
 
         private void btn_enviar_Click(object sender, EventArgs e)
         {
-            DialogResult enviarCobrança = MessageBox.Show("Deseja enviar cobranças por email para essa lista de alunos inadimplentes?", "Confirme o envio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult enviarCobrança = MessageBox.Show("Deseja enviar essa mensagem por email para esse aluno?", "Confirme o envio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (enviarCobrança == DialogResult.Yes)
             {
                 try
@@ -124,17 +133,28 @@ namespace RCFitness.UserControls
                 }
             }
         }
-
+        int visualizadorCampoInadimplentes = 0;
         private void btn_porquinho_Click(object sender, EventArgs e)
         {
-            //DATAGRIDVIEW_PAGAMENTOS DADOS DOS INADIMPLENTES
-            CS_DataGridEmailSenderPagamentosParaReceber consultandoDadosInadimplentes = new CS_DataGridEmailSenderPagamentosParaReceber();
-            consultandoDadosInadimplentes.ConsultandoPagamentosParaReceber(dataGridView_DadosPagamento);
+            if (visualizadorCampoInadimplentes == 0)
+            {
+                //DATAGRIDVIEW_PAGAMENTOS DADOS DOS INADIMPLENTES
+                CS_DataGridEmailSenderPagamentosParaReceber consultandoDadosInadimplentes = new CS_DataGridEmailSenderPagamentosParaReceber();
+                consultandoDadosInadimplentes.ConsultandoPagamentosParaReceber(dataGridView_DadosPagamento);
 
-            AlterarNomesColunasDataGridView(dataGridView_DadosPagamento);
-            groupbox_inadimplentes.Visible = true;
-            groupBox_ConfigureSuaMensagem.Visible = false;
-            groupBox_Configurações.Visible = false;
+                AlterarNomesColunasDataGridView(dataGridView_DadosPagamento);
+                groupbox_inadimplentes.Visible = true;
+                groupBox_ConfigureSuaMensagem.Visible = false;
+                groupBox_Configurações.Visible = false;
+                visualizadorCampoInadimplentes = 1;
+            }
+            else
+            {
+                groupbox_inadimplentes.Visible = false;
+                groupBox_ConfigureSuaMensagem.Visible = true;
+                groupBox_Configurações.Visible = false;
+                visualizadorCampoInadimplentes = 0;
+            }
         }
 
         public List<string> EMAILf = new List<string>();
