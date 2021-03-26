@@ -214,7 +214,6 @@ namespace RCFitness.UserControls
         public void ListaEmailInadimplentes(List<string> Emails)
         {
             CS_NovoAluno consultandoTodosEmails = new CS_NovoAluno();
-
         }
         public void AtribuidorSMTPePorta(TextBox email)
         {
