@@ -141,12 +141,14 @@ namespace RCFitness.UserControls
                 //DATAGRIDVIEW_PAGAMENTOS DADOS DOS INADIMPLENTES
                 CS_DataGridEmailSenderPagamentosParaReceber consultandoDadosInadimplentes = new CS_DataGridEmailSenderPagamentosParaReceber();
                 consultandoDadosInadimplentes.ConsultandoPagamentosParaReceber(dataGridView_DadosPagamento);
+                
 
                 AlterarNomesColunasDataGridView(dataGridView_DadosPagamento);
                 groupbox_inadimplentes.Visible = true;
                 groupBox_ConfigureSuaMensagem.Visible = false;
                 groupBox_Configurações.Visible = false;
                 visualizadorCampoInadimplentes = 1;
+                ListaEmailInadimplentes(dataGridView_DadosPagamento);
             }
             else
             {
@@ -156,8 +158,30 @@ namespace RCFitness.UserControls
                 visualizadorCampoInadimplentes = 0;
             }
         }
+        public void ListaEmailInadimplentes(DataGridView dadosEmail)
+        {   
+            EMAILf.Clear();
+            NOMEf.Clear();
+            int i = 0;
+            while (i < dadosEmail.RowCount)
+            {
+                EMAILf.Add(dadosEmail["EMAIL", i].Value.ToString());
+                NOMEf.Add(dadosEmail["NOME", i].Value.ToString());
+                i++;
+            }
+        }
+        public string TratandoListaInadimplentes()
+        {
+            string destinatarios = "";
+            for (int i = 0; i < EMAILf.Count; i++)
+            {
+                destinatarios += ", " + "\"" + EMAILf[i].ToString() + "\"";
+            }
+            return destinatarios;
+        }
 
         public List<string> EMAILf = new List<string>();
+        public List<string> NOMEf = new List<string>();
         public string SMTP = "";
         public string porta = "";
 
@@ -166,7 +190,7 @@ namespace RCFitness.UserControls
             DialogResult enviarCobrança = MessageBox.Show("Deseja enviar cobranças por email para essa lista de alunos inadimplentes?", "Confirme o envio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(enviarCobrança == DialogResult.Yes)
             {
-                for (int i = 10; i < EMAILf.Count; i++)
+                for (int i = 0; i < EMAILf.Count; i++)
                 {
                     try
                     {
@@ -185,7 +209,8 @@ namespace RCFitness.UserControls
                         msg = new MailMessage();
                         msg.To.Add(new MailAddress(EMAILf[i]));
                         msg.From = new MailAddress(textBox_email.Text);
-                        msg.Body = textBox_escreverEmail.Text;
+                        msg.Subject = "Sua mensalidade venceu";
+                        msg.Body = "Opa " + NOMEf[i] + ", estou aqui passando para avisar que sua mensalidade venceu e para continuar treinando é necessário pagar sua fatura";
                         if (textBox_anexo.Text != "")
                         {
                             msg.Attachments.Add(new Attachment(textBox_anexo.Text));
@@ -210,10 +235,6 @@ namespace RCFitness.UserControls
                 }
                 
             }
-        }
-        public void ListaEmailInadimplentes(List<string> Emails)
-        {
-            CS_NovoAluno consultandoTodosEmails = new CS_NovoAluno();
         }
         public void AtribuidorSMTPePorta(TextBox email)
         {
