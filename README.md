@@ -26,6 +26,7 @@ CREATE TABLE [dbo].[NovoAluno](
 	[CIDADE] [varchar](18) NOT NULL,
 	[DT_MATRÍC] [date] NOT NULL,
 	[MARKETING] [varchar](20) NULL,
+	[EMAIL] [varchar](100) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[IDNOVOALUNO] ASC
