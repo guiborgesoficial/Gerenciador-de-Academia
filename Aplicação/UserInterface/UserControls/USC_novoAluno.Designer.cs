@@ -75,6 +75,7 @@
             this.lbl_idInfo = new System.Windows.Forms.Label();
             this.txtbox_email = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_emailVálido = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_voltar)).BeginInit();
@@ -595,6 +596,7 @@
             this.txtbox_email.Name = "txtbox_email";
             this.txtbox_email.Size = new System.Drawing.Size(260, 20);
             this.txtbox_email.TabIndex = 3;
+            this.txtbox_email.Leave += new System.EventHandler(this.txtbox_email_Leave);
             // 
             // label1
             // 
@@ -606,10 +608,23 @@
             this.label1.TabIndex = 79;
             this.label1.Text = "EMAIL:";
             // 
+            // lbl_emailVálido
+            // 
+            this.lbl_emailVálido.AutoSize = true;
+            this.lbl_emailVálido.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_emailVálido.ForeColor = System.Drawing.Color.Red;
+            this.lbl_emailVálido.Location = new System.Drawing.Point(412, 147);
+            this.lbl_emailVálido.Name = "lbl_emailVálido";
+            this.lbl_emailVálido.Size = new System.Drawing.Size(112, 16);
+            this.lbl_emailVálido.TabIndex = 80;
+            this.lbl_emailVálido.Text = "* Digite um email válido";
+            this.lbl_emailVálido.Visible = false;
+            // 
             // USC_novoAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_emailVálido);
             this.Controls.Add(this.txtbox_email);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_idInfo);
@@ -716,5 +731,6 @@
         private System.Windows.Forms.Label lbl_idInfo;
         private System.Windows.Forms.TextBox txtbox_email;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_emailVálido;
     }
 }

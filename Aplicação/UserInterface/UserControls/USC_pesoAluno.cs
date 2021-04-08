@@ -1,15 +1,8 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Business.SqlComandos.Cadastrar;
 using Business.SqlComandos.Consultar;
-using Business.SqlComandos.Cadastrar;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 using UserInterface;
 
 namespace RCFitness.UserControls
@@ -48,7 +41,7 @@ namespace RCFitness.UserControls
             {
                 lbl_id.Visible = false;
                 lbl_idResult.Visible = false;
-                txtbox_peso.Text = "";
+                msktbox_peso.Text = "";
 
                 lbl_imc.Visible = false;
                 lbl_imcResultado.Visible = false;
@@ -64,29 +57,31 @@ namespace RCFitness.UserControls
                 lbl_idResult.Text = consultandoParaComboBox.IDNOVOALUNO.ToString();
                 lbl_id.Visible = true;
                 lbl_idResult.Visible = true;
-                txtbox_peso.Text = "";
+                msktbox_peso.Text = "";
             }
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
+            validandoCampoPeso();
             string dtAtual = DateTime.Now.ToShortDateString();
             CD_PesoAluno cadastroPesoAluno = new CD_PesoAluno();
 
-            verificarCampos.verificadorDeCamposPreenchidos = 0;
             verificarCampos.VerificaCamposPreenchidos(this);
 
             if(lbl_idResult.Text != "0" && lbl_idResult.Text != "ID:")
             {
-                if(verificarCampos.verificadorDeCamposPreenchidos == 2)
+                if (msktbox_peso.Text != string.Empty)
                 {
+                    verificarCampos.VerificaCamposTempoReal.Stop();
+                    msktbox_peso.Controls.Clear();
                     if (lbl_imcResultado.Text == "PESO:")
                     {
                         lbl_imcResultado.Text = "0";
                     }
-                    cadastroPesoAluno.CadastroPesoAluno(dtAtual, txtbox_peso.Text, lbl_imcResultado.Text, int.Parse(lbl_idResult.Text));
+                    cadastroPesoAluno.CadastroPesoAluno(dtAtual, msktbox_peso.Text, lbl_imcResultado.Text, int.Parse(lbl_idResult.Text));
                     DialogResult msg = MessageBox.Show("Deseja cadastrar uma ficha de treino para esse aluno?", "CADASTRE UMA FICHA DE TREINO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if(msg == DialogResult.Yes)
+                    if (msg == DialogResult.Yes)
                     {
                         this.Visible = false;
                         USC_fichaTreino TelaFicha = new USC_fichaTreino();
@@ -101,7 +96,22 @@ namespace RCFitness.UserControls
                 }
                 else
                 {
-                    verificarCampos.VerificaCamposTempoReal.Tick += VerificaCamposTempoReal_Tick;
+                    verificarCampos.VerificaCamposTempoReal.Stop();
+
+                    MessageBox.Show("É preciso preencher o campo peso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Panel LarguraCampo = new Panel();
+                    Panel AlturaCampo = new Panel();
+
+                    msktbox_peso.Controls.Clear();
+                    AlturaCampo.Height = msktbox_peso.Height;
+                    AlturaCampo.Width = 1;
+                    AlturaCampo.BackColor = Color.Red;
+                    msktbox_peso.Controls.Add(AlturaCampo);
+
+                    LarguraCampo.Width = msktbox_peso.Width;
+                    LarguraCampo.Height = 1;
+                    LarguraCampo.BackColor = Color.Red;
+                    msktbox_peso.Controls.Add(LarguraCampo);
                 }
             }
             else
@@ -125,11 +135,11 @@ namespace RCFitness.UserControls
                 CS_MedidasAluno retornAltura = new CS_MedidasAluno();
                 retornAltura.ConsultandoMedidasAluno(int.Parse(lbl_idResult.Text));
 
-                txtbox_peso.Text = consultandoCadastrados.PESOALUNO;
+                msktbox_peso.Text = consultandoCadastrados.PESOALUNO;
 
                 if(consultandoCadastrados.PESOALUNO != null && retornAltura.ALTURA != null)
                 {
-                    double imc = double.Parse(txtbox_peso.Text) / (double.Parse(retornAltura.ALTURA) * double.Parse(retornAltura.ALTURA));
+                    double imc = double.Parse(msktbox_peso.Text) / (double.Parse(retornAltura.ALTURA) * double.Parse(retornAltura.ALTURA));
                     lbl_imcResultado.Text = imc.ToString();
                     if (imc < 18.5)
                     {
@@ -174,6 +184,30 @@ namespace RCFitness.UserControls
             else
             {
                 MessageBox.Show("É necessário selecionar um aluno para realizar a consulta.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void msktbox_peso_Click(object sender, EventArgs e)
+        {
+            msktbox_peso.Mask = "";
+        }
+        private void msktbox_peso_MouseLeave(object sender, EventArgs e)
+        {
+            validandoCampoPeso();
+        }
+        public void validandoCampoPeso()
+        {
+            if (msktbox_peso.Text.Length == 4)
+            {
+                msktbox_peso.Mask = "00.00";
+            }
+            else if (msktbox_peso.TextLength == 5)
+            {
+                msktbox_peso.Mask = "000.00";
+            }
+            else if (msktbox_peso.TextLength > 5)
+            {
+                msktbox_peso.Text = "";
             }
         }
     }

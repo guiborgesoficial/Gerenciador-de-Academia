@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Business.SqlComandos.Consultar;
 using RCFitness.UserControls.Charts;
 using Business.SqlComandos.Consultar.Charts;
+using System.Drawing.Imaging;
 
 namespace RCFitness
 {
@@ -100,6 +101,15 @@ namespace RCFitness
         private void pnl_menuLateral_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_gerarPDF_Click(object sender, EventArgs e)
+        {
+            using (var image = new Bitmap(pnl_UserControl.Width, pnl_UserControl.Height))
+            {
+                pnl_UserControl.DrawToBitmap(image, new Rectangle(0, 0, image.Width, image.Height));
+                image.Save(@"C:\Users\PICHAU\Desktop\" + "Gráficos" + ".png", ImageFormat.Png);
+            }
         }
     }
 }

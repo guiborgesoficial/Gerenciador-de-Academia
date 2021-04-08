@@ -1,18 +1,5 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Drawing.Text;
-using System.Security.Cryptography.X509Certificates;
-using System.Reflection;
+﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace UserInterface
 {

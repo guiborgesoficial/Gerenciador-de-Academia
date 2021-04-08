@@ -1,12 +1,8 @@
-﻿using System;
-using DataBase;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DataBase;
+using System;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 using System.Data.SqlTypes;
+using System.Windows.Forms;
 
 namespace Business.SqlComandos.Cadastrar
 {

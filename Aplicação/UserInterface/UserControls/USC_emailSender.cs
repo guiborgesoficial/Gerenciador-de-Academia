@@ -1,10 +1,13 @@
 ﻿using Business.SqlComandos.Consultar;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
+using UserInterface;
 
 namespace RCFitness.UserControls
 {
@@ -83,56 +86,75 @@ namespace RCFitness.UserControls
             }
         }
 
+        VerificadorDeCampos verificador = new VerificadorDeCampos();
+
         private void btn_enviar_Click(object sender, EventArgs e)
         {
             DialogResult enviarCobrança = MessageBox.Show("Deseja enviar essa mensagem por email para esse aluno?", "Confirme o envio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (enviarCobrança == DialogResult.Yes)
             {
-                try
+                verificador.VerificaCamposPreenchidos(groupBox_ConfigureSuaMensagem);
+                if(cmbbox_aluno.Text == string.Empty || textBox_assunto.Text == string.Empty || textBox_escreverEmail.Text == string.Empty)
                 {
-                    AtribuidorSMTPePorta(textBox_email);
-
-                    NetworkCredential login;
-                    SmtpClient client;
-                    MailMessage msg;
-
-                    login = new NetworkCredential(textBox_email.Text, textBox_senha.Text);
-                    client = new SmtpClient(SMTP);
-                    client.Port = Convert.ToInt32(porta);
-                    client.EnableSsl = true;
-                    client.Credentials = login;
-
-                    CS_DataGridEmailSenderPagamentosParaReceber consultandoEmail = new CS_DataGridEmailSenderPagamentosParaReceber();
-                    consultandoEmail.ConsultadoEmailPorId(lbl_idResult.Text);
-
-                    msg = new MailMessage();
-                    msg.To.Add(new MailAddress(consultandoEmail.EMAIL));
-                    msg.From = new MailAddress(textBox_email.Text);
-                    msg.Body = textBox_escreverEmail.Text;
-
-                    if (textBox_anexo.Text != "")
-                    {
-                        msg.Attachments.Add(new Attachment(textBox_anexo.Text));
-                    }
-
-                    msg.BodyEncoding = Encoding.UTF8;
-                    msg.IsBodyHtml = false;
-                    msg.Priority = MailPriority.High;
-                    client.Send(msg);
-
-                        
-                    MessageBox.Show("Cobranças enviadas com sucesso");
-                    groupbox_inadimplentes.Visible = false;
-                    groupBox_Configurações.Visible = false;
-                    groupBox_ConfigureSuaMensagem.Visible = true;
-                        
+                    verificador.VerificaCamposTempoReal.Tick += VerificaCamposTempoReal_Tick;
+                    verificador.VerificaCamposTempoReal.Stop();
+                    textBox_anexo.Controls.Clear();
+                    MessageBox.Show("É necessário preencher os campos obrigatórios", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception erro)
+                else
                 {
-                    MessageBox.Show("Erro ao enviar emails: " + erro);
+                    try
+                    {
+                        verificador.VerificaCamposTempoReal.Stop();
+                        AtribuidorSMTPePorta(textBox_email);
+
+                        NetworkCredential login;
+                        SmtpClient client;
+                        MailMessage msg;
+
+                        login = new NetworkCredential(textBox_email.Text, textBox_senha.Text);
+                        client = new SmtpClient(SMTP);
+                        client.Port = Convert.ToInt32(porta);
+                        client.EnableSsl = true;
+                        client.Credentials = login;
+
+                        CS_DataGridEmailSenderPagamentosParaReceber consultandoEmail = new CS_DataGridEmailSenderPagamentosParaReceber();
+                        consultandoEmail.ConsultadoEmailPorId(lbl_idResult.Text);
+
+                        msg = new MailMessage();
+                        msg.To.Add(new MailAddress(consultandoEmail.EMAIL));
+                        msg.From = new MailAddress(textBox_email.Text);
+                        msg.Body = textBox_escreverEmail.Text;
+
+                        if (textBox_anexo.Text != "")
+                        {
+                            msg.Attachments.Add(new Attachment(textBox_anexo.Text));
+                        }
+
+                        msg.BodyEncoding = Encoding.UTF8;
+                        msg.IsBodyHtml = false;
+                        msg.Priority = MailPriority.High;
+                        client.Send(msg);
+
+
+                        MessageBox.Show("Cobranças enviadas com sucesso");
+                        groupbox_inadimplentes.Visible = false;
+                        groupBox_Configurações.Visible = false;
+                        groupBox_ConfigureSuaMensagem.Visible = true;
+
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show("Erro ao enviar emails: " + erro);
+                    }
                 }
             }
+        }   
+        private void VerificaCamposTempoReal_Tick(object sender, EventArgs e)
+        {
+            verificador.VerificaCamposPreenchidos(groupBox_ConfigureSuaMensagem);
         }
+
         int visualizadorCampoInadimplentes = 0;
         private void btn_porquinho_Click(object sender, EventArgs e)
         {
@@ -170,15 +192,6 @@ namespace RCFitness.UserControls
                 i++;
             }
         }
-        public string TratandoListaInadimplentes()
-        {
-            string destinatarios = "";
-            for (int i = 0; i < EMAILf.Count; i++)
-            {
-                destinatarios += ", " + "\"" + EMAILf[i].ToString() + "\"";
-            }
-            return destinatarios;
-        }
 
         public List<string> EMAILf = new List<string>();
         public List<string> NOMEf = new List<string>();
@@ -187,8 +200,18 @@ namespace RCFitness.UserControls
 
         private void btn_enviarCobranças_Click(object sender, EventArgs e)
         {
+            if(dataGridView_DadosPagamento.Rows.Count < 1)
+            {
+                MessageBox.Show("Não há nenhum aluno com mensalidades atrasadas. Parabéns");
+            }
+            else
+                enviarEmailsParaInadimplentes();
+        }
+
+        public async void enviarEmailsParaInadimplentes()
+        {
             DialogResult enviarCobrança = MessageBox.Show("Deseja enviar cobranças por email para essa lista de alunos inadimplentes?", "Confirme o envio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(enviarCobrança == DialogResult.Yes)
+            if (enviarCobrança == DialogResult.Yes)
             {
                 for (int i = 0; i < EMAILf.Count; i++)
                 {
@@ -218,7 +241,7 @@ namespace RCFitness.UserControls
                         msg.BodyEncoding = Encoding.UTF8;
                         msg.IsBodyHtml = false;
                         msg.Priority = MailPriority.High;
-                        client.Send(msg);
+                        await client.SendMailAsync(msg);
 
                         if (i == EMAILf.Count)
                         {
@@ -233,7 +256,6 @@ namespace RCFitness.UserControls
                         MessageBox.Show("Erro ao enviar emails: " + erro);
                     }
                 }
-                
             }
         }
         public void AtribuidorSMTPePorta(TextBox email)
@@ -250,7 +272,7 @@ namespace RCFitness.UserControls
             }
             else if (email.Text.Contains("gmail"))
             {
-                SMTP = "smtp.mail.yahoo.com";
+                SMTP = "smtp.gmail.com";
                 porta = "587";
             }
             else if (email.Text.Contains("yahoo"))
@@ -282,6 +304,25 @@ namespace RCFitness.UserControls
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 textBox_anexo.Text = openFileDialog1.FileName.ToString();
+            }
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            textBox_senha.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            textBox_senha.UseSystemPasswordChar = true;
+        }
+
+        private void btn_gerarPDF_Click(object sender, EventArgs e)
+        {
+            using (var image = new Bitmap(groupbox_inadimplentes.Width, groupbox_inadimplentes.Height))
+            {
+                groupbox_inadimplentes.DrawToBitmap(image, new Rectangle(0, 0, image.Width, image.Height));
+                image.Save(@"C:\Users\PICHAU\Desktop\" + "Alunos Inadimplentes" + ".png", ImageFormat.Png);
             }
         }
     }

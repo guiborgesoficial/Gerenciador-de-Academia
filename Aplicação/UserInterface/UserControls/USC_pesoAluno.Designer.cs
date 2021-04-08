@@ -38,12 +38,12 @@
             this.cmbbox_aluno = new System.Windows.Forms.ComboBox();
             this.lbl_aluno = new System.Windows.Forms.Label();
             this.lbl_peso = new System.Windows.Forms.Label();
-            this.txtbox_peso = new System.Windows.Forms.TextBox();
             this.lbl_imc = new System.Windows.Forms.Label();
             this.lbl_imcResultado = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_idResult = new System.Windows.Forms.Label();
             this.lbl_resultadoIMC = new System.Windows.Forms.Label();
+            this.msktbox_peso = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_voltar)).BeginInit();
@@ -155,14 +155,6 @@
             this.lbl_peso.TabIndex = 68;
             this.lbl_peso.Text = "PESO:";
             // 
-            // txtbox_peso
-            // 
-            this.txtbox_peso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_peso.Location = new System.Drawing.Point(197, 189);
-            this.txtbox_peso.Name = "txtbox_peso";
-            this.txtbox_peso.Size = new System.Drawing.Size(100, 20);
-            this.txtbox_peso.TabIndex = 1;
-            // 
             // lbl_imc
             // 
             this.lbl_imc.AutoSize = true;
@@ -218,16 +210,28 @@
             this.lbl_resultadoIMC.Text = "RESULTADO:";
             this.lbl_resultadoIMC.Visible = false;
             // 
+            // msktbox_peso
+            // 
+            this.msktbox_peso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.msktbox_peso.Location = new System.Drawing.Point(197, 189);
+            this.msktbox_peso.Name = "msktbox_peso";
+            this.msktbox_peso.Size = new System.Drawing.Size(121, 20);
+            this.msktbox_peso.TabIndex = 92;
+            this.msktbox_peso.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.msktbox_peso.ValidatingType = typeof(System.DateTime);
+            this.msktbox_peso.Click += new System.EventHandler(this.msktbox_peso_Click);
+            this.msktbox_peso.MouseLeave += new System.EventHandler(this.msktbox_peso_MouseLeave);
+            // 
             // USC_pesoAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.msktbox_peso);
             this.Controls.Add(this.lbl_resultadoIMC);
             this.Controls.Add(this.lbl_idResult);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.lbl_imcResultado);
             this.Controls.Add(this.lbl_imc);
-            this.Controls.Add(this.txtbox_peso);
             this.Controls.Add(this.lbl_peso);
             this.Controls.Add(this.cmbbox_aluno);
             this.Controls.Add(this.lbl_aluno);
@@ -258,12 +262,12 @@
         private BotãoDinamico.CustomBotãoImage btn_cadastrar;
         private System.Windows.Forms.Label lbl_aluno;
         private System.Windows.Forms.Label lbl_peso;
-        private System.Windows.Forms.TextBox txtbox_peso;
         private System.Windows.Forms.Label lbl_imc;
         private System.Windows.Forms.Label lbl_imcResultado;
         private System.Windows.Forms.Label lbl_resultadoIMC;
         public System.Windows.Forms.ComboBox cmbbox_aluno;
         public System.Windows.Forms.Label lbl_idResult;
         public System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.MaskedTextBox msktbox_peso;
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USC_emailSender));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictbox_novoAluno = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new BotãoDinamico.CustomBotãoImage();
@@ -41,9 +41,8 @@
             this.lbl_idResult = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
             this.groupBox_Configurações = new System.Windows.Forms.GroupBox();
-            this.checkBox_cobrançaEmail = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_salvar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox_senha = new System.Windows.Forms.TextBox();
             this.textBox_email = new System.Windows.Forms.TextBox();
             this.lbl_Email = new System.Windows.Forms.Label();
@@ -60,8 +59,8 @@
             this.bnt_config = new BotãoDinamico.CustomBotãoImage();
             this.btn_porquinho = new BotãoDinamico.CustomBotãoImage();
             this.groupbox_inadimplentes = new System.Windows.Forms.GroupBox();
-            this.btn_enviarCobranças = new System.Windows.Forms.Button();
             this.dataGridView_DadosPagamento = new System.Windows.Forms.DataGridView();
+            this.btn_enviarCobranças = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
@@ -155,6 +154,7 @@
             this.btn_gerarPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_gerarPDF.TabIndex = 72;
             this.btn_gerarPDF.TabStop = false;
+            this.btn_gerarPDF.Click += new System.EventHandler(this.btn_gerarPDF_Click);
             // 
             // lbl_idResult
             // 
@@ -180,9 +180,8 @@
             // 
             // groupBox_Configurações
             // 
-            this.groupBox_Configurações.Controls.Add(this.checkBox_cobrançaEmail);
-            this.groupBox_Configurações.Controls.Add(this.pictureBox2);
             this.groupBox_Configurações.Controls.Add(this.btn_salvar);
+            this.groupBox_Configurações.Controls.Add(this.pictureBox2);
             this.groupBox_Configurações.Controls.Add(this.textBox_senha);
             this.groupBox_Configurações.Controls.Add(this.textBox_email);
             this.groupBox_Configurações.Controls.Add(this.lbl_Email);
@@ -195,15 +194,16 @@
             this.groupBox_Configurações.TabStop = false;
             this.groupBox_Configurações.Text = "Configurações e Conta";
             // 
-            // checkBox_cobrançaEmail
+            // btn_salvar
             // 
-            this.checkBox_cobrançaEmail.AutoSize = true;
-            this.checkBox_cobrançaEmail.Location = new System.Drawing.Point(8, 71);
-            this.checkBox_cobrançaEmail.Name = "checkBox_cobrançaEmail";
-            this.checkBox_cobrançaEmail.Size = new System.Drawing.Size(388, 17);
-            this.checkBox_cobrançaEmail.TabIndex = 18;
-            this.checkBox_cobrançaEmail.Text = "Ativar avisos automáticos de mensalidades e cobranças de faturas por email.";
-            this.checkBox_cobrançaEmail.UseVisualStyleBackColor = true;
+            this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salvar.Location = new System.Drawing.Point(6, 73);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(252, 23);
+            this.btn_salvar.TabIndex = 5;
+            this.btn_salvar.Text = "SALVAR";
+            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // pictureBox2
             // 
@@ -215,17 +215,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
-            // 
-            // btn_salvar
-            // 
-            this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_salvar.Location = new System.Drawing.Point(6, 94);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(233, 23);
-            this.btn_salvar.TabIndex = 5;
-            this.btn_salvar.Text = "SALVAR";
-            this.btn_salvar.UseVisualStyleBackColor = true;
-            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
             // textBox_senha
             // 
@@ -233,6 +224,7 @@
             this.textBox_senha.Name = "textBox_senha";
             this.textBox_senha.Size = new System.Drawing.Size(191, 20);
             this.textBox_senha.TabIndex = 2;
+            this.textBox_senha.Text = "rcfitnesS";
             this.textBox_senha.UseSystemPasswordChar = true;
             // 
             // textBox_email
@@ -241,7 +233,7 @@
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(191, 20);
             this.textBox_email.TabIndex = 0;
-            this.textBox_email.Text = "DIGITE O SEU EMAIL";
+            this.textBox_email.Text = "appacademiatcc@outlook.com";
             // 
             // lbl_Email
             // 
@@ -385,25 +377,14 @@
             // 
             // groupbox_inadimplentes
             // 
-            this.groupbox_inadimplentes.Controls.Add(this.btn_enviarCobranças);
             this.groupbox_inadimplentes.Controls.Add(this.dataGridView_DadosPagamento);
+            this.groupbox_inadimplentes.Controls.Add(this.btn_enviarCobranças);
             this.groupbox_inadimplentes.Location = new System.Drawing.Point(79, 68);
             this.groupbox_inadimplentes.Name = "groupbox_inadimplentes";
             this.groupbox_inadimplentes.Size = new System.Drawing.Size(691, 323);
             this.groupbox_inadimplentes.TabIndex = 102;
             this.groupbox_inadimplentes.TabStop = false;
             this.groupbox_inadimplentes.Text = "Inadimplentes";
-            // 
-            // btn_enviarCobranças
-            // 
-            this.btn_enviarCobranças.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_enviarCobranças.Location = new System.Drawing.Point(12, 298);
-            this.btn_enviarCobranças.Name = "btn_enviarCobranças";
-            this.btn_enviarCobranças.Size = new System.Drawing.Size(174, 23);
-            this.btn_enviarCobranças.TabIndex = 92;
-            this.btn_enviarCobranças.Text = "ENVIAR COBRANÇAS";
-            this.btn_enviarCobranças.UseVisualStyleBackColor = true;
-            this.btn_enviarCobranças.Click += new System.EventHandler(this.btn_enviarCobranças_Click);
             // 
             // dataGridView_DadosPagamento
             // 
@@ -415,23 +396,23 @@
             this.dataGridView_DadosPagamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView_DadosPagamento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView_DadosPagamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_DadosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_DadosPagamento.EnableHeadersVisualStyles = false;
             this.dataGridView_DadosPagamento.Location = new System.Drawing.Point(12, 21);
             this.dataGridView_DadosPagamento.Name = "dataGridView_DadosPagamento";
@@ -440,6 +421,17 @@
             this.dataGridView_DadosPagamento.RowHeadersVisible = false;
             this.dataGridView_DadosPagamento.Size = new System.Drawing.Size(679, 271);
             this.dataGridView_DadosPagamento.TabIndex = 91;
+            // 
+            // btn_enviarCobranças
+            // 
+            this.btn_enviarCobranças.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enviarCobranças.Location = new System.Drawing.Point(12, 298);
+            this.btn_enviarCobranças.Name = "btn_enviarCobranças";
+            this.btn_enviarCobranças.Size = new System.Drawing.Size(174, 23);
+            this.btn_enviarCobranças.TabIndex = 92;
+            this.btn_enviarCobranças.Text = "ENVIAR COBRANÇAS";
+            this.btn_enviarCobranças.UseVisualStyleBackColor = true;
+            this.btn_enviarCobranças.Click += new System.EventHandler(this.btn_enviarCobranças_Click);
             // 
             // openFileDialog1
             // 
@@ -457,9 +449,9 @@
             this.Controls.Add(this.cmbbox_aluno);
             this.Controls.Add(this.lbl_aluno);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupbox_inadimplentes);
-            this.Controls.Add(this.groupBox_Configurações);
             this.Controls.Add(this.groupBox_ConfigureSuaMensagem);
+            this.Controls.Add(this.groupBox_Configurações);
+            this.Controls.Add(this.groupbox_inadimplentes);
             this.Name = "USC_emailSender";
             this.Size = new System.Drawing.Size(805, 453);
             this.Load += new System.EventHandler(this.USC_emailSender_Load);
@@ -510,7 +502,6 @@
         private System.Windows.Forms.Label lbl_assunto;
         private BotãoDinamico.CustomBotãoImage bnt_config;
         private System.Windows.Forms.Button btn_enviar;
-        private System.Windows.Forms.CheckBox checkBox_cobrançaEmail;
         private BotãoDinamico.CustomBotãoImage btn_porquinho;
         private System.Windows.Forms.GroupBox groupbox_inadimplentes;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
