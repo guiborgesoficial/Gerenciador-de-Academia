@@ -23,6 +23,7 @@ namespace Business.SqlComandos.Consultar
         public string E_MUSC { get; set; }
         public string E_DIA { get; set; }
         Conexão conectar = new Conexão();
+        public bool verificadorExisteDados = false; 
         public void ConsultandoFichaDeTreino(string ID)
         {   
             string strConsultar = "SELECT * FROM FichaDeTreino WHERE ID_NOVOALUNO = '" + int.Parse(ID) + "'";
@@ -34,20 +35,29 @@ namespace Business.SqlComandos.Consultar
                 objComando.ExecuteNonQuery();
 
                 SqlDataReader leitor = objComando.ExecuteReader();
-                while (leitor.Read())
+                if(leitor.HasRows)
                 {
-                    DT_COLETA = Convert.ToDateTime(leitor["DT_COLETA"]);
-                    A_MUSC = leitor["A_MUSC"].ToString();
-                    A_DIA = leitor["A_DIA"].ToString();
-                    B_MUSC = leitor["B_MUSC"].ToString();
-                    B_DIA = leitor["B_DIA"].ToString();
-                    C_MUSC = leitor["C_MUSC"].ToString();
-                    C_DIA = leitor["C_DIA"].ToString();
-                    D_MUSC = leitor["D_MUSC"].ToString();
-                    D_DIA = leitor["D_DIA"].ToString();
-                    E_MUSC = leitor["E_MUSC"].ToString();
-                    E_DIA = leitor["E_DIA"].ToString();
+                    verificadorExisteDados = true;
+                    while (leitor.Read())
+                    {
+                        DT_COLETA = Convert.ToDateTime(leitor["DT_COLETA"]);
+                        A_MUSC = leitor["A_MUSC"].ToString();
+                        A_DIA = leitor["A_DIA"].ToString();
+                        B_MUSC = leitor["B_MUSC"].ToString();
+                        B_DIA = leitor["B_DIA"].ToString();
+                        C_MUSC = leitor["C_MUSC"].ToString();
+                        C_DIA = leitor["C_DIA"].ToString();
+                        D_MUSC = leitor["D_MUSC"].ToString();
+                        D_DIA = leitor["D_DIA"].ToString();
+                        E_MUSC = leitor["E_MUSC"].ToString();
+                        E_DIA = leitor["E_DIA"].ToString();
+                    }
                 }
+                else
+                {
+                    verificadorExisteDados = false;
+                }
+                
             }
             catch (Exception erro)
             {

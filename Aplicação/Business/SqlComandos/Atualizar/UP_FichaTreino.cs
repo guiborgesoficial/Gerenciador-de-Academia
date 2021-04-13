@@ -32,7 +32,7 @@ namespace Business.SqlComandos.Atualizar
                 objComando.Parameters.Add(new SqlParameter("@E_DIA", E_DIA));
                 objComando.Parameters.Add(new SqlParameter("@IDNOVOALUNO", id));
                 objComando.ExecuteNonQuery();
-                MessageBox.Show("Atualizado com sucesso!");
+                MessageBox.Show("Atualizado com sucesso", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception erro)

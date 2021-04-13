@@ -1,17 +1,10 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Imaging;
-using Business.SqlComandos.Consultar;
+﻿using Business.SqlComandos.Atualizar;
 using Business.SqlComandos.Cadastrar;
-using Business.SqlComandos.Atualizar;
+using Business.SqlComandos.Consultar;
+using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Windows.Forms;
 using UserInterface;
 
 namespace RCFitness.UserControls
@@ -71,25 +64,36 @@ namespace RCFitness.UserControls
 
             if(verificador.verificadorDeCamposPreenchidos == 23)
             {
-                verificador.VerificaCamposTempoReal.Stop();
-                CD_MedidasAluno cadastrarMedidas = new CD_MedidasAluno();
-                cadastrarMedidas.InserindoMedidasAluno(int.Parse(lbl_idResult.Text), txtbox_altura.Text, txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
-                DialogResult msg = MessageBox.Show("Deseja cadastrar o peso desse aluno?", "CADASTRE O PESO DO ALUNO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if(msg == DialogResult.Yes)
+                verificador.VerificarCamposNuméricos(pnl_print);
+
+                if(verificador.verificadorQtdInputsNumericosValidados == 23)
                 {
-                    this.Visible = false;
-                    USC_pesoAluno TelaPeso = new USC_pesoAluno();
-                    this.Parent.Controls.Add(TelaPeso);
-                    TelaPeso.lbl_idResult.Text = lbl_idResult.Text;
-                    TelaPeso.lbl_idResult.Visible = true;
-                    TelaPeso.cmbbox_aluno.Text = cmbbox_aluno.Text.ToUpper();
-                    TelaPeso.Visible = true;
-                    TelaPeso.lbl_id.Visible = true;
+                    verificador.VerificaCamposTempoReal.Stop();
+                    verificador.VerificaCamposNuméricosTempoReal.Stop();
+                    CD_MedidasAluno cadastrarMedidas = new CD_MedidasAluno();
+                    cadastrarMedidas.InserindoMedidasAluno(int.Parse(lbl_idResult.Text), txtbox_altura.Text, txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
+                    DialogResult msg = MessageBox.Show("Deseja cadastrar o peso desse aluno?", "CADASTRE O PESO DO ALUNO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (msg == DialogResult.Yes)
+                    {
+                        this.Visible = false;
+                        USC_pesoAluno TelaPeso = new USC_pesoAluno();
+                        this.Parent.Controls.Add(TelaPeso);
+                        TelaPeso.lbl_idResult.Text = lbl_idResult.Text;
+                        TelaPeso.lbl_idResult.Visible = true;
+                        TelaPeso.cmbbox_aluno.Text = cmbbox_aluno.Text.ToUpper();
+                        TelaPeso.Visible = true;
+                        TelaPeso.lbl_id.Visible = true;
+                    }
+                }
+                else
+                {
+                    verificador.VerificaCamposNuméricosTempoReal.Tick += VerificaCamposNuméricosTempoReal_Tick;
+                    MessageBox.Show("Esses campos são numéricos", "Preencha com números", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                verificador.VerificaCamposTempoReal.Start();
+                verificador.VerificaCamposTempoReal.Tick += VerificaCamposTempoReal_Tick;
                 MessageBox.Show("O preenchimento dos campos é obrigatório!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -97,6 +101,10 @@ namespace RCFitness.UserControls
         private void VerificaCamposTempoReal_Tick(object sender, EventArgs e)
         {
             verificador.VerificaCamposPreenchidos(pnl_print);
+        }
+        private void VerificaCamposNuméricosTempoReal_Tick(object sender, EventArgs e)
+        {
+            verificador.VerificarCamposNuméricos(pnl_print);
         }
 
         private void btn_atualizar_Click(object sender, EventArgs e)
@@ -209,6 +217,6 @@ namespace RCFitness.UserControls
             txtbox_punho.Text = "";
             lbl_coleta.Visible = false;
             lbl_coletaResult.Visible = false;
-        }
+        }        
     }
 }

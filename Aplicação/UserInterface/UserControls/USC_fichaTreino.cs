@@ -512,314 +512,321 @@ namespace RCFitness.UserControls
             CS_FichaDeTreino novo = new CS_FichaDeTreino();
             novo.ConsultandoFichaDeTreino(lbl_idResult.Text);
             
+            
             //A_MUSC
+            if(novo.verificadorExisteDados)
+            {
+                if (novo.A_MUSC.Contains("PEITO"))
+                {
+                    chckbox_aMusculo.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.A_MUSC.Contains("OMBROS"))
+                {
+                    chckbox_aMusculo.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.A_MUSC.Contains("BÍCEPS"))
+                {
+                    chckbox_aMusculo.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.A_MUSC.Contains("TRÍCEPS"))
+                {
+                    chckbox_aMusculo.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.A_MUSC.Contains("ANTEBRAÇO"))
+                {
+                    chckbox_aMusculo.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.A_MUSC.Contains("COSTAS"))
+                {
+                    chckbox_aMusculo.SetItemCheckState(5, CheckState.Checked);
+                }
+                if (novo.A_MUSC.Contains("ABDÔMEN"))
+                {
+                    chckbox_aMusculo.SetItemCheckState(6, CheckState.Checked);
+                }
+                if (novo.A_MUSC.Contains("MEBROS INFER."))
+                {
+                    chckbox_aMusculo.SetItemCheckState(7, CheckState.Checked);
+                }
 
-            if (novo.A_MUSC.Contains("PEITO"))
-            {
-                chckbox_aMusculo.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.A_MUSC.Contains("OMBROS"))
-            {
-                chckbox_aMusculo.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.A_MUSC.Contains("BÍCEPS"))
-            {
-                chckbox_aMusculo.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.A_MUSC.Contains("TRÍCEPS"))
-            {
-                chckbox_aMusculo.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.A_MUSC.Contains("ANTEBRAÇO"))
-            {
-                chckbox_aMusculo.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.A_MUSC.Contains("COSTAS"))
-            {
-                chckbox_aMusculo.SetItemCheckState(5, CheckState.Checked);
-            }
-            if (novo.A_MUSC.Contains("ABDÔMEN"))
-            {
-                chckbox_aMusculo.SetItemCheckState(6, CheckState.Checked);
-            }
-            if (novo.A_MUSC.Contains("MEBROS INFER."))
-            {
-                chckbox_aMusculo.SetItemCheckState(7, CheckState.Checked);
-            }
-            
-            //A_DIA
+                //A_DIA
 
-            if(novo.A_DIA.Contains("SEGUNDA-FEIRA"))
-            {
-                chckbox_aDias.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.A_DIA.Contains("TERÇA-FEIRA"))
-            {
-                chckbox_aDias.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.A_DIA.Contains("QUARTA-FEIRA"))
-            {
-                chckbox_aDias.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.A_DIA.Contains("QUINTA-FEIRA"))
-            {
-                chckbox_aDias.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.A_DIA.Contains("SEXTA-FEIRA"))
-            {
-                chckbox_aDias.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.A_DIA.Contains("SÁBADO"))
-            {
-                chckbox_aDias.SetItemCheckState(5, CheckState.Checked);
-            }
+                if (novo.A_DIA.Contains("SEGUNDA-FEIRA"))
+                {
+                    chckbox_aDias.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.A_DIA.Contains("TERÇA-FEIRA"))
+                {
+                    chckbox_aDias.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.A_DIA.Contains("QUARTA-FEIRA"))
+                {
+                    chckbox_aDias.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.A_DIA.Contains("QUINTA-FEIRA"))
+                {
+                    chckbox_aDias.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.A_DIA.Contains("SEXTA-FEIRA"))
+                {
+                    chckbox_aDias.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.A_DIA.Contains("SÁBADO"))
+                {
+                    chckbox_aDias.SetItemCheckState(5, CheckState.Checked);
+                }
 
-            //B_MUSC
+                //B_MUSC
 
-            if (novo.B_MUSC.Contains("PEITO"))
-            {
-                chckbox_bMusculo.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.B_MUSC.Contains("OMBROS"))
-            {
-                chckbox_bMusculo.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.B_MUSC.Contains("BÍCEPS"))
-            {
-                chckbox_bMusculo.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.B_MUSC.Contains("TRÍCEPS"))
-            {
-                chckbox_bMusculo.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.B_MUSC.Contains("ANTEBRAÇO"))
-            {
-                chckbox_bMusculo.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.B_MUSC.Contains("COSTAS"))
-            {
-                chckbox_bMusculo.SetItemCheckState(5, CheckState.Checked);
-            }
-            if (novo.B_MUSC.Contains("ABDÔMEN"))
-            {
-                chckbox_bMusculo.SetItemCheckState(6, CheckState.Checked);
-            }
-            if (novo.B_MUSC.Contains("MEBROS INFER."))
-            {
-                chckbox_bMusculo.SetItemCheckState(7, CheckState.Checked);
-            }
-            
-            //B_DIA
+                if (novo.B_MUSC.Contains("PEITO"))
+                {
+                    chckbox_bMusculo.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.B_MUSC.Contains("OMBROS"))
+                {
+                    chckbox_bMusculo.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.B_MUSC.Contains("BÍCEPS"))
+                {
+                    chckbox_bMusculo.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.B_MUSC.Contains("TRÍCEPS"))
+                {
+                    chckbox_bMusculo.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.B_MUSC.Contains("ANTEBRAÇO"))
+                {
+                    chckbox_bMusculo.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.B_MUSC.Contains("COSTAS"))
+                {
+                    chckbox_bMusculo.SetItemCheckState(5, CheckState.Checked);
+                }
+                if (novo.B_MUSC.Contains("ABDÔMEN"))
+                {
+                    chckbox_bMusculo.SetItemCheckState(6, CheckState.Checked);
+                }
+                if (novo.B_MUSC.Contains("MEBROS INFER."))
+                {
+                    chckbox_bMusculo.SetItemCheckState(7, CheckState.Checked);
+                }
 
-            if (novo.B_DIA.Contains("SEGUNDA-FEIRA"))
-            {
-                chckbox_bDias.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.B_DIA.Contains("TERÇA-FEIRA"))
-            {
-                chckbox_bDias.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.B_DIA.Contains("QUARTA-FEIRA"))
-            {
-                chckbox_bDias.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.B_DIA.Contains("QUINTA-FEIRA"))
-            {
-                chckbox_bDias.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.B_DIA.Contains("SEXTA-FEIRA"))
-            {
-                chckbox_bDias.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.B_DIA.Contains("SÁBADO"))
-            {
-                chckbox_bDias.SetItemCheckState(5, CheckState.Checked);
-            }
+                //B_DIA
 
-            //C_MUSC
+                if (novo.B_DIA.Contains("SEGUNDA-FEIRA"))
+                {
+                    chckbox_bDias.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.B_DIA.Contains("TERÇA-FEIRA"))
+                {
+                    chckbox_bDias.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.B_DIA.Contains("QUARTA-FEIRA"))
+                {
+                    chckbox_bDias.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.B_DIA.Contains("QUINTA-FEIRA"))
+                {
+                    chckbox_bDias.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.B_DIA.Contains("SEXTA-FEIRA"))
+                {
+                    chckbox_bDias.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.B_DIA.Contains("SÁBADO"))
+                {
+                    chckbox_bDias.SetItemCheckState(5, CheckState.Checked);
+                }
 
-            if (novo.C_MUSC.Contains("PEITO"))
-            {
-                chckbox_cMusculo.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.C_MUSC.Contains("OMBROS"))
-            {
-                chckbox_cMusculo.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.C_MUSC.Contains("BÍCEPS"))
-            {
-                chckbox_cMusculo.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.C_MUSC.Contains("TRÍCEPS"))
-            {
-                chckbox_cMusculo.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.C_MUSC.Contains("ANTEBRAÇO"))
-            {
-                chckbox_cMusculo.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.C_MUSC.Contains("COSTAS"))
-            {
-                chckbox_cMusculo.SetItemCheckState(5, CheckState.Checked);
-            }
-            if (novo.C_MUSC.Contains("ABDÔMEN"))
-            {
-                chckbox_cMusculo.SetItemCheckState(6, CheckState.Checked);
-            }
-            if (novo.C_MUSC.Contains("MEBROS INFER."))
-            {
-                chckbox_cMusculo.SetItemCheckState(7, CheckState.Checked);
-            }
-            
-            //B_DIA
+                //C_MUSC
 
-            if (novo.C_DIA.Contains("SEGUNDA-FEIRA"))
-            {
-                chckbox_cDias.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.C_DIA.Contains("TERÇA-FEIRA"))
-            {
-                chckbox_cDias.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.C_DIA.Contains("QUARTA-FEIRA"))
-            {
-                chckbox_cDias.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.C_DIA.Contains("QUINTA-FEIRA"))
-            {
-                chckbox_cDias.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.C_DIA.Contains("SEXTA-FEIRA"))
-            {
-                chckbox_cDias.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.C_DIA.Contains("SÁBADO"))
-            {
-                chckbox_cDias.SetItemCheckState(5, CheckState.Checked);
-            }
+                if (novo.C_MUSC.Contains("PEITO"))
+                {
+                    chckbox_cMusculo.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.C_MUSC.Contains("OMBROS"))
+                {
+                    chckbox_cMusculo.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.C_MUSC.Contains("BÍCEPS"))
+                {
+                    chckbox_cMusculo.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.C_MUSC.Contains("TRÍCEPS"))
+                {
+                    chckbox_cMusculo.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.C_MUSC.Contains("ANTEBRAÇO"))
+                {
+                    chckbox_cMusculo.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.C_MUSC.Contains("COSTAS"))
+                {
+                    chckbox_cMusculo.SetItemCheckState(5, CheckState.Checked);
+                }
+                if (novo.C_MUSC.Contains("ABDÔMEN"))
+                {
+                    chckbox_cMusculo.SetItemCheckState(6, CheckState.Checked);
+                }
+                if (novo.C_MUSC.Contains("MEBROS INFER."))
+                {
+                    chckbox_cMusculo.SetItemCheckState(7, CheckState.Checked);
+                }
 
-            //D_MUSC
+                //B_DIA
 
-            if (novo.D_MUSC.Contains("PEITO"))
-            {
-                chckbox_dMusculo.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.D_MUSC.Contains("OMBROS"))
-            {
-                chckbox_dMusculo.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.D_MUSC.Contains("BÍCEPS"))
-            {
-                chckbox_dMusculo.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.D_MUSC.Contains("TRÍCEPS"))
-            {
-                chckbox_dMusculo.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.D_MUSC.Contains("ANTEBRAÇO"))
-            {
-                chckbox_dMusculo.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.D_MUSC.Contains("COSTAS"))
-            {
-                chckbox_dMusculo.SetItemCheckState(5, CheckState.Checked);
-            }
-            if (novo.D_MUSC.Contains("ABDÔMEN"))
-            {
-                chckbox_dMusculo.SetItemCheckState(6, CheckState.Checked);
-            }
-            if (novo.D_MUSC.Contains("MEBROS INFER."))
-            {
-                chckbox_dMusculo.SetItemCheckState(7, CheckState.Checked);
-            }
-      
-            //D_DIA
+                if (novo.C_DIA.Contains("SEGUNDA-FEIRA"))
+                {
+                    chckbox_cDias.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.C_DIA.Contains("TERÇA-FEIRA"))
+                {
+                    chckbox_cDias.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.C_DIA.Contains("QUARTA-FEIRA"))
+                {
+                    chckbox_cDias.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.C_DIA.Contains("QUINTA-FEIRA"))
+                {
+                    chckbox_cDias.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.C_DIA.Contains("SEXTA-FEIRA"))
+                {
+                    chckbox_cDias.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.C_DIA.Contains("SÁBADO"))
+                {
+                    chckbox_cDias.SetItemCheckState(5, CheckState.Checked);
+                }
 
-            if (novo.D_DIA.Contains("SEGUNDA-FEIRA"))
-            {
-                chckbox_dDias.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.D_DIA.Contains("TERÇA-FEIRA"))
-            {
-                chckbox_dDias.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.D_DIA.Contains("QUARTA-FEIRA"))
-            {
-                chckbox_dDias.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.D_DIA.Contains("QUINTA-FEIRA"))
-            {
-                chckbox_dDias.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.D_DIA.Contains("SEXTA-FEIRA"))
-            {
-                chckbox_dDias.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.D_DIA.Contains("SÁBADO"))
-            {
-                chckbox_dDias.SetItemCheckState(5, CheckState.Checked);
-            }
+                //D_MUSC
 
-            //E_MUSC
+                if (novo.D_MUSC.Contains("PEITO"))
+                {
+                    chckbox_dMusculo.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.D_MUSC.Contains("OMBROS"))
+                {
+                    chckbox_dMusculo.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.D_MUSC.Contains("BÍCEPS"))
+                {
+                    chckbox_dMusculo.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.D_MUSC.Contains("TRÍCEPS"))
+                {
+                    chckbox_dMusculo.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.D_MUSC.Contains("ANTEBRAÇO"))
+                {
+                    chckbox_dMusculo.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.D_MUSC.Contains("COSTAS"))
+                {
+                    chckbox_dMusculo.SetItemCheckState(5, CheckState.Checked);
+                }
+                if (novo.D_MUSC.Contains("ABDÔMEN"))
+                {
+                    chckbox_dMusculo.SetItemCheckState(6, CheckState.Checked);
+                }
+                if (novo.D_MUSC.Contains("MEBROS INFER."))
+                {
+                    chckbox_dMusculo.SetItemCheckState(7, CheckState.Checked);
+                }
 
-            if (novo.E_MUSC.Contains("PEITO"))
-            {
-                chckbox_eMusculo.SetItemCheckState(0, CheckState.Checked);
-            }
-            if (novo.E_MUSC.Contains("OMBROS"))
-            {
-                chckbox_eMusculo.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.E_MUSC.Contains("BÍCEPS"))
-            {
-                chckbox_eMusculo.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.E_MUSC.Contains("TRÍCEPS"))
-            {
-                chckbox_eMusculo.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.E_MUSC.Contains("ANTEBRAÇO"))
-            {
-                chckbox_eMusculo.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.E_MUSC.Contains("COSTAS"))
-            {
-                chckbox_eMusculo.SetItemCheckState(5, CheckState.Checked);
-            }
-            if (novo.E_MUSC.Contains("ABDÔMEN"))
-            {
-                chckbox_eMusculo.SetItemCheckState(6, CheckState.Checked);
-            }
-            if (novo.E_MUSC.Contains("MEBROS INFER."))
-            {
-                chckbox_eMusculo.SetItemCheckState(7, CheckState.Checked);
-            }
-        
-            //E_DIA
+                //D_DIA
 
-            if (novo.E_DIA.Contains("SEGUNDA-FEIRA"))
-            {
-                chckbox_eDias.SetItemCheckState(0, CheckState.Checked);
+                if (novo.D_DIA.Contains("SEGUNDA-FEIRA"))
+                {
+                    chckbox_dDias.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.D_DIA.Contains("TERÇA-FEIRA"))
+                {
+                    chckbox_dDias.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.D_DIA.Contains("QUARTA-FEIRA"))
+                {
+                    chckbox_dDias.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.D_DIA.Contains("QUINTA-FEIRA"))
+                {
+                    chckbox_dDias.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.D_DIA.Contains("SEXTA-FEIRA"))
+                {
+                    chckbox_dDias.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.D_DIA.Contains("SÁBADO"))
+                {
+                    chckbox_dDias.SetItemCheckState(5, CheckState.Checked);
+                }
+
+                //E_MUSC
+
+                if (novo.E_MUSC.Contains("PEITO"))
+                {
+                    chckbox_eMusculo.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.E_MUSC.Contains("OMBROS"))
+                {
+                    chckbox_eMusculo.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.E_MUSC.Contains("BÍCEPS"))
+                {
+                    chckbox_eMusculo.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.E_MUSC.Contains("TRÍCEPS"))
+                {
+                    chckbox_eMusculo.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.E_MUSC.Contains("ANTEBRAÇO"))
+                {
+                    chckbox_eMusculo.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.E_MUSC.Contains("COSTAS"))
+                {
+                    chckbox_eMusculo.SetItemCheckState(5, CheckState.Checked);
+                }
+                if (novo.E_MUSC.Contains("ABDÔMEN"))
+                {
+                    chckbox_eMusculo.SetItemCheckState(6, CheckState.Checked);
+                }
+                if (novo.E_MUSC.Contains("MEBROS INFER."))
+                {
+                    chckbox_eMusculo.SetItemCheckState(7, CheckState.Checked);
+                }
+
+                //E_DIA
+
+                if (novo.E_DIA.Contains("SEGUNDA-FEIRA"))
+                {
+                    chckbox_eDias.SetItemCheckState(0, CheckState.Checked);
+                }
+                if (novo.E_DIA.Contains("TERÇA-FEIRA"))
+                {
+                    chckbox_eDias.SetItemCheckState(1, CheckState.Checked);
+                }
+                if (novo.E_DIA.Contains("QUARTA-FEIRA"))
+                {
+                    chckbox_eDias.SetItemCheckState(2, CheckState.Checked);
+                }
+                if (novo.E_DIA.Contains("QUINTA-FEIRA"))
+                {
+                    chckbox_eDias.SetItemCheckState(3, CheckState.Checked);
+                }
+                if (novo.E_DIA.Contains("SEXTA-FEIRA"))
+                {
+                    chckbox_eDias.SetItemCheckState(4, CheckState.Checked);
+                }
+                if (novo.E_DIA.Contains("SÁBADO"))
+                {
+                    chckbox_eDias.SetItemCheckState(5, CheckState.Checked);
+                }
             }
-            if (novo.E_DIA.Contains("TERÇA-FEIRA"))
+            else
             {
-                chckbox_eDias.SetItemCheckState(1, CheckState.Checked);
-            }
-            if (novo.E_DIA.Contains("QUARTA-FEIRA"))
-            {
-                chckbox_eDias.SetItemCheckState(2, CheckState.Checked);
-            }
-            if (novo.E_DIA.Contains("QUINTA-FEIRA"))
-            {
-                chckbox_eDias.SetItemCheckState(3, CheckState.Checked);
-            }
-            if (novo.E_DIA.Contains("SEXTA-FEIRA"))
-            {
-                chckbox_eDias.SetItemCheckState(4, CheckState.Checked);
-            }
-            if (novo.E_DIA.Contains("SÁBADO"))
-            {
-                chckbox_eDias.SetItemCheckState(5, CheckState.Checked);
+                MessageBox.Show("Não há nenhuma ficha de treino cadastrada para esse aluno", "Sem Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -835,8 +842,15 @@ namespace RCFitness.UserControls
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             Concatenar();
-            UP_FichaTreino atualizar = new UP_FichaTreino();
-            atualizar.AtualizarFichaTreino(aM, aD, bM, bD, cM, cD, dM, dD, eM, eD, lbl_idResult.Text);
+            if(lbl_idResult.Text != string.Empty || lbl_idResult.Text != "ID:")
+            {
+                UP_FichaTreino atualizar = new UP_FichaTreino();
+                atualizar.AtualizarFichaTreino(aM, aD, bM, bD, cM, cD, dM, dD, eM, eD, lbl_idResult.Text);
+            }
+            else
+            {
+                MessageBox.Show("Realize uma consulta antes de atualizar uma ficha de treino.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
