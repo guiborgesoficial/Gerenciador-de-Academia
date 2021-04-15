@@ -39,6 +39,7 @@ namespace RCFitness.UserControls
                 LimpaCheckBox();
                 lbl_id.Visible = false;
                 lbl_idResult.Visible = false;
+                lbl_idResult.Text = "0";
             }
             else
             {
@@ -842,7 +843,7 @@ namespace RCFitness.UserControls
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             Concatenar();
-            if(lbl_idResult.Text != string.Empty || lbl_idResult.Text != "ID:")
+            if(lbl_idResult.Text != "0" && lbl_idResult.Text != "ID:")
             {
                 UP_FichaTreino atualizar = new UP_FichaTreino();
                 atualizar.AtualizarFichaTreino(aM, aD, bM, bD, cM, cD, dM, dD, eM, eD, lbl_idResult.Text);

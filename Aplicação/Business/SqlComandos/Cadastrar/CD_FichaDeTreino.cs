@@ -37,7 +37,14 @@ namespace Business.SqlComandos.Cadastrar
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao cadastrar - Business/SqlComandos/Cadastrar/CD_FichaDeTreino - InserindoFichaDeTreino()" + erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(erro.Message.Contains("UNIQUE"))
+                {
+                    MessageBox.Show("Esse aluno já tem um treino cadastrado. Para alterar o treino desse aluno você deve realizar uma consulta e atualizá-la.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar - Business/SqlComandos/Cadastrar/CD_FichaDeTreino - InserindoFichaDeTreino()" + erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             finally
             {
