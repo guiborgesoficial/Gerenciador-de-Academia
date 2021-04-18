@@ -81,6 +81,9 @@ namespace RCFitness.UserControls
             DialogResult confirmar = MessageBox.Show("Deseja confirmar as alterações?", "Salvar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(confirmar == DialogResult.Yes)
             {
+                UserInterface.Properties.Settings.Default.Email = textBox_email.Text;
+                UserInterface.Properties.Settings.Default.Senha= textBox_senha.Text;
+                UserInterface.Properties.Settings.Default.Save();
                 groupBox_Configurações.Visible = false;
                 visualizarCampoConfigurações = 0;
             }
@@ -105,6 +108,8 @@ namespace RCFitness.UserControls
                 {
                     try
                     {
+                        textBox_anexo.Controls.Clear();
+
                         verificador.VerificaCamposTempoReal.Stop();
                         AtribuidorSMTPePorta(textBox_email);
 
@@ -323,6 +328,134 @@ namespace RCFitness.UserControls
             {
                 groupbox_inadimplentes.DrawToBitmap(image, new Rectangle(0, 0, image.Width, image.Height));
                 image.Save(@"C:\Users\PICHAU\Desktop\" + "Alunos Inadimplentes" + ".png", ImageFormat.Png);
+            }
+        }
+
+        private void btn_msgPersonalizada1_Click(object sender, EventArgs e)
+        {
+            lbl_numeroMsgPersonalizada.Text = "1";
+            lbl_numeroMsgPersonalizada.Visible = true;
+
+            if(UserInterface.Properties.Settings.Default.btn_msgPersonalizada1.Length > 1)
+            {
+                textBox_assunto.Text = UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado1;
+                textBox_escreverEmail.Text = UserInterface.Properties.Settings.Default.btn_msgPersonalizada1;
+            }
+            else
+            {
+                textBox_assunto.Text = string.Empty;
+                textBox_escreverEmail.Text = string.Empty;
+                MessageBox.Show("Ainda não há nenhuma mensagem personalizada no preset 1", "Personalize uma mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+        }
+
+        private void btn_msgPersonalizada2_Click(object sender, EventArgs e)
+        {
+            lbl_numeroMsgPersonalizada.Text = "2";
+            lbl_numeroMsgPersonalizada.Visible = true;
+
+            if (UserInterface.Properties.Settings.Default.btn_msgPersonalizada2.Length > 1)
+            {
+                textBox_assunto.Text = UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado2;
+                textBox_escreverEmail.Text = UserInterface.Properties.Settings.Default.btn_msgPersonalizada2;
+            }
+            else
+            {
+                textBox_assunto.Text = string.Empty;
+                textBox_escreverEmail.Text = string.Empty;
+                MessageBox.Show("Ainda não há nenhuma mensagem personalizada no preset 2", "Personalize uma mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btn_msgPersonalizada3_Click(object sender, EventArgs e)
+        {
+            lbl_numeroMsgPersonalizada.Text = "3";
+            lbl_numeroMsgPersonalizada.Visible = true;
+
+            if (UserInterface.Properties.Settings.Default.btn_msgPersonalizada3.Length > 1)
+            {
+                textBox_assunto.Text = UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado3;
+                textBox_escreverEmail.Text = UserInterface.Properties.Settings.Default.btn_msgPersonalizada3;
+            }
+            else
+            {
+                textBox_assunto.Text = string.Empty;
+                textBox_escreverEmail.Text = string.Empty;
+                MessageBox.Show("Ainda não há nenhuma mensagem personalizada no preset 3", "Personalize uma mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btn_msgPersonalizada4_Click(object sender, EventArgs e)
+        {
+            lbl_numeroMsgPersonalizada.Text = "4";
+            lbl_numeroMsgPersonalizada.Visible = true;
+
+            if (UserInterface.Properties.Settings.Default.btn_msgPersonalizada4.Length > 1)
+            {
+                textBox_assunto.Text = UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado4;
+                textBox_escreverEmail.Text = UserInterface.Properties.Settings.Default.btn_msgPersonalizada4;
+            }
+            else
+            {
+                textBox_assunto.Text = string.Empty;
+                textBox_escreverEmail.Text = string.Empty;
+                MessageBox.Show("Ainda não há nenhuma mensagem personalizada no preset 4", "Personalize uma mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btn_salvarMsg_Click(object sender, EventArgs e)
+        {
+            switch(lbl_numeroMsgPersonalizada.Text)
+            {
+                case "1":
+                    if(textBox_assunto.Text.Length > 1 && textBox_escreverEmail.Text.Length > 1)
+                    {
+                        UserInterface.Properties.Settings.Default.btn_msgPersonalizada1 = textBox_escreverEmail.Text;
+                        UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado1 = textBox_assunto.Text;
+                        UserInterface.Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha os campos Assunto e Mensagem para salvar um preset personalizado", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    break;
+                case "2":
+                    if (textBox_assunto.Text.Length > 1 && textBox_escreverEmail.Text.Length > 1)
+                    {
+                        UserInterface.Properties.Settings.Default.btn_msgPersonalizada2 = textBox_escreverEmail.Text;
+                        UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado2 = textBox_assunto.Text;
+                        UserInterface.Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha os campos Assunto e Mensagem para salvar um preset personalizado", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    break;
+                case "3":
+                    if (textBox_assunto.Text.Length > 1 && textBox_escreverEmail.Text.Length > 1)
+                    {
+                        UserInterface.Properties.Settings.Default.btn_msgPersonalizada3 = textBox_escreverEmail.Text;
+                        UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado3 = textBox_assunto.Text;
+                        UserInterface.Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha os campos Assunto e Mensagem para salvar um preset personalizado", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    break;
+                case "4":
+                    if (textBox_assunto.Text.Length > 1 && textBox_escreverEmail.Text.Length > 1)
+                    {
+                        UserInterface.Properties.Settings.Default.btn_msgPersonalizada4 = textBox_escreverEmail.Text;
+                        UserInterface.Properties.Settings.Default.btn_assuntoPersonalizado4 = textBox_assunto.Text;
+                        UserInterface.Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha os campos Assunto e Mensagem para salvar um preset personalizado", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    break;
             }
         }
     }

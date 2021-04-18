@@ -1,16 +1,7 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Business.SqlComandos.Consultar;
+using System;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business.SqlComandos.Consultar;
-using System.Data.SqlTypes;
-using System.Globalization;
 
 namespace RCFitness.UserControls.Charts
 {

@@ -48,7 +48,6 @@
             this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_senha = new System.Windows.Forms.Label();
             this.groupBox_ConfigureSuaMensagem = new System.Windows.Forms.GroupBox();
-            this.btn_enviar = new System.Windows.Forms.Button();
             this.textBox_anexo = new System.Windows.Forms.TextBox();
             this.btn_anexoBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,10 +58,17 @@
             this.bnt_config = new BotãoDinamico.CustomBotãoImage();
             this.btn_porquinho = new BotãoDinamico.CustomBotãoImage();
             this.groupbox_inadimplentes = new System.Windows.Forms.GroupBox();
-            this.dataGridView_DadosPagamento = new System.Windows.Forms.DataGridView();
             this.btn_enviarCobranças = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dataGridView_DadosPagamento = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btn_msgPersonalizada1 = new BotãoDinamico.CustomBotãoImage();
+            this.btn_msgPersonalizada2 = new BotãoDinamico.CustomBotãoImage();
+            this.btn_msgPersonalizada3 = new BotãoDinamico.CustomBotãoImage();
+            this.btn_msgPersonalizada4 = new BotãoDinamico.CustomBotãoImage();
+            this.lbl_numeroMsgPersonalizada = new System.Windows.Forms.Label();
+            this.btn_salvarMsg = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_enviar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_voltar)).BeginInit();
@@ -75,6 +81,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_porquinho)).BeginInit();
             this.groupbox_inadimplentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -258,6 +268,13 @@
             // groupBox_ConfigureSuaMensagem
             // 
             this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_enviar);
+            this.groupBox_ConfigureSuaMensagem.Controls.Add(this.label1);
+            this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_salvarMsg);
+            this.groupBox_ConfigureSuaMensagem.Controls.Add(this.lbl_numeroMsgPersonalizada);
+            this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_msgPersonalizada4);
+            this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_msgPersonalizada3);
+            this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_msgPersonalizada2);
+            this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_msgPersonalizada1);
             this.groupBox_ConfigureSuaMensagem.Controls.Add(this.textBox_anexo);
             this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_anexoBuscar);
             this.groupBox_ConfigureSuaMensagem.Controls.Add(this.label3);
@@ -272,17 +289,6 @@
             this.groupBox_ConfigureSuaMensagem.TabStop = false;
             this.groupBox_ConfigureSuaMensagem.Text = "Configure Sua Mensagem";
             // 
-            // btn_enviar
-            // 
-            this.btn_enviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_enviar.Location = new System.Drawing.Point(440, 169);
-            this.btn_enviar.Name = "btn_enviar";
-            this.btn_enviar.Size = new System.Drawing.Size(85, 23);
-            this.btn_enviar.TabIndex = 18;
-            this.btn_enviar.Text = "ENVIAR";
-            this.btn_enviar.UseVisualStyleBackColor = true;
-            this.btn_enviar.Click += new System.EventHandler(this.btn_enviar_Click);
-            // 
             // textBox_anexo
             // 
             this.textBox_anexo.Location = new System.Drawing.Point(186, 172);
@@ -293,7 +299,7 @@
             // btn_anexoBuscar
             // 
             this.btn_anexoBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_anexoBuscar.Location = new System.Drawing.Point(314, 169);
+            this.btn_anexoBuscar.Location = new System.Drawing.Point(314, 171);
             this.btn_anexoBuscar.Name = "btn_anexoBuscar";
             this.btn_anexoBuscar.Size = new System.Drawing.Size(89, 23);
             this.btn_anexoBuscar.TabIndex = 100;
@@ -377,14 +383,25 @@
             // 
             // groupbox_inadimplentes
             // 
-            this.groupbox_inadimplentes.Controls.Add(this.dataGridView_DadosPagamento);
             this.groupbox_inadimplentes.Controls.Add(this.btn_enviarCobranças);
+            this.groupbox_inadimplentes.Controls.Add(this.dataGridView_DadosPagamento);
             this.groupbox_inadimplentes.Location = new System.Drawing.Point(79, 68);
             this.groupbox_inadimplentes.Name = "groupbox_inadimplentes";
             this.groupbox_inadimplentes.Size = new System.Drawing.Size(691, 323);
             this.groupbox_inadimplentes.TabIndex = 102;
             this.groupbox_inadimplentes.TabStop = false;
             this.groupbox_inadimplentes.Text = "Inadimplentes";
+            // 
+            // btn_enviarCobranças
+            // 
+            this.btn_enviarCobranças.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enviarCobranças.Location = new System.Drawing.Point(12, 298);
+            this.btn_enviarCobranças.Name = "btn_enviarCobranças";
+            this.btn_enviarCobranças.Size = new System.Drawing.Size(174, 23);
+            this.btn_enviarCobranças.TabIndex = 92;
+            this.btn_enviarCobranças.Text = "ENVIAR COBRANÇAS";
+            this.btn_enviarCobranças.UseVisualStyleBackColor = true;
+            this.btn_enviarCobranças.Click += new System.EventHandler(this.btn_enviarCobranças_Click);
             // 
             // dataGridView_DadosPagamento
             // 
@@ -422,20 +439,107 @@
             this.dataGridView_DadosPagamento.Size = new System.Drawing.Size(679, 271);
             this.dataGridView_DadosPagamento.TabIndex = 91;
             // 
-            // btn_enviarCobranças
-            // 
-            this.btn_enviarCobranças.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_enviarCobranças.Location = new System.Drawing.Point(12, 298);
-            this.btn_enviarCobranças.Name = "btn_enviarCobranças";
-            this.btn_enviarCobranças.Size = new System.Drawing.Size(174, 23);
-            this.btn_enviarCobranças.TabIndex = 92;
-            this.btn_enviarCobranças.Text = "ENVIAR COBRANÇAS";
-            this.btn_enviarCobranças.UseVisualStyleBackColor = true;
-            this.btn_enviarCobranças.Click += new System.EventHandler(this.btn_enviarCobranças_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btn_msgPersonalizada1
+            // 
+            this.btn_msgPersonalizada1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_msgPersonalizada1.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada1.Image")));
+            this.btn_msgPersonalizada1.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada1.ImageHover")));
+            this.btn_msgPersonalizada1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada1.ImageNormal")));
+            this.btn_msgPersonalizada1.Location = new System.Drawing.Point(538, 19);
+            this.btn_msgPersonalizada1.Name = "btn_msgPersonalizada1";
+            this.btn_msgPersonalizada1.Size = new System.Drawing.Size(43, 39);
+            this.btn_msgPersonalizada1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_msgPersonalizada1.TabIndex = 102;
+            this.btn_msgPersonalizada1.TabStop = false;
+            this.btn_msgPersonalizada1.Click += new System.EventHandler(this.btn_msgPersonalizada1_Click);
+            // 
+            // btn_msgPersonalizada2
+            // 
+            this.btn_msgPersonalizada2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_msgPersonalizada2.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada2.Image")));
+            this.btn_msgPersonalizada2.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada2.ImageHover")));
+            this.btn_msgPersonalizada2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada2.ImageNormal")));
+            this.btn_msgPersonalizada2.Location = new System.Drawing.Point(538, 64);
+            this.btn_msgPersonalizada2.Name = "btn_msgPersonalizada2";
+            this.btn_msgPersonalizada2.Size = new System.Drawing.Size(43, 39);
+            this.btn_msgPersonalizada2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_msgPersonalizada2.TabIndex = 103;
+            this.btn_msgPersonalizada2.TabStop = false;
+            this.btn_msgPersonalizada2.Click += new System.EventHandler(this.btn_msgPersonalizada2_Click);
+            // 
+            // btn_msgPersonalizada3
+            // 
+            this.btn_msgPersonalizada3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_msgPersonalizada3.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada3.Image")));
+            this.btn_msgPersonalizada3.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada3.ImageHover")));
+            this.btn_msgPersonalizada3.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada3.ImageNormal")));
+            this.btn_msgPersonalizada3.Location = new System.Drawing.Point(538, 109);
+            this.btn_msgPersonalizada3.Name = "btn_msgPersonalizada3";
+            this.btn_msgPersonalizada3.Size = new System.Drawing.Size(43, 39);
+            this.btn_msgPersonalizada3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_msgPersonalizada3.TabIndex = 104;
+            this.btn_msgPersonalizada3.TabStop = false;
+            this.btn_msgPersonalizada3.Click += new System.EventHandler(this.btn_msgPersonalizada3_Click);
+            // 
+            // btn_msgPersonalizada4
+            // 
+            this.btn_msgPersonalizada4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_msgPersonalizada4.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada4.Image")));
+            this.btn_msgPersonalizada4.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada4.ImageHover")));
+            this.btn_msgPersonalizada4.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada4.ImageNormal")));
+            this.btn_msgPersonalizada4.Location = new System.Drawing.Point(538, 154);
+            this.btn_msgPersonalizada4.Name = "btn_msgPersonalizada4";
+            this.btn_msgPersonalizada4.Size = new System.Drawing.Size(43, 39);
+            this.btn_msgPersonalizada4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_msgPersonalizada4.TabIndex = 105;
+            this.btn_msgPersonalizada4.TabStop = false;
+            this.btn_msgPersonalizada4.Click += new System.EventHandler(this.btn_msgPersonalizada4_Click);
+            // 
+            // lbl_numeroMsgPersonalizada
+            // 
+            this.lbl_numeroMsgPersonalizada.AutoSize = true;
+            this.lbl_numeroMsgPersonalizada.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numeroMsgPersonalizada.Location = new System.Drawing.Point(647, 20);
+            this.lbl_numeroMsgPersonalizada.Name = "lbl_numeroMsgPersonalizada";
+            this.lbl_numeroMsgPersonalizada.Size = new System.Drawing.Size(19, 21);
+            this.lbl_numeroMsgPersonalizada.TabIndex = 106;
+            this.lbl_numeroMsgPersonalizada.Text = "0";
+            this.lbl_numeroMsgPersonalizada.Visible = false;
+            // 
+            // btn_salvarMsg
+            // 
+            this.btn_salvarMsg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salvarMsg.Location = new System.Drawing.Point(588, 172);
+            this.btn_salvarMsg.Name = "btn_salvarMsg";
+            this.btn_salvarMsg.Size = new System.Drawing.Size(74, 23);
+            this.btn_salvarMsg.TabIndex = 107;
+            this.btn_salvarMsg.Text = "SALVAR";
+            this.btn_salvarMsg.UseVisualStyleBackColor = true;
+            this.btn_salvarMsg.Click += new System.EventHandler(this.btn_salvarMsg_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(584, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 21);
+            this.label1.TabIndex = 108;
+            this.label1.Text = "PRESET";
+            // 
+            // btn_enviar
+            // 
+            this.btn_enviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enviar.Location = new System.Drawing.Point(443, 172);
+            this.btn_enviar.Name = "btn_enviar";
+            this.btn_enviar.Size = new System.Drawing.Size(83, 23);
+            this.btn_enviar.TabIndex = 109;
+            this.btn_enviar.Text = "ENVIAR";
+            this.btn_enviar.UseVisualStyleBackColor = true;
             // 
             // USC_emailSender
             // 
@@ -469,6 +573,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_porquinho)).EndInit();
             this.groupbox_inadimplentes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_msgPersonalizada4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,12 +609,18 @@
         private System.Windows.Forms.Label lbl_escreverEmail;
         private System.Windows.Forms.Label lbl_assunto;
         private BotãoDinamico.CustomBotãoImage bnt_config;
-        private System.Windows.Forms.Button btn_enviar;
         private BotãoDinamico.CustomBotãoImage btn_porquinho;
         private System.Windows.Forms.GroupBox groupbox_inadimplentes;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView dataGridView_DadosPagamento;
         private System.Windows.Forms.Button btn_enviarCobranças;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private BotãoDinamico.CustomBotãoImage btn_msgPersonalizada4;
+        private BotãoDinamico.CustomBotãoImage btn_msgPersonalizada3;
+        private BotãoDinamico.CustomBotãoImage btn_msgPersonalizada2;
+        private BotãoDinamico.CustomBotãoImage btn_msgPersonalizada1;
+        private System.Windows.Forms.Button btn_salvarMsg;
+        private System.Windows.Forms.Label lbl_numeroMsgPersonalizada;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_enviar;
     }
 }

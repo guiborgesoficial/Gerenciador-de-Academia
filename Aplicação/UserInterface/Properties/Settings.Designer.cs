@@ -12,7 +12,7 @@ namespace UserInterface.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -30,6 +30,126 @@ namespace UserInterface.Properties {
         public string RCFitnessConnectionString {
             get {
                 return ((string)(this["RCFitnessConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("appacademiatcc@outlook.com")]
+        public string Email {
+            get {
+                return ((string)(this["Email"]));
+            }
+            set {
+                this["Email"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rcfitnesS")]
+        public string Senha {
+            get {
+                return ((string)(this["Senha"]));
+            }
+            set {
+                this["Senha"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_msgPersonalizada1 {
+            get {
+                return ((string)(this["btn_msgPersonalizada1"]));
+            }
+            set {
+                this["btn_msgPersonalizada1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_msgPersonalizada2 {
+            get {
+                return ((string)(this["btn_msgPersonalizada2"]));
+            }
+            set {
+                this["btn_msgPersonalizada2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_msgPersonalizada3 {
+            get {
+                return ((string)(this["btn_msgPersonalizada3"]));
+            }
+            set {
+                this["btn_msgPersonalizada3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_msgPersonalizada4 {
+            get {
+                return ((string)(this["btn_msgPersonalizada4"]));
+            }
+            set {
+                this["btn_msgPersonalizada4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_assuntoPersonalizado1 {
+            get {
+                return ((string)(this["btn_assuntoPersonalizado1"]));
+            }
+            set {
+                this["btn_assuntoPersonalizado1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_assuntoPersonalizado2 {
+            get {
+                return ((string)(this["btn_assuntoPersonalizado2"]));
+            }
+            set {
+                this["btn_assuntoPersonalizado2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_assuntoPersonalizado3 {
+            get {
+                return ((string)(this["btn_assuntoPersonalizado3"]));
+            }
+            set {
+                this["btn_assuntoPersonalizado3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string btn_assuntoPersonalizado4 {
+            get {
+                return ((string)(this["btn_assuntoPersonalizado4"]));
+            }
+            set {
+                this["btn_assuntoPersonalizado4"] = value;
             }
         }
     }

@@ -1,25 +1,15 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Windows.Forms;
+﻿using Business.SqlComandos.Atualizar;
 using Business.SqlComandos.Cadastrar;
 using Business.SqlComandos.Consultar;
-using Business.SqlComandos.Atualizar;
-using System.Drawing.Text;
-using UserInterface;
+using System;
 using System.Data.SqlTypes;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using UserInterface;
 
 namespace RCFitness.UserControls
 {
-	public partial class USC_novoAluno : UserControl
+    public partial class USC_novoAluno : UserControl
 	{
 		public string StatusPag = DateTime.Now.ToShortDateString();
 		VerificadorDeCampos verificador = new VerificadorDeCampos();

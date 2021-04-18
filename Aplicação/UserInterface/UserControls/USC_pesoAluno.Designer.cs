@@ -213,14 +213,13 @@
             // msktbox_peso
             // 
             this.msktbox_peso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.msktbox_peso.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.msktbox_peso.Location = new System.Drawing.Point(197, 189);
             this.msktbox_peso.Name = "msktbox_peso";
             this.msktbox_peso.Size = new System.Drawing.Size(121, 20);
             this.msktbox_peso.TabIndex = 92;
             this.msktbox_peso.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.msktbox_peso.ValidatingType = typeof(System.DateTime);
-            this.msktbox_peso.Click += new System.EventHandler(this.msktbox_peso_Click);
-            this.msktbox_peso.MouseLeave += new System.EventHandler(this.msktbox_peso_MouseLeave);
             // 
             // USC_pesoAluno
             // 

@@ -63,7 +63,6 @@ namespace RCFitness.UserControls
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            validandoCampoPeso();
             string dtAtual = DateTime.Now.ToShortDateString();
             CD_PesoAluno cadastroPesoAluno = new CD_PesoAluno();
 
@@ -184,30 +183,6 @@ namespace RCFitness.UserControls
             else
             {
                 MessageBox.Show("É necessário selecionar um aluno para realizar a consulta.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void msktbox_peso_Click(object sender, EventArgs e)
-        {
-            msktbox_peso.Mask = "";
-        }
-        private void msktbox_peso_MouseLeave(object sender, EventArgs e)
-        {
-            validandoCampoPeso();
-        }
-        public void validandoCampoPeso()
-        {
-            if (msktbox_peso.Text.Length == 4)
-            {
-                msktbox_peso.Mask = "00.00";
-            }
-            else if (msktbox_peso.TextLength == 5)
-            {
-                msktbox_peso.Mask = "000.00";
-            }
-            else if (msktbox_peso.TextLength > 5)
-            {
-                msktbox_peso.Text = "";
             }
         }
     }

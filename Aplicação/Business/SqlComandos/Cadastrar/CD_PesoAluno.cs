@@ -21,7 +21,7 @@ namespace Business.SqlComandos.Cadastrar
                 SqlCommand objComando = new SqlCommand(strInserção, conectar.con);
 
                 objComando.Parameters.Add(new SqlParameter("@DT_COLETA", Convert.ToDateTime(dtColeta).ToShortDateString()));
-                objComando.Parameters.Add(new SqlParameter("@PESO", decimal.Parse(Peso)));
+                objComando.Parameters.Add(new SqlParameter("@PESO", double.Parse(Peso)));
                 objComando.Parameters.Add(new SqlParameter("@ID_NOVOALUNO", id));
                 objComando.ExecuteNonQuery();
                 MessageBox.Show("Cadastro realizado com sucesso");

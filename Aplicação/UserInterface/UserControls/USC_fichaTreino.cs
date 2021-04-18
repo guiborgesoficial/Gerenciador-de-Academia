@@ -1,17 +1,11 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Imaging;
-using Business.SqlComandos.Consultar;
+﻿using Business.SqlComandos.Atualizar;
 using Business.SqlComandos.Cadastrar;
-using Business.SqlComandos.Atualizar;
+using Business.SqlComandos.Consultar;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Windows.Forms;
 
 namespace RCFitness.UserControls
 {
@@ -501,7 +495,6 @@ namespace RCFitness.UserControls
             if(lbl_idResult.Text != "0" && lbl_idResult.Text != "ID:")
             {
                 RetornandoCheckBox();
-                
             }
             else
             {
@@ -512,8 +505,7 @@ namespace RCFitness.UserControls
         {
             CS_FichaDeTreino novo = new CS_FichaDeTreino();
             novo.ConsultandoFichaDeTreino(lbl_idResult.Text);
-            
-            
+                        
             //A_MUSC
             if(novo.verificadorExisteDados)
             {

@@ -40,19 +40,19 @@
             this.btn_novoAluno = new BotãoDinamico.CustomBotãoImage();
             this.pictbox_logo = new System.Windows.Forms.PictureBox();
             this.pnl_UserControl = new System.Windows.Forms.Panel();
-            this.lbl_longData = new System.Windows.Forms.Label();
-            this.lbl_datalonga = new System.Windows.Forms.Label();
-            this.lbl_dataCurta = new System.Windows.Forms.Label();
-            this.timer_dataCurta = new System.Windows.Forms.Timer(this.components);
             this.btn_gerarPDF = new BotãoDinamico.CustomBotãoImage();
             this.usC_chtFaturamento1 = new RCFitness.UserControls.Charts.USC_chtFaturamento();
             this.usC_chtAlunos = new RCFitness.UserControls.Charts.USC_chtAlunos();
+            this.lbl_longData = new System.Windows.Forms.Label();
+            this.lbl_datalonga = new System.Windows.Forms.Label();
+            this.lbl_dataCurta = new System.Windows.Forms.Label();
             this.USC_emailSender1 = new RCFitness.UserControls.USC_emailSender();
             this.usC_medidasAluno1 = new RCFitness.UserControls.USC_medidasAluno();
             this.usC_fichaTreino1 = new RCFitness.UserControls.USC_fichaTreino();
             this.usC_pesoAluno1 = new RCFitness.UserControls.USC_pesoAluno();
             this.usC_matriculados1 = new RCFitness.UserControls.USC_matriculados();
             this.usC_novoAluno1 = new RCFitness.UserControls.USC_novoAluno();
+            this.timer_dataCurta = new System.Windows.Forms.Timer(this.components);
             this.pnl_menuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customBotãoImage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_dados)).BeginInit();
@@ -81,7 +81,6 @@
             this.pnl_menuLateral.Name = "pnl_menuLateral";
             this.pnl_menuLateral.Size = new System.Drawing.Size(126, 451);
             this.pnl_menuLateral.TabIndex = 0;
-            this.pnl_menuLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_menuLateral_Paint);
             // 
             // customBotãoImage1
             // 
@@ -212,6 +211,35 @@
             this.pnl_UserControl.Size = new System.Drawing.Size(782, 451);
             this.pnl_UserControl.TabIndex = 1;
             // 
+            // btn_gerarPDF
+            // 
+            this.btn_gerarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gerarPDF.Image = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.Image")));
+            this.btn_gerarPDF.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageHover")));
+            this.btn_gerarPDF.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageNormal")));
+            this.btn_gerarPDF.Location = new System.Drawing.Point(681, 417);
+            this.btn_gerarPDF.Name = "btn_gerarPDF";
+            this.btn_gerarPDF.Size = new System.Drawing.Size(89, 25);
+            this.btn_gerarPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_gerarPDF.TabIndex = 73;
+            this.btn_gerarPDF.TabStop = false;
+            this.btn_gerarPDF.Click += new System.EventHandler(this.btn_gerarPDF_Click);
+            // 
+            // usC_chtFaturamento1
+            // 
+            this.usC_chtFaturamento1.Location = new System.Drawing.Point(3, 49);
+            this.usC_chtFaturamento1.Name = "usC_chtFaturamento1";
+            this.usC_chtFaturamento1.Size = new System.Drawing.Size(429, 266);
+            this.usC_chtFaturamento1.TabIndex = 11;
+            // 
+            // usC_chtAlunos
+            // 
+            this.usC_chtAlunos.Location = new System.Drawing.Point(435, 49);
+            this.usC_chtAlunos.MaximumSize = new System.Drawing.Size(545, 389);
+            this.usC_chtAlunos.Name = "usC_chtAlunos";
+            this.usC_chtAlunos.Size = new System.Drawing.Size(335, 250);
+            this.usC_chtAlunos.TabIndex = 9;
+            // 
             // lbl_longData
             // 
             this.lbl_longData.AutoSize = true;
@@ -246,40 +274,6 @@
             this.lbl_dataCurta.Size = new System.Drawing.Size(70, 17);
             this.lbl_dataCurta.TabIndex = 6;
             this.lbl_dataCurta.Text = "data curta";
-            // 
-            // timer_dataCurta
-            // 
-            this.timer_dataCurta.Enabled = true;
-            this.timer_dataCurta.Tick += new System.EventHandler(this.timer_dataCurta_Tick);
-            // 
-            // btn_gerarPDF
-            // 
-            this.btn_gerarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_gerarPDF.Image = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.Image")));
-            this.btn_gerarPDF.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageHover")));
-            this.btn_gerarPDF.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageNormal")));
-            this.btn_gerarPDF.Location = new System.Drawing.Point(681, 417);
-            this.btn_gerarPDF.Name = "btn_gerarPDF";
-            this.btn_gerarPDF.Size = new System.Drawing.Size(89, 25);
-            this.btn_gerarPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_gerarPDF.TabIndex = 73;
-            this.btn_gerarPDF.TabStop = false;
-            this.btn_gerarPDF.Click += new System.EventHandler(this.btn_gerarPDF_Click);
-            // 
-            // usC_chtFaturamento1
-            // 
-            this.usC_chtFaturamento1.Location = new System.Drawing.Point(3, 49);
-            this.usC_chtFaturamento1.Name = "usC_chtFaturamento1";
-            this.usC_chtFaturamento1.Size = new System.Drawing.Size(429, 266);
-            this.usC_chtFaturamento1.TabIndex = 11;
-            // 
-            // usC_chtAlunos
-            // 
-            this.usC_chtAlunos.Location = new System.Drawing.Point(435, 49);
-            this.usC_chtAlunos.MaximumSize = new System.Drawing.Size(545, 389);
-            this.usC_chtAlunos.Name = "usC_chtAlunos";
-            this.usC_chtAlunos.Size = new System.Drawing.Size(335, 250);
-            this.usC_chtAlunos.TabIndex = 9;
             // 
             // USC_emailSender1
             // 
@@ -324,6 +318,11 @@
             this.usC_novoAluno1.Size = new System.Drawing.Size(668, 451);
             this.usC_novoAluno1.TabIndex = 0;
             // 
+            // timer_dataCurta
+            // 
+            this.timer_dataCurta.Enabled = true;
+            this.timer_dataCurta.Tick += new System.EventHandler(this.timer_dataCurta_Tick);
+            // 
             // frm_Sistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +332,6 @@
             this.Controls.Add(this.pnl_menuLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Sistema";
-            this.Load += new System.EventHandler(this.frm_Sistema_Load);
             this.pnl_menuLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customBotãoImage1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_dados)).EndInit();

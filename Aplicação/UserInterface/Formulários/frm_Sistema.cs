@@ -1,19 +1,8 @@
-﻿using System;
-using Business;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using RCFitness.UserControls;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RCFitness.UserControls;
-using System.Data.SqlClient;
-using System.Windows.Forms;
-using Business.SqlComandos.Consultar;
-using RCFitness.UserControls.Charts;
-using Business.SqlComandos.Consultar.Charts;
 using System.Drawing.Imaging;
+using System.Windows.Forms;
 
 namespace RCFitness
 {
@@ -22,10 +11,6 @@ namespace RCFitness
         public frm_Sistema()
         {
             InitializeComponent();
-        }
-        private void frm_Sistema_Load(object sender, EventArgs e)
-        {
-            
         }
         private void customBotãoImage1_Click(object sender, EventArgs e)
         {
@@ -93,14 +78,6 @@ namespace RCFitness
             lbl_dataCurta.Text = DateTime.Now.ToShortDateString();
             lbl_datalonga.Text = DateTime.Now.ToLongTimeString();
             lbl_longData.Text = DateTime.Now.ToLongDateString().ToUpper();
-        }
-        private void usC_chtAlunosCadastrados1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void pnl_menuLateral_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btn_gerarPDF_Click(object sender, EventArgs e)
