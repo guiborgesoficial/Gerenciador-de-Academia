@@ -103,7 +103,8 @@ namespace UserInterface
 				{
 					Panel LarguraCampo = new Panel();
 					Panel AlturaCampo = new Panel();
-					if (Regex.IsMatch(verificar.Text, @"^[0-9]+$"))
+					
+					if (Regex.IsMatch(verificar.Text, @"^-?[0-9]*\.|,?[0-9]+$"))
 					{
 						verificadorQtdInputsNumericosValidados++;
 					}
@@ -120,7 +121,6 @@ namespace UserInterface
 						LarguraCampo.BackColor = Color.Red;
 						verificar.Controls.Add(LarguraCampo); 
 						
-						verificar.Text = string.Empty;
 					}
 				}
 			}

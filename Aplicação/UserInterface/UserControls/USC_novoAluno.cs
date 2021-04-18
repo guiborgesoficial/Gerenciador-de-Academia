@@ -158,7 +158,7 @@ namespace RCFitness.UserControls
 		{
 			verificador.VerificaCamposPreenchidos(this);
 		}
-		public  string verificarMudançaValorMensalidade = "";
+		public string verificarMudançaValorMensalidade = "";
 		private void btn_consultar_Click(object sender, EventArgs e)
 		{
 			if(!msktbox_rg.Text.Contains("_") || !mstkbox_cpf.Text.Contains("_"))

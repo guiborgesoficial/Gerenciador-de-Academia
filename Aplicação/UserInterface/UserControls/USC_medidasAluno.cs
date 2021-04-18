@@ -60,13 +60,14 @@ namespace RCFitness.UserControls
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             verificador.verificadorDeCamposPreenchidos = 0;
+            verificador.verificadorQtdInputsNumericosValidados = 0;
             verificador.VerificaCamposPreenchidos(pnl_print);
 
             if(verificador.verificadorDeCamposPreenchidos == 23)
             {
                 verificador.VerificarCamposNuméricos(pnl_print);
 
-                if(verificador.verificadorQtdInputsNumericosValidados == 23)
+                if(verificador.verificadorQtdInputsNumericosValidados == 22)
                 {
                     verificador.VerificaCamposTempoReal.Stop();
                     verificador.VerificaCamposNuméricosTempoReal.Stop();
@@ -112,6 +113,7 @@ namespace RCFitness.UserControls
             UP_MedidasAluno atualizarMedidas = new UP_MedidasAluno();
 
             verificador.verificadorDeCamposPreenchidos = 0;
+            verificador.verificadorQtdInputsNumericosValidados = 0;
             verificador.VerificaCamposPreenchidos(pnl_print);
 
             if (lbl_idResult.Text != "0" && lbl_idResult.Text != "ID:")
@@ -119,7 +121,16 @@ namespace RCFitness.UserControls
                 if (verificador.verificadorDeCamposPreenchidos == 23)
                 {
                     verificador.VerificaCamposTempoReal.Stop();
-                    atualizarMedidas.AtualizarMedidasAluno(int.Parse(lbl_idResult.Text), txtbox_altura.Text, txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
+                    verificador.VerificarCamposNuméricos(pnl_print);
+
+                    if(verificador.verificadorQtdInputsNumericosValidados == 22)
+                    {
+                        atualizarMedidas.AtualizarMedidasAluno(int.Parse(lbl_idResult.Text), txtbox_altura.Text, txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Esses campos são numéricos", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
