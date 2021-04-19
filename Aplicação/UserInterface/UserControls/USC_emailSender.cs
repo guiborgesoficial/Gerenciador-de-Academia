@@ -25,6 +25,8 @@ namespace RCFitness.UserControls
 
         private void USC_emailSender_Load(object sender, EventArgs e)
         {
+            textBox_email.Text = UserInterface.Properties.Settings.Default.email;
+            textBox_senha.Text = UserInterface.Properties.Settings.Default.senha;
             groupBox_Configurações.Visible = false;
             groupbox_inadimplentes.Visible = false;
             this.Visible = false;
@@ -81,8 +83,8 @@ namespace RCFitness.UserControls
             DialogResult confirmar = MessageBox.Show("Deseja confirmar as alterações?", "Salvar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(confirmar == DialogResult.Yes)
             {
-                UserInterface.Properties.Settings.Default.email = textBox_email.Text;
                 UserInterface.Properties.Settings.Default.senha = textBox_senha.Text;
+                UserInterface.Properties.Settings.Default.email = textBox_email.Text;
                 UserInterface.Properties.Settings.Default.Save();
                 groupBox_Configurações.Visible = false;
                 visualizarCampoConfigurações = 0;

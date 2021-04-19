@@ -35,7 +35,7 @@ namespace UserInterface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("appacademiatcc@outlook.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string email {
             get {
                 return ((string)(this["email"]));
@@ -47,7 +47,7 @@ namespace UserInterface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("rcfitnesS")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string senha {
             get {
                 return ((string)(this["senha"]));

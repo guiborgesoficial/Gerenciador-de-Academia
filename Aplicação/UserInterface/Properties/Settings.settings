@@ -11,10 +11,10 @@
       <Value Profile="(Default)">Data Source=PCH_SD-001\BORGES;Initial Catalog=RCFitness;Integrated Security=True</Value>
     </Setting>
     <Setting Name="email" Type="System.String" Scope="User">
-      <Value Profile="(Default)">appacademiatcc@outlook.com</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="senha" Type="System.String" Scope="User">
-      <Value Profile="(Default)">rcfitnesS</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="btn_msgPersonalizada1" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
