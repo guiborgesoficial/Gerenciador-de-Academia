@@ -81,8 +81,8 @@ namespace RCFitness.UserControls
             DialogResult confirmar = MessageBox.Show("Deseja confirmar as alterações?", "Salvar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(confirmar == DialogResult.Yes)
             {
-                UserInterface.Properties.Settings.Default.Email = textBox_email.Text;
-                UserInterface.Properties.Settings.Default.Senha= textBox_senha.Text;
+                UserInterface.Properties.Settings.Default.email = textBox_email.Text;
+                UserInterface.Properties.Settings.Default.senha = textBox_senha.Text;
                 UserInterface.Properties.Settings.Default.Save();
                 groupBox_Configurações.Visible = false;
                 visualizarCampoConfigurações = 0;

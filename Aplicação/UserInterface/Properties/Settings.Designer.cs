@@ -36,24 +36,24 @@ namespace UserInterface.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("appacademiatcc@outlook.com")]
-        public string Email {
+        public string email {
             get {
-                return ((string)(this["Email"]));
+                return ((string)(this["email"]));
             }
             set {
-                this["Email"] = value;
+                this["email"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("rcfitnesS")]
-        public string Senha {
+        public string senha {
             get {
-                return ((string)(this["Senha"]));
+                return ((string)(this["senha"]));
             }
             set {
-                this["Senha"] = value;
+                this["senha"] = value;
             }
         }
         

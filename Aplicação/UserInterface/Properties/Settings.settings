@@ -10,10 +10,10 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=PCH_SD-001\BORGES;Initial Catalog=RCFitness;Integrated Security=True</Value>
     </Setting>
-    <Setting Name="Email" Type="System.String" Scope="User">
+    <Setting Name="email" Type="System.String" Scope="User">
       <Value Profile="(Default)">appacademiatcc@outlook.com</Value>
     </Setting>
-    <Setting Name="Senha" Type="System.String" Scope="User">
+    <Setting Name="senha" Type="System.String" Scope="User">
       <Value Profile="(Default)">rcfitnesS</Value>
     </Setting>
     <Setting Name="btn_msgPersonalizada1" Type="System.String" Scope="User">
