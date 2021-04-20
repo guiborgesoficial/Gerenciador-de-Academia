@@ -125,7 +125,7 @@ namespace RCFitness.UserControls
 
                     if(verificador.verificadorQtdInputsNumericosValidados == 22)
                     {
-                        atualizarMedidas.AtualizarMedidasAluno(int.Parse(lbl_idResult.Text), txtbox_altura.Text, txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
+                        atualizarMedidas.AtualizarMedidasAluno(int.Parse(lbl_idResult.Text), int.Parse(IdMedidasAluno), txtbox_altura.Text, txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
                     }
                     else
                     {
@@ -143,8 +143,8 @@ namespace RCFitness.UserControls
                 MessageBox.Show("É necessário realizar uma consulta para atualizar um cadastro!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        
 
+        public string IdMedidasAluno = string.Empty;
         private void btn_consultar_Click(object sender, EventArgs e)
         {
             CS_MedidasAluno consultar = new CS_MedidasAluno();
@@ -181,6 +181,7 @@ namespace RCFitness.UserControls
                     txtbox_joelho.Text = consultar.JOELHO;
                     txtbox_tornozelo.Text = consultar.TORNOZELO;
                     txtbox_punho.Text = consultar.PUNHO;
+                    IdMedidasAluno = consultar.IDMEDIDASALUNO;
                     lbl_coletaResult.Text = Convert.ToDateTime(consultar.DT_COLETA).ToShortDateString();
                     lbl_coleta.Visible = true;
                     lbl_coletaResult.Visible = true;

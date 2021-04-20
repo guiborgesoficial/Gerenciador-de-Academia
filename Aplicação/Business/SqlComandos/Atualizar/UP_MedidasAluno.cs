@@ -11,9 +11,9 @@ namespace Business.SqlComandos.Atualizar
 {
     public class UP_MedidasAluno
     {
-        public string strUpadate = "UPDATE MedidasAluno SET ALTURA = @ALTURA, TÓRAX = @TÓRAX, ABDÔMEN = @ABDÔMEN, CINTURA = @CINTURA, QUADRIL = @QUADRIL, BRAÇO_DIREITO = @BRAÇO_DIREITO, BRAÇO_ESQUERDO = @BRAÇO_ESQUERDO, ANTEBRAÇO_DIREITO = @ANTEBRAÇO_DIREITO, ANTEBRAÇO_ESQUERDO = @ANTEBRAÇO_ESQUERDO, COXA_DIREITA_P = @COXA_DIREITA_P, COXA_DIREITA_M = @COXA_DIREITA_M, COXA_DIREITA_D = @COXA_DIREITA_D, COXA_ESQUERDA_P = @COXA_ESQUERDA_P, COXA_ESQUERDA_M = @COXA_ESQUERDA_M, COXA_ESQUERDA_D = @COXA_ESQUERDA_D, PERNA_DIREITA = @PERNA_DIREITA, PERNA_ESQUERDA = @PERNA_ESQUERDA, OMBROS = @OMBROS, PESCOÇO = @PESCOÇO, PUNHO = @PUNHO, JOELHO = @JOELHO, TORNOZELO = @TORNOZELO, DT_COLETA = @DT_COLETA WHERE ID_NOVOALUNO = @ID_NOVOALUNO";
+        public string strUpadate = "UPDATE MedidasAluno SET ALTURA = @ALTURA, TÓRAX = @TÓRAX, ABDÔMEN = @ABDÔMEN, CINTURA = @CINTURA, QUADRIL = @QUADRIL, BRAÇO_DIREITO = @BRAÇO_DIREITO, BRAÇO_ESQUERDO = @BRAÇO_ESQUERDO, ANTEBRAÇO_DIREITO = @ANTEBRAÇO_DIREITO, ANTEBRAÇO_ESQUERDO = @ANTEBRAÇO_ESQUERDO, COXA_DIREITA_P = @COXA_DIREITA_P, COXA_DIREITA_M = @COXA_DIREITA_M, COXA_DIREITA_D = @COXA_DIREITA_D, COXA_ESQUERDA_P = @COXA_ESQUERDA_P, COXA_ESQUERDA_M = @COXA_ESQUERDA_M, COXA_ESQUERDA_D = @COXA_ESQUERDA_D, PERNA_DIREITA = @PERNA_DIREITA, PERNA_ESQUERDA = @PERNA_ESQUERDA, OMBROS = @OMBROS, PESCOÇO = @PESCOÇO, PUNHO = @PUNHO, JOELHO = @JOELHO, TORNOZELO = @TORNOZELO, DT_COLETA = @DT_COLETA WHERE ID_NOVOALUNO = @ID_NOVOALUNO AND IDMEDIDASALUNO = @IDMEDIDASALUNO";
         Conexão conectar = new Conexão();
-        public void AtualizarMedidasAluno(int ID, string altura, string tórax, string abdomen, string cintura, string quadril, string bracoD, string bracoE, string antebD, string antebE, string coxadP, string coxadM, string coxadD, string coxaeP, string coxaeM, string coxaeD, string pernaD, string pernaE, string ombro, string pescoço, string punho, string joelho, string tornozelo)
+        public void AtualizarMedidasAluno(int ID, int IDMEDIDAS,string altura, string tórax, string abdomen, string cintura, string quadril, string bracoD, string bracoE, string antebD, string antebE, string coxadP, string coxadM, string coxadD, string coxaeP, string coxaeM, string coxaeD, string pernaD, string pernaE, string ombro, string pescoço, string punho, string joelho, string tornozelo)
         {
             try
             {
@@ -44,6 +44,7 @@ namespace Business.SqlComandos.Atualizar
                 objComando.Parameters.Add(new SqlParameter("@TORNOZELO", tornozelo));
                 objComando.Parameters.Add(new SqlParameter("@DT_COLETA", DateTime.Now.ToShortDateString()));
                 objComando.Parameters.Add(new SqlParameter("@ID_NOVOALUNO", ID));
+                objComando.Parameters.Add(new SqlParameter("@IDMEDIDASALUNO", IDMEDIDAS));
                 objComando.ExecuteNonQuery();
                 MessageBox.Show("Atualizado com sucesso");
             }

@@ -34,10 +34,11 @@ namespace Business.SqlComandos.Consultar
         public string JOELHO { get; set; }
         public string TORNOZELO { get; set; }
         public string DT_COLETA { get; set; }
+        public string IDMEDIDASALUNO { get; set; }
         Conexão conectar = new Conexão();
         public void ConsultandoMedidasAluno(int ID)
         { 
-            string strConsultar = "SELECT * FROM MedidasAluno WHERE ID_NOVOALUNO = '"+ID+"'";
+            string strConsultar = "SELECT TOP(1) * FROM MedidasAluno where ID_NOVOALUNO = '" + ID + "'" + "Order By DT_COLETA DESC";
 
             try
             {
@@ -72,6 +73,7 @@ namespace Business.SqlComandos.Consultar
                     JOELHO = leitor["JOELHO"].ToString();
                     TORNOZELO = leitor["TORNOZELO"].ToString();
                     DT_COLETA = leitor["DT_COLETA"].ToString();
+                    IDMEDIDASALUNO = leitor["IDMEDIDASALUNO"].ToString();
                 }
             }
             catch (Exception erro)
