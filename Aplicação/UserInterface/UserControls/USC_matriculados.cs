@@ -78,23 +78,22 @@ namespace RCFitness.UserControls
                         VerificaExistenciaPrimeiraFatura = true;
                         lbl_dtUltimoPagamentoResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[2, dataGridView_DadosPagamento.RowCount - 2].Value).ToShortDateString();
                         lbl_próximoVencResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[4, dataGridView_DadosPagamento.RowCount - 1].Value).ToShortDateString();
-                        cmbbox_Plano.Text = (dataGridView_DadosPagamento[0, dataGridView_DadosPagamento.RowCount - 1].Value).ToString();
-
-                        if (DateTime.Today >= Convert.ToDateTime(dataGridView_DadosPagamento[4, dataGridView_DadosPagamento.RowCount - 1].Value))
-                        {
-                            lbl_statusResultado.ForeColor = Color.Red;
-                            lbl_dtUltimoPagamentoResultado.Visible = false;
-                            lbl_statusResultado.Text = "Inadimplente";
-                            lbl_statusResultado.Visible = true;
-                        }
-                        else
-                        {
-                            lbl_statusResultado.ForeColor = Color.Green;
-                            lbl_statusResultado.Text = "Adimplente";
-                            lbl_statusResultado.Visible = true;
-                        }
+                        cmbbox_Plano.Text = (dataGridView_DadosPagamento[0, dataGridView_DadosPagamento.RowCount - 1].Value).ToString();                       
                         break;
-                } 
+                }
+                if (DateTime.Today >= Convert.ToDateTime(dataGridView_DadosPagamento[4, dataGridView_DadosPagamento.RowCount - 1].Value))
+                {
+                    lbl_statusResultado.ForeColor = Color.Red;
+                    lbl_dtUltimoPagamentoResultado.Visible = false;
+                    lbl_statusResultado.Text = "Inadimplente";
+                    lbl_statusResultado.Visible = true;
+                }
+                else
+                {
+                    lbl_statusResultado.ForeColor = Color.Green;
+                    lbl_statusResultado.Text = "Adimplente";
+                    lbl_statusResultado.Visible = true;
+                }
                 MostrarCampos();
             }
         }
