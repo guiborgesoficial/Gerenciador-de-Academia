@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Sistema));
             this.pnl_menuLateral = new System.Windows.Forms.Panel();
             this.customBotãoImage1 = new BotãoDinamico.CustomBotãoImage();
-            this.btn_dados = new BotãoDinamico.CustomBotãoImage();
+            this.btn_emailSender = new BotãoDinamico.CustomBotãoImage();
             this.btn_alunoMatriculado = new BotãoDinamico.CustomBotãoImage();
             this.btn_fichaTreino = new BotãoDinamico.CustomBotãoImage();
             this.btn_peso = new BotãoDinamico.CustomBotãoImage();
@@ -55,7 +55,7 @@
             this.timer_dataCurta = new System.Windows.Forms.Timer(this.components);
             this.pnl_menuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customBotãoImage1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_dados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_emailSender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_alunoMatriculado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_fichaTreino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_peso)).BeginInit();
@@ -70,7 +70,7 @@
             // 
             this.pnl_menuLateral.BackColor = System.Drawing.Color.Goldenrod;
             this.pnl_menuLateral.Controls.Add(this.customBotãoImage1);
-            this.pnl_menuLateral.Controls.Add(this.btn_dados);
+            this.pnl_menuLateral.Controls.Add(this.btn_emailSender);
             this.pnl_menuLateral.Controls.Add(this.btn_alunoMatriculado);
             this.pnl_menuLateral.Controls.Add(this.btn_fichaTreino);
             this.pnl_menuLateral.Controls.Add(this.btn_peso);
@@ -96,19 +96,19 @@
             this.customBotãoImage1.TabStop = false;
             this.customBotãoImage1.Click += new System.EventHandler(this.customBotãoImage1_Click);
             // 
-            // btn_dados
+            // btn_emailSender
             // 
-            this.btn_dados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_dados.Image = ((System.Drawing.Image)(resources.GetObject("btn_dados.Image")));
-            this.btn_dados.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_dados.ImageHover")));
-            this.btn_dados.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_dados.ImageNormal")));
-            this.btn_dados.Location = new System.Drawing.Point(34, 284);
-            this.btn_dados.Name = "btn_dados";
-            this.btn_dados.Size = new System.Drawing.Size(65, 49);
-            this.btn_dados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_dados.TabIndex = 7;
-            this.btn_dados.TabStop = false;
-            this.btn_dados.Click += new System.EventHandler(this.btn_dados_Click);
+            this.btn_emailSender.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_emailSender.Image = ((System.Drawing.Image)(resources.GetObject("btn_emailSender.Image")));
+            this.btn_emailSender.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_emailSender.ImageHover")));
+            this.btn_emailSender.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_emailSender.ImageNormal")));
+            this.btn_emailSender.Location = new System.Drawing.Point(34, 284);
+            this.btn_emailSender.Name = "btn_emailSender";
+            this.btn_emailSender.Size = new System.Drawing.Size(65, 49);
+            this.btn_emailSender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_emailSender.TabIndex = 7;
+            this.btn_emailSender.TabStop = false;
+            this.btn_emailSender.Click += new System.EventHandler(this.btn_emailSender_Click);
             // 
             // btn_alunoMatriculado
             // 
@@ -279,7 +279,7 @@
             // 
             this.USC_emailSender1.Location = new System.Drawing.Point(0, 0);
             this.USC_emailSender1.Name = "USC_emailSender1";
-            this.USC_emailSender1.Size = new System.Drawing.Size(668, 451);
+            this.USC_emailSender1.Size = new System.Drawing.Size(782, 451);
             this.USC_emailSender1.TabIndex = 5;
             // 
             // usC_medidasAluno1
@@ -294,7 +294,7 @@
             // 
             this.usC_fichaTreino1.Location = new System.Drawing.Point(0, 0);
             this.usC_fichaTreino1.Name = "usC_fichaTreino1";
-            this.usC_fichaTreino1.Size = new System.Drawing.Size(668, 451);
+            this.usC_fichaTreino1.Size = new System.Drawing.Size(782, 451);
             this.usC_fichaTreino1.TabIndex = 3;
             // 
             // usC_pesoAluno1
@@ -308,7 +308,7 @@
             // 
             this.usC_matriculados1.Location = new System.Drawing.Point(0, 0);
             this.usC_matriculados1.Name = "usC_matriculados1";
-            this.usC_matriculados1.Size = new System.Drawing.Size(668, 451);
+            this.usC_matriculados1.Size = new System.Drawing.Size(782, 451);
             this.usC_matriculados1.TabIndex = 1;
             // 
             // usC_novoAluno1
@@ -334,7 +334,7 @@
             this.Name = "frm_Sistema";
             this.pnl_menuLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customBotãoImage1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_dados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_emailSender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_alunoMatriculado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_fichaTreino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_peso)).EndInit();
@@ -355,7 +355,7 @@
         private BotãoDinamico.CustomBotãoImage btn_peso;
         private BotãoDinamico.CustomBotãoImage btn_medidas;
         private BotãoDinamico.CustomBotãoImage btn_novoAluno;
-        private BotãoDinamico.CustomBotãoImage btn_dados;
+        private BotãoDinamico.CustomBotãoImage btn_emailSender;
         private BotãoDinamico.CustomBotãoImage customBotãoImage1;
         private UserControls.USC_novoAluno usC_novoAluno1;
         public System.Windows.Forms.Panel pnl_UserControl;

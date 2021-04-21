@@ -30,44 +30,38 @@ namespace RCFitness
         private void btn_novoAluno_Click(object sender, EventArgs e)
         {
             pnl_UserControl.Controls.Clear();
-            USC_novoAluno telaAluno = new USC_novoAluno();
-            pnl_UserControl.Controls.Add(telaAluno);
-            telaAluno.Visible = true;
+            pnl_UserControl.Controls.Add(usC_novoAluno1);
+            usC_novoAluno1.Visible = true;
         }
         private void btn_alunoMatriculado_Click(object sender, EventArgs e)
         {
             pnl_UserControl.Controls.Clear();
-            USC_matriculados TelaMatriculado = new USC_matriculados();
-            pnl_UserControl.Controls.Add(TelaMatriculado);
-            TelaMatriculado.Visible = true;
+            pnl_UserControl.Controls.Add(usC_matriculados1);
+            usC_matriculados1.Visible = true;
         }
         private void btn_peso_Click(object sender, EventArgs e)
         {
             pnl_UserControl.Controls.Clear();
-            USC_pesoAluno TelaPeso = new USC_pesoAluno();
-            pnl_UserControl.Controls.Add(TelaPeso);
-            TelaPeso.Visible = true;
+            pnl_UserControl.Controls.Add(usC_pesoAluno1);
+            usC_pesoAluno1.Visible = true;
         }
         private void btn_fichaTreino_Click(object sender, EventArgs e)
         {
             pnl_UserControl.Controls.Clear();
-            USC_fichaTreino TelaFichaTreino = new USC_fichaTreino();
-            pnl_UserControl.Controls.Add(TelaFichaTreino);
-            TelaFichaTreino.Visible = true;
+            pnl_UserControl.Controls.Add(usC_fichaTreino1);
+            usC_fichaTreino1.Visible = true;
         }
         private void btn_medidas_Click(object sender, EventArgs e)
         {
             pnl_UserControl.Controls.Clear();
-            USC_medidasAluno TelaMedidas = new USC_medidasAluno();
-            pnl_UserControl.Controls.Add(TelaMedidas);
-            TelaMedidas.Visible = true;
+            pnl_UserControl.Controls.Add(usC_medidasAluno1);
+            usC_medidasAluno1.Visible = true;
         }
-        private void btn_dados_Click(object sender, EventArgs e)
+        private void btn_emailSender_Click(object sender, EventArgs e)
         {
             pnl_UserControl.Controls.Clear();
-            USC_emailSender TelaDados = new USC_emailSender();
-            pnl_UserControl.Controls.Add(TelaDados);
-            TelaDados.Visible = true;
+            pnl_UserControl.Controls.Add(USC_emailSender1);
+            USC_emailSender1.Visible = true;
         }
         private void timer_dataCurta_Tick(object sender, EventArgs e)
         {

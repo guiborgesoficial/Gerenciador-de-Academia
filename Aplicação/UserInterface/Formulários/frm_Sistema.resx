@@ -198,7 +198,7 @@
         Ed4JVwv/U8LVGST2jZkDi8oeXET24OKZrPsPS53Pp5RhsQgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_dados.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_emailSender.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGoAAABQCAYAAADxwOBcAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAApbSURBVHhe7Zz5b1xXFcfzL1BT
@@ -249,7 +249,7 @@
         6AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_dados.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_emailSender.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGoAAABQCAYAAADxwOBcAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAApnSURBVHhe7dx5kBxVHQfwJHtn
@@ -300,7 +300,7 @@
         5U0y6X81bPzplcx+GQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_dados.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_emailSender.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGoAAABQCAYAAADxwOBcAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAApbSURBVHhe7Zz5b1xXFcfzL1BT
