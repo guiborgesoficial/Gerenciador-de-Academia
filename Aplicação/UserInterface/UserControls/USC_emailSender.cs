@@ -131,6 +131,7 @@ namespace RCFitness.UserControls
                         msg = new MailMessage();
                         msg.To.Add(new MailAddress(consultandoEmail.EMAIL));
                         msg.From = new MailAddress(textBox_email.Text);
+                        msg.Subject = textBox_assunto.Text;
                         msg.Body = textBox_escreverEmail.Text;
 
                         if (textBox_anexo.Text != "")
