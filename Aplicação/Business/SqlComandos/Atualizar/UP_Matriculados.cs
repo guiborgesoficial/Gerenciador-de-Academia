@@ -14,7 +14,8 @@ namespace Business.SqlComandos.Atualizar
         public DateTime DT_VENC { get; set; }
         public int lbl_id2 { get; set; }
 
-        public string strAtualizar = "UPDATE Pagamento SET DT_PAG = @DT_PAG, STATUS = @STATUS WHERE ID_NOVOALUNO = @IDNOVOALUNO";
+        public string strAtualizarPagamento = "UPDATE Pagamento SET DT_PAG = @DT_PAG, STATUS = @STATUS WHERE ID_NOVOALUNO = @IDNOVOALUNO";
+        public string strAtualizarFrequencia = "UPDATE Frequencia SET FREQUENCIA = @FREQUENCIA WHERE ID_NOVOALUNO = @IDNOVOALUNO";
         public string strInserir2 = "INSERT INTO Pagamento (DT_VENC, PRÓX_PAG, PLANO, VALOR, STATUS, ID_NOVOALUNO) VALUES (@DT_VENC, @DT_PRÓX, @PLANO, @VALOR, @STATUS, @IDNOVOALUNO)";
         Conexão conectar = new Conexão();
         public void AtualizarPagamento(int lbl_id)
@@ -22,7 +23,7 @@ namespace Business.SqlComandos.Atualizar
             try
             {
                 conectar.AbrirConexão();
-                SqlCommand objComando = new SqlCommand(strAtualizar, conectar.con);
+                SqlCommand objComando = new SqlCommand(strAtualizarPagamento, conectar.con);
                 objComando.Parameters.Add(new SqlParameter("@DT_PAG", DateTime.Now.ToShortDateString()));
                 objComando.Parameters.Add(new SqlParameter("@STATUS","PAGO"));
                 objComando.Parameters.Add(new SqlParameter("@IDNOVOALUNO", lbl_id));
@@ -94,6 +95,26 @@ namespace Business.SqlComandos.Atualizar
             {
                 MessageBox.Show("Erro ao Consultar Datas - BLL/SqlComandos/Atualizar/UP_Matriculados - ConsultandoDatas()" + erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }         
+            finally
+            {
+                conectar.FecharConexão();
+            }
+        }
+        public void AtualizarFrequencia(int id, string statusFrequencia)
+        {
+            try
+            {
+                conectar.AbrirConexão();
+                SqlCommand objComando = new SqlCommand(strAtualizarFrequencia, conectar.con);
+                objComando.Parameters.Add(new SqlParameter("@FREQUENCIA", statusFrequencia));
+                objComando.Parameters.Add(new SqlParameter("@IDNOVOALUNO", id));
+                objComando.ExecuteNonQuery();
+                MessageBox.Show("Atualizado com sucesso");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao atualizar - Business/SqlComandos/Atualizar/UP_Matriculados - AtualizarFrequencia()" + erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             finally
             {
                 conectar.FecharConexão();

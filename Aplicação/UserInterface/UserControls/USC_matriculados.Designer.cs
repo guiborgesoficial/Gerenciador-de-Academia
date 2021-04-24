@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USC_matriculados));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictbox_novoAluno = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new BotãoDinamico.CustomBotãoImage();
@@ -55,6 +55,10 @@
             this.cmbbox_Plano = new System.Windows.Forms.ComboBox();
             this.dataGridView_DadosPagamento = new System.Windows.Forms.DataGridView();
             this.btn_atualizar = new BotãoDinamico.CustomBotãoImage();
+            this.lbl_frequencia = new System.Windows.Forms.Label();
+            this.lbl_frequenciaResult = new System.Windows.Forms.Label();
+            this.chckbox_ativo = new System.Windows.Forms.CheckBox();
+            this.btn_frequencia = new BotãoDinamico.CustomBotãoImage();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_voltar)).BeginInit();
@@ -62,6 +66,7 @@
             this.panel_resultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_atualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_frequencia)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -185,7 +190,7 @@
             // chckbox_pagarProxFatura
             // 
             this.chckbox_pagarProxFatura.AutoSize = true;
-            this.chckbox_pagarProxFatura.Location = new System.Drawing.Point(95, 289);
+            this.chckbox_pagarProxFatura.Location = new System.Drawing.Point(95, 319);
             this.chckbox_pagarProxFatura.Name = "chckbox_pagarProxFatura";
             this.chckbox_pagarProxFatura.Size = new System.Drawing.Size(123, 17);
             this.chckbox_pagarProxFatura.TabIndex = 79;
@@ -271,6 +276,7 @@
             // 
             // panel_resultado
             // 
+            this.panel_resultado.Controls.Add(this.lbl_frequenciaResult);
             this.panel_resultado.Controls.Add(this.msktbox_Valor);
             this.panel_resultado.Controls.Add(this.lbl_dtMatriculaResultado);
             this.panel_resultado.Controls.Add(this.cmbbox_Plano);
@@ -279,7 +285,7 @@
             this.panel_resultado.Controls.Add(this.lbl_statusResultado);
             this.panel_resultado.Location = new System.Drawing.Point(222, 79);
             this.panel_resultado.Name = "panel_resultado";
-            this.panel_resultado.Size = new System.Drawing.Size(165, 227);
+            this.panel_resultado.Size = new System.Drawing.Size(165, 235);
             this.panel_resultado.TabIndex = 89;
             // 
             // msktbox_Valor
@@ -319,23 +325,23 @@
             this.dataGridView_DadosPagamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView_DadosPagamento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView_DadosPagamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DadosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_DadosPagamento.EnableHeadersVisualStyles = false;
             this.dataGridView_DadosPagamento.Location = new System.Drawing.Point(393, 79);
             this.dataGridView_DadosPagamento.Name = "dataGridView_DadosPagamento";
@@ -360,10 +366,59 @@
             this.btn_atualizar.TabStop = false;
             this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
             // 
+            // lbl_frequencia
+            // 
+            this.lbl_frequencia.AutoSize = true;
+            this.lbl_frequencia.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_frequencia.Location = new System.Drawing.Point(91, 285);
+            this.lbl_frequencia.Name = "lbl_frequencia";
+            this.lbl_frequencia.Size = new System.Drawing.Size(109, 21);
+            this.lbl_frequencia.TabIndex = 92;
+            this.lbl_frequencia.Text = "FREQUÊNCIA:";
+            // 
+            // lbl_frequenciaResult
+            // 
+            this.lbl_frequenciaResult.AutoSize = true;
+            this.lbl_frequenciaResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_frequenciaResult.Location = new System.Drawing.Point(17, 206);
+            this.lbl_frequenciaResult.Name = "lbl_frequenciaResult";
+            this.lbl_frequenciaResult.Size = new System.Drawing.Size(109, 21);
+            this.lbl_frequenciaResult.TabIndex = 92;
+            this.lbl_frequenciaResult.Text = "FREQUÊNCIA:";
+            this.lbl_frequenciaResult.Visible = false;
+            // 
+            // chckbox_ativo
+            // 
+            this.chckbox_ativo.AutoSize = true;
+            this.chckbox_ativo.Location = new System.Drawing.Point(95, 342);
+            this.chckbox_ativo.Name = "chckbox_ativo";
+            this.chckbox_ativo.Size = new System.Drawing.Size(95, 17);
+            this.chckbox_ativo.TabIndex = 93;
+            this.chckbox_ativo.Text = "FREQUENCIA";
+            this.chckbox_ativo.UseVisualStyleBackColor = true;
+            this.chckbox_ativo.Visible = false;
+            // 
+            // btn_frequencia
+            // 
+            this.btn_frequencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_frequencia.Image = ((System.Drawing.Image)(resources.GetObject("btn_frequencia.Image")));
+            this.btn_frequencia.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_frequencia.ImageHover")));
+            this.btn_frequencia.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_frequencia.ImageNormal")));
+            this.btn_frequencia.Location = new System.Drawing.Point(261, 395);
+            this.btn_frequencia.Name = "btn_frequencia";
+            this.btn_frequencia.Size = new System.Drawing.Size(176, 30);
+            this.btn_frequencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_frequencia.TabIndex = 94;
+            this.btn_frequencia.TabStop = false;
+            this.btn_frequencia.Click += new System.EventHandler(this.btn_frequencia_Click);
+            // 
             // USC_matriculados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_frequencia);
+            this.Controls.Add(this.chckbox_ativo);
+            this.Controls.Add(this.lbl_frequencia);
             this.Controls.Add(this.dataGridView_DadosPagamento);
             this.Controls.Add(this.lbl_idResult);
             this.Controls.Add(this.lbl_id);
@@ -390,6 +445,7 @@
             this.panel_resultado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DadosPagamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_atualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_frequencia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,5 +477,9 @@
         private System.Windows.Forms.ComboBox cmbbox_Plano;
         private System.Windows.Forms.MaskedTextBox msktbox_Valor;
         private System.Windows.Forms.DataGridView dataGridView_DadosPagamento;
+        private System.Windows.Forms.Label lbl_frequenciaResult;
+        private System.Windows.Forms.Label lbl_frequencia;
+        private System.Windows.Forms.CheckBox chckbox_ativo;
+        private BotãoDinamico.CustomBotãoImage btn_frequencia;
     }
 }

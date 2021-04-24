@@ -53,7 +53,7 @@ namespace RCFitness.UserControls
 
                 lbl_idResult.Text = consultandoComboBox.IDNOVOALUNO.ToString();
                 lbl_dtMatriculaResultado.Text = consultandoComboBox.DT_MATRÍC.ToShortDateString();
-
+                
                 switch(dataGridView_DadosPagamento.Rows.Count)
                 {
                     case 1:
@@ -94,10 +94,28 @@ namespace RCFitness.UserControls
                     lbl_statusResultado.Text = "Adimplente";
                     lbl_statusResultado.Visible = true;
                 }
+
+                VerificandoFrequencia(int.Parse(lbl_idResult.Text));
                 MostrarCampos();
             }
         }
-
+        private void VerificandoFrequencia(int id)
+        {
+            CS_Frequencia consultandoFrequencia = new CS_Frequencia();
+            consultandoFrequencia.ConsultandoFrequencia(id);
+            if (consultandoFrequencia.StatusFrequencia.ToUpper() == "ATIVO")
+            {
+                lbl_frequenciaResult.ForeColor = Color.Green;
+                lbl_frequenciaResult.Text = "ATIVO";
+                chckbox_ativo.Text = "Tornar Inativo";
+            }
+            else if (consultandoFrequencia.StatusFrequencia.ToUpper() == "INATIVO")
+            {
+                lbl_frequenciaResult.ForeColor = Color.Red;
+                lbl_frequenciaResult.Text = "INATIVO";
+                chckbox_ativo.Text = "Tornar Ativo";
+            }
+        }
         VerificadorDeCampos verificador = new VerificadorDeCampos();
         
         private void VerificaCamposTempoReal_Tick(object sender, EventArgs e)
@@ -209,6 +227,9 @@ namespace RCFitness.UserControls
             lbl_próximoVencResultado.Visible = false;
             lbl_statusResultado.Visible = false;
             dataGridView_DadosPagamento.Visible = false;
+            lbl_frequenciaResult.Visible = false;
+            chckbox_ativo.Visible = false;
+            chckbox_pagarProxFatura.Visible = false;
             lbl_idResult.Text = "ID:";
         }
         private void MostrarCampos()
@@ -222,6 +243,39 @@ namespace RCFitness.UserControls
             lbl_dtUltimoPagamentoResultado.Visible = true;
             lbl_próximoVencResultado.Visible = true;
             dataGridView_DadosPagamento.Visible = true;
+            chckbox_ativo.Visible = true;
+            lbl_frequenciaResult.Visible = true;
+            lbl_frequencia.Visible = true;
+        }
+
+        private void btn_frequencia_Click(object sender, EventArgs e)
+        {
+            if(lbl_idResult.Text != "0" && lbl_idResult.Text != "ID:")
+            {
+                if (chckbox_ativo.Checked)
+                {
+                    UP_Matriculados atualizandoFrequencia = new UP_Matriculados();
+                    if (lbl_frequenciaResult.Text == "ATIVO")
+                    {
+                        atualizandoFrequencia.AtualizarFrequencia(int.Parse(lbl_idResult.Text), "INATIVO");
+                    }
+                    else if (lbl_frequenciaResult.Text == "INATIVO")
+                    {
+                        atualizandoFrequencia.AtualizarFrequencia(int.Parse(lbl_idResult.Text), "ATIVO");
+                    }
+                    int cmbAlunoIndex = cmbbox_aluno.SelectedIndex;
+                    cmbbox_aluno.SelectedIndex = 0;
+                    cmbbox_aluno.SelectedIndex = cmbAlunoIndex;
+                }
+                else
+                {
+                    MessageBox.Show("É necessário marcar a Check Box para alterar o status de frequência desse aluno", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário selecionar um aluno antes de atualizar a sua frequência", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -143,7 +143,8 @@ namespace RCFitness.UserControls
 					}
 				}
 			}
-		} 
+			cadastrarNovoAluno.InserindoFrequencia(cadastrarNovoAluno.IdRetorno, "ATIVO");
+		}
 		private void VerificaCamposTempoReal_Tick(object sender, EventArgs e)
 		{
 			verificador.VerificaCamposPreenchidos(this);

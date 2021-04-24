@@ -9,15 +9,16 @@ namespace Business.SqlComandos.Cadastrar
     public class CD_NovoAluno
     {
         public int IdRetorno { get; set;}
-        public string strInserção = "INSERT INTO NovoAluno (NOME , DT_NASC, SEXO, RG, CPF, TELEFONE, WHATSAPP, ENDEREÇO, NÚMERO, BAIRRO, UF, CEP, CIDADE, DT_MATRÍC, MARKETING, EMAIL) VALUES (@NOME , @DT_NASC, @SEXO, @RG, @CPF, @TELEFONE, @WHATSAPP, @ENDEREÇO, @NÚMERO, @BAIRRO, @UF, @CEP, @CIDADE, @DT_MATRÍC, @MARKETING, @EMAIL) SELECT SCOPE_IDENTITY()";
-        public string strInserção2 = "INSERT INTO Pagamento (DT_PAG, DT_VENC, PRÓX_PAG, VALOR, PLANO, STATUS, ID_NOVOALUNO) VALUES (@DT_PAG, @DT_VENC, @PRÓX_PAG, @VALOR, @PLANO, @STATUS, @ID_NOVOALUNO)";
+        public string strInserçãoFrequencia = "INSERT INTO Frequencia (FREQUENCIA, ID_NOVOALUNO) VALUES (@FREQUENCIA, @ID_NOVOALUNO)";
+        public string strInserçãoNovoAluno = "INSERT INTO NovoAluno (NOME , DT_NASC, SEXO, RG, CPF, TELEFONE, WHATSAPP, ENDEREÇO, NÚMERO, BAIRRO, UF, CEP, CIDADE, DT_MATRÍC, MARKETING, EMAIL) VALUES (@NOME , @DT_NASC, @SEXO, @RG, @CPF, @TELEFONE, @WHATSAPP, @ENDEREÇO, @NÚMERO, @BAIRRO, @UF, @CEP, @CIDADE, @DT_MATRÍC, @MARKETING, @EMAIL) SELECT SCOPE_IDENTITY()";
+        public string strInserçãoPagamento = "INSERT INTO Pagamento (DT_PAG, DT_VENC, PRÓX_PAG, VALOR, PLANO, STATUS, ID_NOVOALUNO) VALUES (@DT_PAG, @DT_VENC, @PRÓX_PAG, @VALOR, @PLANO, @STATUS, @ID_NOVOALUNO)";
         Conexão conectar = new Conexão();
         public void InserindoNovoAluno(string txtbox_nome, string msktbox_dtNascimento, string cmbbox_sexo, string msktbox_rg, string mstkbox_cpf, string msktbox_telefone, string Whatsapp, string txtbox_endereco, string txtbox_numero, string txtbox_bairro, string cmbbox_uf, string msktbox_cep, string cmbbox_cidade, string msktbox_dtMatricula, string cmbbox_marketing, string txtbox_email)
         {
             try
             {
                 conectar.AbrirConexão();
-                SqlCommand objComando = new SqlCommand(strInserção, conectar.con);
+                SqlCommand objComando = new SqlCommand(strInserçãoNovoAluno, conectar.con);
 
                 objComando.Parameters.Add(new SqlParameter("@NOME", txtbox_nome.ToUpper()));
                 objComando.Parameters.Add(new SqlParameter("@DT_NASC", DateTime.Parse(msktbox_dtMatricula)));
@@ -57,7 +58,7 @@ namespace Business.SqlComandos.Cadastrar
             try
             {
                 conectar.AbrirConexão();
-                SqlCommand objComando = new SqlCommand(strInserção2, conectar.con);
+                SqlCommand objComando = new SqlCommand(strInserçãoPagamento, conectar.con);
 
                 objComando.Parameters.Add(new SqlParameter("@DT_PAG", DataPagamento));
                 objComando.Parameters.Add(new SqlParameter("@DT_VENC", DateTime.Now.ToShortDateString()));
@@ -76,6 +77,27 @@ namespace Business.SqlComandos.Cadastrar
                 }
                 else
                     MessageBox.Show("Erro ao cadastrar pagamento - Business/SqlComandos/Cadastrar/CD_NovoAluno - InserindoPagamento()" + erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conectar.FecharConexão();
+            }
+        }
+        public void InserindoFrequencia(int id, string statusFrequencia)
+        {
+            try
+            {
+                conectar.AbrirConexão();
+                SqlCommand objComando = new SqlCommand(strInserçãoFrequencia, conectar.con);
+
+                objComando.Parameters.Add(new SqlParameter("@ID_NOVOALUNO", id));
+                objComando.Parameters.Add(new SqlParameter("@FREQUENCIA", statusFrequencia));
+
+                objComando.ExecuteNonQuery();
+            }
+            catch (Exception erro)
+            {
+               MessageBox.Show("Erro ao cadastrar Frequência - Business/SqlComandos/Cadastrar/CD_NovoAluno - InserindoFrequencia()" + erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
