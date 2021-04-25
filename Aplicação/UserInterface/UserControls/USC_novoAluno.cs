@@ -144,7 +144,29 @@ namespace RCFitness.UserControls
 				}
 			}
 			cadastrarNovoAluno.InserindoFrequencia(cadastrarNovoAluno.IdRetorno, "ATIVO");
+			LimpaCampos();
 		}
+		public void LimpaCampos()
+        {
+			lbl_id.Text = string.Empty;
+			lbl_idInfo.Visible = false;
+			txtbox_nome.Text = string.Empty;
+			msktbox_dtNascimento.Text = string.Empty;
+			txtbox_email.Text = string.Empty;
+			msktbox_rg.Text = string.Empty;
+			mstkbox_cpf.Text = string.Empty;
+			msktbox_telefone.Text = string.Empty;
+			chckbox_whatsaap.Checked = false;
+			txtbox_endereco.Text = string.Empty;
+			txtbox_numero.Text = string.Empty;
+			txtbox_bairro.Text = string.Empty;
+			msktbox_cep.Text = string.Empty;
+			msktbox_dtMatricula.Text = string.Empty;
+			msktbox_outroValor.Text = string.Empty;
+			chckbox_pago.Checked = false;
+			cmbbox_plano.SelectedIndex = 0;
+		}
+
 		private void VerificaCamposTempoReal_Tick(object sender, EventArgs e)
 		{
 			verificador.VerificaCamposPreenchidos(this);

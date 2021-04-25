@@ -587,7 +587,6 @@
         private System.Windows.Forms.PictureBox pictbox_novoAluno;
         private BotãoDinamico.CustomBotãoImage btn_voltar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbbox_aluno;
         private System.Windows.Forms.Label lbl_aluno;
         private BotãoDinamico.CustomBotãoImage btn_gerarPDF;
         private System.Windows.Forms.Label lbl_idResult;
@@ -621,5 +620,6 @@
         private System.Windows.Forms.Label lbl_numeroMsgPersonalizada;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_enviar;
+        public System.Windows.Forms.ComboBox cmbbox_aluno;
     }
 }

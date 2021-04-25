@@ -35,6 +35,7 @@ namespace RCFitness.UserControls
                 lbl_id.Visible = false;
                 lbl_idResult.Visible = false;
                 lbl_idResult.Text = "";
+                LimpaCampos();
             }
             else
             {
@@ -185,6 +186,7 @@ namespace RCFitness.UserControls
                     lbl_coletaResult.Text = Convert.ToDateTime(consultar.DT_COLETA).ToShortDateString();
                     lbl_coleta.Visible = true;
                     lbl_coletaResult.Visible = true;
+                    lbl_id.Visible = true;
                 }
             }
             else
@@ -204,29 +206,29 @@ namespace RCFitness.UserControls
         }
         private void LimpaCampos()
         {
-            txtbox_abdomen.Text = "";
-            txtbox_altura.Text = "";
-            txtbox_torax.Text = "";
-            txtbox_cintura.Text = "";
-            txtbox_quadril.Text = "";
-            txtbox_bracoDireito.Text = "";
-            txtbox_bracoEsquerdo.Text = "";
-            txtbox_antebracoDireito.Text = "";
-            txtbox_antebracoEsquerdo.Text = "";
-            txtbox_Dproximal.Text = "";
-            txtbox_Dmedial.Text = "";
-            txtbox_Ddistal.Text = "";
-            txtbox_Eproximal.Text = "";
-            txtbox_Emedial.Text = "";
-            txtbox_Edistal.Text = "";
-            txtbox_pernaDireita.Text = "";
-            txtbox_pernaEsquerda.Text = "";
-            txtbox_ombros.Text = "";
-            txtbox_pescoco.Text = "";
-            txtbox_joelho.Text = "";
-            txtbox_tornozelo.Text = "";
-            lbl_coletaResult.Text = "";
-            txtbox_punho.Text = "";
+            txtbox_abdomen.Text = string.Empty;
+            txtbox_altura.Text = string.Empty;
+            txtbox_torax.Text = string.Empty;
+            txtbox_cintura.Text = string.Empty;
+            txtbox_quadril.Text = string.Empty;
+            txtbox_bracoDireito.Text = string.Empty;
+            txtbox_bracoEsquerdo.Text = string.Empty;
+            txtbox_antebracoDireito.Text = string.Empty;
+            txtbox_antebracoEsquerdo.Text = string.Empty;
+            txtbox_Dproximal.Text = string.Empty;
+            txtbox_Dmedial.Text = string.Empty;
+            txtbox_Ddistal.Text = string.Empty;
+            txtbox_Eproximal.Text = string.Empty;
+            txtbox_Emedial.Text = string.Empty;
+            txtbox_Edistal.Text = string.Empty;
+            txtbox_pernaDireita.Text = string.Empty;
+            txtbox_pernaEsquerda.Text = string.Empty;
+            txtbox_ombros.Text = string.Empty;
+            txtbox_pescoco.Text = string.Empty;
+            txtbox_joelho.Text = string.Empty;
+            txtbox_tornozelo.Text = string.Empty;
+            lbl_coletaResult.Text = string.Empty;
+            txtbox_punho.Text = string.Empty;
             lbl_coleta.Visible = false;
             lbl_coletaResult.Visible = false;
         }        

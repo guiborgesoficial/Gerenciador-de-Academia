@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USC_matriculados));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictbox_novoAluno = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new BotãoDinamico.CustomBotãoImage();
@@ -51,12 +51,12 @@
             this.lbl_idResult = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
             this.panel_resultado = new System.Windows.Forms.Panel();
+            this.lbl_frequenciaResult = new System.Windows.Forms.Label();
             this.msktbox_Valor = new System.Windows.Forms.MaskedTextBox();
             this.cmbbox_Plano = new System.Windows.Forms.ComboBox();
             this.dataGridView_DadosPagamento = new System.Windows.Forms.DataGridView();
             this.btn_atualizar = new BotãoDinamico.CustomBotãoImage();
             this.lbl_frequencia = new System.Windows.Forms.Label();
-            this.lbl_frequenciaResult = new System.Windows.Forms.Label();
             this.chckbox_ativo = new System.Windows.Forms.CheckBox();
             this.btn_frequencia = new BotãoDinamico.CustomBotãoImage();
             this.panel1.SuspendLayout();
@@ -288,6 +288,17 @@
             this.panel_resultado.Size = new System.Drawing.Size(165, 235);
             this.panel_resultado.TabIndex = 89;
             // 
+            // lbl_frequenciaResult
+            // 
+            this.lbl_frequenciaResult.AutoSize = true;
+            this.lbl_frequenciaResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_frequenciaResult.Location = new System.Drawing.Point(17, 206);
+            this.lbl_frequenciaResult.Name = "lbl_frequenciaResult";
+            this.lbl_frequenciaResult.Size = new System.Drawing.Size(109, 21);
+            this.lbl_frequenciaResult.TabIndex = 92;
+            this.lbl_frequenciaResult.Text = "FREQUÊNCIA:";
+            this.lbl_frequenciaResult.Visible = false;
+            // 
             // msktbox_Valor
             // 
             this.msktbox_Valor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -325,23 +336,23 @@
             this.dataGridView_DadosPagamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView_DadosPagamento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView_DadosPagamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_DadosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_DadosPagamento.EnableHeadersVisualStyles = false;
             this.dataGridView_DadosPagamento.Location = new System.Drawing.Point(393, 79);
             this.dataGridView_DadosPagamento.Name = "dataGridView_DadosPagamento";
@@ -375,17 +386,6 @@
             this.lbl_frequencia.Size = new System.Drawing.Size(109, 21);
             this.lbl_frequencia.TabIndex = 92;
             this.lbl_frequencia.Text = "FREQUÊNCIA:";
-            // 
-            // lbl_frequenciaResult
-            // 
-            this.lbl_frequenciaResult.AutoSize = true;
-            this.lbl_frequenciaResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_frequenciaResult.Location = new System.Drawing.Point(17, 206);
-            this.lbl_frequenciaResult.Name = "lbl_frequenciaResult";
-            this.lbl_frequenciaResult.Size = new System.Drawing.Size(109, 21);
-            this.lbl_frequenciaResult.TabIndex = 92;
-            this.lbl_frequenciaResult.Text = "FREQUÊNCIA:";
-            this.lbl_frequenciaResult.Visible = false;
             // 
             // chckbox_ativo
             // 
@@ -457,7 +457,6 @@
         private System.Windows.Forms.PictureBox pictbox_novoAluno;
         private BotãoDinamico.CustomBotãoImage btn_voltar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbbox_aluno;
         private System.Windows.Forms.Label lbl_aluno;
         private BotãoDinamico.CustomBotãoImage btn_atualizar;
         private System.Windows.Forms.Label lbl_dtMatricula;
@@ -481,5 +480,6 @@
         private System.Windows.Forms.Label lbl_frequencia;
         private System.Windows.Forms.CheckBox chckbox_ativo;
         private BotãoDinamico.CustomBotãoImage btn_frequencia;
+        public System.Windows.Forms.ComboBox cmbbox_aluno;
     }
 }

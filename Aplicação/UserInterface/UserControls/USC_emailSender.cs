@@ -38,6 +38,9 @@ namespace RCFitness.UserControls
             {
                 lbl_id.Visible = false;
                 lbl_idResult.Visible = false;
+                textBox_anexo.Text = string.Empty;
+                textBox_assunto.Text = string.Empty;
+                textBox_escreverEmail.Text = string.Empty;
             }
             else
             {
