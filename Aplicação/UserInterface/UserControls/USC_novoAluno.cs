@@ -164,6 +164,8 @@ namespace RCFitness.UserControls
 			msktbox_dtMatricula.Text = string.Empty;
 			msktbox_outroValor.Text = string.Empty;
 			chckbox_pago.Checked = false;
+			cmbbox_sexo.SelectedIndex = -1;
+			cmbbox_marketing.SelectedIndex = -1;
 			cmbbox_plano.SelectedIndex = 0;
 		}
 
@@ -303,5 +305,10 @@ namespace RCFitness.UserControls
 				lbl_emailVálido.Visible = false;
             }
 		}
+
+        private void cmbbox_sexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }   
 }

@@ -323,6 +323,7 @@
             this.cmbbox_sexo.Name = "cmbbox_sexo";
             this.cmbbox_sexo.Size = new System.Drawing.Size(32, 21);
             this.cmbbox_sexo.TabIndex = 2;
+            this.cmbbox_sexo.SelectedIndexChanged += new System.EventHandler(this.cmbbox_sexo_SelectedIndexChanged);
             // 
             // txtbox_endereco
             // 
