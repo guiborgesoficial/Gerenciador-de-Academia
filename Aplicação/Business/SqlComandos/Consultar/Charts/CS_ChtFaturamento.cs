@@ -23,6 +23,7 @@ namespace Business.SqlComandos.Consultar
         {
             try
             {
+                faturamento = 0;
                 conectar.AbrirConexão();
                 string strConsultar = intervalo;
                 SqlCommand objComando = new SqlCommand(strConsultar, conectar.con);
