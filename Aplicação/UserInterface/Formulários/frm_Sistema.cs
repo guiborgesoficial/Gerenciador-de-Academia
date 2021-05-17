@@ -67,6 +67,9 @@ namespace RCFitness
             pnl_UserControl.Controls.Clear();
             pnl_UserControl.Controls.Add(USC_emailSender1);
             USC_emailSender1.cmbbox_aluno.SelectedItem = string.Empty;
+            USC_emailSender1.groupBox_Configurações.Visible = false;
+            USC_emailSender1.groupbox_inadimplentes.Visible = false;
+            USC_emailSender1.groupBox_ConfigureSuaMensagem.Visible = true;
             USC_emailSender1.Visible = true;
         }
         private void timer_dataCurta_Tick(object sender, EventArgs e)

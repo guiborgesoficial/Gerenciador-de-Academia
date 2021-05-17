@@ -160,8 +160,8 @@ namespace RCFitness.UserControls
 			txtbox_endereco.Text = string.Empty;
 			txtbox_numero.Text = string.Empty;
 			txtbox_bairro.Text = string.Empty;
-			msktbox_cep.Text = string.Empty;
-			msktbox_dtMatricula.Text = string.Empty;
+			msktbox_cep.Text = "12980000";
+			msktbox_dtMatricula.Text = DateTime.Now.ToShortDateString();
 			msktbox_outroValor.Text = string.Empty;
 			chckbox_pago.Checked = false;
 			cmbbox_sexo.SelectedIndex = -1;

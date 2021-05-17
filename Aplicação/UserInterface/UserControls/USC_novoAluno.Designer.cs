@@ -708,7 +708,6 @@
         private System.Windows.Forms.ComboBox cmbbox_uf;
         private System.Windows.Forms.MaskedTextBox msktbox_cep;
         private System.Windows.Forms.ComboBox cmbbox_cidade;
-        private System.Windows.Forms.MaskedTextBox msktbox_dtMatricula;
         private System.Windows.Forms.ComboBox cmbbox_marketing;
         private System.Windows.Forms.ComboBox cmbbox_plano;
         private System.Windows.Forms.ComboBox cmbbox_valor;
@@ -733,5 +732,6 @@
         private System.Windows.Forms.TextBox txtbox_email;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_emailVálido;
+        private System.Windows.Forms.MaskedTextBox msktbox_dtMatricula;
     }
 }

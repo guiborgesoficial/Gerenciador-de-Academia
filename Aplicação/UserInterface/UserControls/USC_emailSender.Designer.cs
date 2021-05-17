@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USC_emailSender));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictbox_novoAluno = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new BotãoDinamico.CustomBotãoImage();
@@ -510,23 +510,23 @@
             this.dataGridView_DadosPagamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView_DadosPagamento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView_DadosPagamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_DadosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_DadosPagamento.EnableHeadersVisualStyles = false;
             this.dataGridView_DadosPagamento.Location = new System.Drawing.Point(12, 21);
             this.dataGridView_DadosPagamento.Name = "dataGridView_DadosPagamento";
@@ -591,14 +591,12 @@
         private BotãoDinamico.CustomBotãoImage btn_gerarPDF;
         private System.Windows.Forms.Label lbl_idResult;
         private System.Windows.Forms.Label lbl_id;
-        private System.Windows.Forms.GroupBox groupBox_Configurações;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.TextBox textBox_senha;
         private System.Windows.Forms.TextBox textBox_email;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.Label lbl_senha;
-        private System.Windows.Forms.GroupBox groupBox_ConfigureSuaMensagem;
         private System.Windows.Forms.TextBox textBox_anexo;
         private System.Windows.Forms.Button btn_anexoBuscar;
         private System.Windows.Forms.Label label3;
@@ -608,8 +606,6 @@
         private System.Windows.Forms.Label lbl_assunto;
         private BotãoDinamico.CustomBotãoImage bnt_config;
         private BotãoDinamico.CustomBotãoImage btn_porquinho;
-        private System.Windows.Forms.GroupBox groupbox_inadimplentes;
-        private System.Windows.Forms.DataGridView dataGridView_DadosPagamento;
         private System.Windows.Forms.Button btn_enviarCobranças;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private BotãoDinamico.CustomBotãoImage btn_msgPersonalizada4;
@@ -621,5 +617,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_enviar;
         public System.Windows.Forms.ComboBox cmbbox_aluno;
+        public System.Windows.Forms.GroupBox groupBox_Configurações;
+        private System.Windows.Forms.DataGridView dataGridView_DadosPagamento;
+        public System.Windows.Forms.GroupBox groupbox_inadimplentes;
+        public System.Windows.Forms.GroupBox groupBox_ConfigureSuaMensagem;
     }
 }
