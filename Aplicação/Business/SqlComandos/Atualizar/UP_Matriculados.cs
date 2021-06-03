@@ -14,7 +14,7 @@ namespace Business.SqlComandos.Atualizar
         public DateTime DT_VENC { get; set; }
         public int lbl_id2 { get; set; }
 
-        public string strAtualizarPagamento = "UPDATE Pagamento SET DT_PAG = @DT_PAG, STATUS = @STATUS WHERE ID_NOVOALUNO = @IDNOVOALUNO";
+        public string strAtualizarPagamento = ";WITH CTE AS (SELECT TOP 1 * FROM Pagamento WITH(NOLOCK) ORDER BY IDPAGAMENTO DESC) UPDATE CTE SET DT_PAG = @DT_PAG, STATUS = @STATUS WHERE ID_NOVOALUNO = @IDNOVOALUNO";
         public string strAtualizarFrequencia = "UPDATE Frequencia SET FREQUENCIA = @FREQUENCIA WHERE ID_NOVOALUNO = @IDNOVOALUNO";
         public string strInserir2 = "INSERT INTO Pagamento (DT_VENC, PRÓX_PAG, PLANO, VALOR, STATUS, ID_NOVOALUNO) VALUES (@DT_VENC, @DT_PRÓX, @PLANO, @VALOR, @STATUS, @IDNOVOALUNO)";
         Conexão conectar = new Conexão();
