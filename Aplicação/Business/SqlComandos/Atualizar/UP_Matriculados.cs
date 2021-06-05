@@ -14,19 +14,20 @@ namespace Business.SqlComandos.Atualizar
         public DateTime DT_VENC { get; set; }
         public int lbl_id2 { get; set; }
 
-        public string strAtualizarPagamento = ";WITH CTE AS (SELECT TOP 1 * FROM Pagamento WITH(NOLOCK) ORDER BY IDPAGAMENTO DESC) UPDATE CTE SET DT_PAG = @DT_PAG, STATUS = @STATUS WHERE ID_NOVOALUNO = @IDNOVOALUNO";
+        public string strAtualizarPagamento = "UPDATE Pagamento SET DT_PAG = @DT_PAG, STATUS = @STATUS WHERE ID_NOVOALUNO = @IDNOVOALUNO AND IDPAGAMENTO = @IDPAGAMENTO";
         public string strAtualizarFrequencia = "UPDATE Frequencia SET FREQUENCIA = @FREQUENCIA WHERE ID_NOVOALUNO = @IDNOVOALUNO";
         public string strInserir2 = "INSERT INTO Pagamento (DT_VENC, PRÓX_PAG, PLANO, VALOR, STATUS, ID_NOVOALUNO) VALUES (@DT_VENC, @DT_PRÓX, @PLANO, @VALOR, @STATUS, @IDNOVOALUNO)";
         Conexão conectar = new Conexão();
-        public void AtualizarPagamento(int lbl_id)
+        public void AtualizarPagamento(int lbl_id, string idPagamento)
         {
             try
             {
                 conectar.AbrirConexão();
                 SqlCommand objComando = new SqlCommand(strAtualizarPagamento, conectar.con);
-                objComando.Parameters.Add(new SqlParameter("@DT_PAG", DateTime.Now.ToShortDateString()));
+                objComando.Parameters.Add(new SqlParameter("@DT_PAG", "10/05/2021"));
                 objComando.Parameters.Add(new SqlParameter("@STATUS","PAGO"));
                 objComando.Parameters.Add(new SqlParameter("@IDNOVOALUNO", lbl_id));
+                objComando.Parameters.Add(new SqlParameter("@IDPAGAMENTO", idPagamento));
                 lbl_id2 = lbl_id;
                 objComando.ExecuteNonQuery();
                 MessageBox.Show("Atualizado com sucesso");

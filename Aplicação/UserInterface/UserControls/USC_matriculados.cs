@@ -11,6 +11,7 @@ namespace RCFitness.UserControls
 {
     public partial class USC_matriculados : UserControl
     {
+        string idPagamento;
         public USC_matriculados()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace RCFitness.UserControls
         public bool VerificaExistenciaPrimeiraFatura = true;
         private void cmbbox_aluno_SelectedIndexChanged(object sender, EventArgs e)
         {
+            idPagamento = string.Empty;
             if (cmbbox_aluno.SelectedIndex == 0)
             {
                 EsconderCampos();
@@ -53,21 +55,21 @@ namespace RCFitness.UserControls
 
                 lbl_idResult.Text = consultandoComboBox.IDNOVOALUNO.ToString();
                 lbl_dtMatriculaResultado.Text = consultandoComboBox.DT_MATRÍC.ToShortDateString();
-                
-                switch(dataGridView_DadosPagamento.Rows.Count)
+
+                switch (dataGridView_DadosPagamento.Rows.Count)
                 {
                     case 1:
                         VerificaExistenciaPrimeiraFatura = true;
-                        if (string.IsNullOrEmpty(dataGridView_DadosPagamento[2,0].Value.ToString()))
+                        if (string.IsNullOrEmpty(dataGridView_DadosPagamento[3,0].Value.ToString()))
                         {
                            lbl_dtUltimoPagamentoResultado.Text = "A PAGAR";
-                           cmbbox_Plano.Text = (dataGridView_DadosPagamento[0, dataGridView_DadosPagamento.RowCount - 1].Value).ToString();
-                           lbl_próximoVencResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[4, dataGridView_DadosPagamento.RowCount - 1].Value).ToShortDateString();
+                           cmbbox_Plano.Text = (dataGridView_DadosPagamento[1, dataGridView_DadosPagamento.RowCount - 1].Value).ToString();
+                           lbl_próximoVencResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[5, dataGridView_DadosPagamento.RowCount - 1].Value).ToShortDateString();
                            VerificaExistenciaPrimeiraFatura = true;
                         }
                         else
                         {
-                            lbl_dtUltimoPagamentoResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[4, 0].Value).ToShortDateString();
+                            lbl_dtUltimoPagamentoResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[3, 0].Value).ToShortDateString();
                         }
                         break;
                     case 0:
@@ -76,12 +78,12 @@ namespace RCFitness.UserControls
                         break;
                     default:
                         VerificaExistenciaPrimeiraFatura = true;
-                        lbl_dtUltimoPagamentoResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[2, dataGridView_DadosPagamento.RowCount - 2].Value).ToShortDateString();
-                        lbl_próximoVencResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[4, dataGridView_DadosPagamento.RowCount - 1].Value).ToShortDateString();
-                        cmbbox_Plano.Text = (dataGridView_DadosPagamento[0, dataGridView_DadosPagamento.RowCount - 1].Value).ToString();                       
+                        lbl_dtUltimoPagamentoResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[3, dataGridView_DadosPagamento.RowCount - 2].Value).ToShortDateString();
+                        lbl_próximoVencResultado.Text = Convert.ToDateTime(dataGridView_DadosPagamento[5, dataGridView_DadosPagamento.RowCount - 1].Value).ToShortDateString();
+                        cmbbox_Plano.Text = (dataGridView_DadosPagamento[1, dataGridView_DadosPagamento.RowCount - 1].Value).ToString();                       
                         break;
                 }
-                if (DateTime.Today >= Convert.ToDateTime(dataGridView_DadosPagamento[4, dataGridView_DadosPagamento.RowCount - 1].Value))
+                if (DateTime.Today >= Convert.ToDateTime(dataGridView_DadosPagamento[5, dataGridView_DadosPagamento.RowCount - 1].Value))
                 {
                     lbl_statusResultado.ForeColor = Color.Red;
                     lbl_dtUltimoPagamentoResultado.Visible = false;
@@ -138,7 +140,7 @@ namespace RCFitness.UserControls
                         {
                             verificador.VerificaCamposTempoReal.Stop();
                             UP_Matriculados atualizarPagamento = new UP_Matriculados();
-                            atualizarPagamento.AtualizarPagamento(int.Parse(lbl_idResult.Text));
+                            atualizarPagamento.AtualizarPagamento(int.Parse(lbl_idResult.Text), idPagamento);
                             atualizarPagamento.InserindoNovaFaturaMatriculados(int.Parse(lbl_idResult.Text), msktbox_Valor.Text, cmbbox_Plano.Text, "HAVER");
 
                             int cmbAlunoIndex = cmbbox_aluno.SelectedIndex;
@@ -162,7 +164,7 @@ namespace RCFitness.UserControls
 
                             UP_Matriculados AtualizandoPrimeiraFatura = new UP_Matriculados();
                             AtualizandoPrimeiraFatura.lbl_id2 = int.Parse(lbl_idResult.Text);
-                            AtualizandoPrimeiraFatura.AtualizarPagamento(int.Parse(lbl_idResult.Text));
+                            AtualizandoPrimeiraFatura.AtualizarPagamento(int.Parse(lbl_idResult.Text), idPagamento);
                             AtualizandoPrimeiraFatura.InserindoNovaFaturaMatriculados(int.Parse(lbl_idResult.Text), msktbox_Valor.Text, cmbbox_Plano.Text, "HAVER");
 
                             int cmbAlunoIndex = cmbbox_aluno.SelectedIndex;
@@ -191,11 +193,22 @@ namespace RCFitness.UserControls
 
         private void AlterarNomesColunasDataGridView(DataGridView dataGridView)
         {
-            dataGridView.Columns.Remove(dataGridView.Columns[0]);
-            dataGridView.Columns[2].HeaderText = "DATA DE PAGAMENTO";
-            dataGridView.Columns[4].HeaderText = "DATA DE VENCIMENTO";
-            dataGridView.Columns[5].HeaderText = "PRÓXIMO PAGAMENTO";
-            dataGridView.Columns[6].HeaderText = "ID DO ALUNO";
+            dataGridView.Columns["PLANO"].DisplayIndex = 0;
+            dataGridView.Columns["VALOR"].DisplayIndex = 1;
+            dataGridView.Columns["DT_PAG"].DisplayIndex = 2;
+            dataGridView.Columns["STATUS"].DisplayIndex = 3;
+            dataGridView.Columns["DT_VENC"].DisplayIndex = 4;
+            dataGridView.Columns["PRÓX_PAG"].DisplayIndex = 5;
+            dataGridView.Columns["ID_NOVOALUNO"].DisplayIndex = 6;
+            dataGridView.Columns["IDPAGAMENTO"].DisplayIndex = 7;
+
+            dataGridView.Columns["DT_PAG"].HeaderText = "DATA DO PAGAMENTO";
+            dataGridView.Columns["DT_VENC"].HeaderText = "DATA DO VENCIMENTO";
+            dataGridView.Columns["PRÓX_PAG"].HeaderText = "PRÓXIMO VENCIMENTO";
+            dataGridView.Columns["ID_NOVOALUNO"].HeaderText = "ID DO ALUNO";
+            dataGridView.Columns["IDPAGAMENTO"].HeaderText = "ID DO PAGAMENTO";
+
+            idPagamento = dataGridView_DadosPagamento[0, dataGridView_DadosPagamento.RowCount - 1].Value.ToString();
         }
 
         private void cmbbox_Plano_SelectedIndexChanged(object sender, EventArgs e)
