@@ -24,7 +24,7 @@ namespace Business.SqlComandos.Atualizar
             {
                 conectar.AbrirConexão();
                 SqlCommand objComando = new SqlCommand(strAtualizarPagamento, conectar.con);
-                objComando.Parameters.Add(new SqlParameter("@DT_PAG", "10/05/2021"));
+                objComando.Parameters.Add(new SqlParameter("@DT_PAG", DateTime.Now.ToShortDateString()));
                 objComando.Parameters.Add(new SqlParameter("@STATUS","PAGO"));
                 objComando.Parameters.Add(new SqlParameter("@IDNOVOALUNO", lbl_id));
                 objComando.Parameters.Add(new SqlParameter("@IDPAGAMENTO", idPagamento));

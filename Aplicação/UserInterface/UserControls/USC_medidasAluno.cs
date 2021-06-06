@@ -73,7 +73,7 @@ namespace RCFitness.UserControls
                     verificador.VerificaCamposTempoReal.Stop();
                     verificador.VerificaCamposNuméricosTempoReal.Stop();
                     CD_MedidasAluno cadastrarMedidas = new CD_MedidasAluno();
-                    cadastrarMedidas.InserindoMedidasAluno(int.Parse(lbl_idResult.Text), txtbox_altura.Text, txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
+                    cadastrarMedidas.InserindoMedidasAluno(int.Parse(lbl_idResult.Text), txtbox_altura.Text.Replace(".",","), txtbox_torax.Text, txtbox_abdomen.Text, txtbox_cintura.Text, txtbox_quadril.Text, txtbox_bracoDireito.Text, txtbox_bracoEsquerdo.Text, txtbox_antebracoDireito.Text, txtbox_antebracoEsquerdo.Text, txtbox_Dproximal.Text, txtbox_Dmedial.Text, txtbox_Ddistal.Text, txtbox_Eproximal.Text, txtbox_Emedial.Text, txtbox_Edistal.Text, txtbox_pernaDireita.Text, txtbox_pernaEsquerda.Text, txtbox_ombros.Text, txtbox_pescoco.Text, txtbox_punho.Text, txtbox_joelho.Text, txtbox_tornozelo.Text);
                     DialogResult msg = MessageBox.Show("Deseja cadastrar o peso desse aluno?", "CADASTRE O PESO DO ALUNO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (msg == DialogResult.Yes)
                     {
