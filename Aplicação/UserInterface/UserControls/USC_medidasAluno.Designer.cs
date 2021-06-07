@@ -659,7 +659,7 @@
             // 
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(540, 11);
+            this.lbl_id.Location = new System.Drawing.Point(465, 205);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(30, 21);
             this.lbl_id.TabIndex = 61;
@@ -670,7 +670,7 @@
             // 
             this.lbl_idResult.AutoSize = true;
             this.lbl_idResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_idResult.Location = new System.Drawing.Point(576, 11);
+            this.lbl_idResult.Location = new System.Drawing.Point(501, 205);
             this.lbl_idResult.Name = "lbl_idResult";
             this.lbl_idResult.Size = new System.Drawing.Size(30, 21);
             this.lbl_idResult.TabIndex = 62;
@@ -760,7 +760,7 @@
             this.pnl_print.ForeColor = System.Drawing.Color.Black;
             this.pnl_print.Location = new System.Drawing.Point(82, 14);
             this.pnl_print.Name = "pnl_print";
-            this.pnl_print.Size = new System.Drawing.Size(645, 376);
+            this.pnl_print.Size = new System.Drawing.Size(723, 376);
             this.pnl_print.TabIndex = 1;
             // 
             // USC_medidasAluno
@@ -850,10 +850,10 @@
         private System.Windows.Forms.Label lbl_aluno;
         public System.Windows.Forms.ComboBox cmbbox_aluno;
         private BotãoDinamico.CustomBotãoImage btn_gerarPDF;
-        private System.Windows.Forms.Label lbl_id;
         public System.Windows.Forms.Label lbl_idResult;
         private System.Windows.Forms.Label lbl_coleta;
         private System.Windows.Forms.Label lbl_coletaResult;
         private System.Windows.Forms.Panel pnl_print;
+        public System.Windows.Forms.Label lbl_id;
     }
 }

@@ -138,6 +138,7 @@ namespace RCFitness.UserControls
 						this.Parent.Controls.Add(TelaMedidas);
 						TelaMedidas.lbl_idResult.Text = cadastrarNovoAluno.IdRetorno.ToString();
 						TelaMedidas.lbl_idResult.Visible = true;
+						TelaMedidas.lbl_id.Visible = true;
 						TelaMedidas.cmbbox_aluno.Text = txtbox_nome.Text.ToUpper();
 						TelaMedidas.Visible = true;
 					}
