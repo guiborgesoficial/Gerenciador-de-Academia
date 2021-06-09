@@ -110,6 +110,7 @@
             this.cht_Inadimplentes.Legends.Add(legend3);
             this.cht_Inadimplentes.Location = new System.Drawing.Point(0, 16);
             this.cht_Inadimplentes.Name = "cht_Inadimplentes";
+            this.cht_Inadimplentes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series3.Legend = "Legend1";

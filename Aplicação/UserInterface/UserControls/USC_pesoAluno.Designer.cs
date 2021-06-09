@@ -54,6 +54,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.pictbox_novoAluno);
             this.panel1.Controls.Add(this.btn_voltar);
@@ -65,6 +67,8 @@
             // 
             // pictbox_novoAluno
             // 
+            this.pictbox_novoAluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictbox_novoAluno.Image = ((System.Drawing.Image)(resources.GetObject("pictbox_novoAluno.Image")));
             this.pictbox_novoAluno.Location = new System.Drawing.Point(3, 53);
             this.pictbox_novoAluno.Name = "pictbox_novoAluno";
@@ -75,6 +79,7 @@
             // 
             // btn_voltar
             // 
+            this.btn_voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
             this.btn_voltar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_voltar.ImageHover")));
@@ -99,6 +104,7 @@
             // 
             // btn_consultar
             // 
+            this.btn_consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_consultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_consultar.Image = ((System.Drawing.Image)(resources.GetObject("btn_consultar.Image")));
             this.btn_consultar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_consultar.ImageHover")));
@@ -113,6 +119,7 @@
             // 
             // btn_cadastrar
             // 
+            this.btn_cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
             this.btn_cadastrar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.ImageHover")));
@@ -127,8 +134,12 @@
             // 
             // cmbbox_aluno
             // 
+            this.cmbbox_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_aluno.FormattingEnabled = true;
             this.cmbbox_aluno.Location = new System.Drawing.Point(197, 154);
+            this.cmbbox_aluno.MinimumSize = new System.Drawing.Size(231, 0);
             this.cmbbox_aluno.Name = "cmbbox_aluno";
             this.cmbbox_aluno.Size = new System.Drawing.Size(231, 21);
             this.cmbbox_aluno.TabIndex = 0;
@@ -137,9 +148,13 @@
             // 
             // lbl_aluno
             // 
+            this.lbl_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_aluno.AutoSize = true;
             this.lbl_aluno.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_aluno.Location = new System.Drawing.Point(132, 156);
+            this.lbl_aluno.MinimumSize = new System.Drawing.Size(68, 21);
             this.lbl_aluno.Name = "lbl_aluno";
             this.lbl_aluno.Size = new System.Drawing.Size(68, 21);
             this.lbl_aluno.TabIndex = 66;
@@ -147,9 +162,13 @@
             // 
             // lbl_peso
             // 
+            this.lbl_peso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_peso.AutoSize = true;
             this.lbl_peso.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_peso.Location = new System.Drawing.Point(132, 189);
+            this.lbl_peso.MinimumSize = new System.Drawing.Size(52, 21);
             this.lbl_peso.Name = "lbl_peso";
             this.lbl_peso.Size = new System.Drawing.Size(52, 21);
             this.lbl_peso.TabIndex = 68;
@@ -157,9 +176,13 @@
             // 
             // lbl_imc
             // 
+            this.lbl_imc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_imc.AutoSize = true;
             this.lbl_imc.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_imc.Location = new System.Drawing.Point(132, 220);
+            this.lbl_imc.MinimumSize = new System.Drawing.Size(44, 21);
             this.lbl_imc.Name = "lbl_imc";
             this.lbl_imc.Size = new System.Drawing.Size(44, 21);
             this.lbl_imc.TabIndex = 70;
@@ -168,9 +191,13 @@
             // 
             // lbl_imcResultado
             // 
+            this.lbl_imcResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_imcResultado.AutoSize = true;
             this.lbl_imcResultado.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_imcResultado.Location = new System.Drawing.Point(193, 220);
+            this.lbl_imcResultado.MinimumSize = new System.Drawing.Size(52, 21);
             this.lbl_imcResultado.Name = "lbl_imcResultado";
             this.lbl_imcResultado.Size = new System.Drawing.Size(52, 21);
             this.lbl_imcResultado.TabIndex = 2;
@@ -179,9 +206,13 @@
             // 
             // lbl_id
             // 
+            this.lbl_id.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id.Location = new System.Drawing.Point(132, 117);
+            this.lbl_id.MinimumSize = new System.Drawing.Size(30, 21);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(30, 21);
             this.lbl_id.TabIndex = 72;
@@ -190,9 +221,13 @@
             // 
             // lbl_idResult
             // 
+            this.lbl_idResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_idResult.AutoSize = true;
             this.lbl_idResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_idResult.Location = new System.Drawing.Point(193, 117);
+            this.lbl_idResult.MinimumSize = new System.Drawing.Size(30, 21);
             this.lbl_idResult.Name = "lbl_idResult";
             this.lbl_idResult.Size = new System.Drawing.Size(30, 21);
             this.lbl_idResult.TabIndex = 73;
@@ -201,9 +236,13 @@
             // 
             // lbl_resultadoIMC
             // 
+            this.lbl_resultadoIMC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_resultadoIMC.AutoSize = true;
             this.lbl_resultadoIMC.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_resultadoIMC.Location = new System.Drawing.Point(132, 254);
+            this.lbl_resultadoIMC.MinimumSize = new System.Drawing.Size(101, 21);
             this.lbl_resultadoIMC.Name = "lbl_resultadoIMC";
             this.lbl_resultadoIMC.Size = new System.Drawing.Size(101, 21);
             this.lbl_resultadoIMC.TabIndex = 3;
@@ -212,11 +251,15 @@
             // 
             // msktbox_peso
             // 
+            this.msktbox_peso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.msktbox_peso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msktbox_peso.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.msktbox_peso.Location = new System.Drawing.Point(197, 189);
+            this.msktbox_peso.MinimumSize = new System.Drawing.Size(231, 20);
             this.msktbox_peso.Name = "msktbox_peso";
-            this.msktbox_peso.Size = new System.Drawing.Size(121, 20);
+            this.msktbox_peso.Size = new System.Drawing.Size(231, 20);
             this.msktbox_peso.TabIndex = 92;
             this.msktbox_peso.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.msktbox_peso.ValidatingType = typeof(System.DateTime);

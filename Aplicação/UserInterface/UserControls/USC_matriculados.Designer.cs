@@ -71,6 +71,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.pictbox_novoAluno);
             this.panel1.Controls.Add(this.btn_voltar);
@@ -82,6 +84,8 @@
             // 
             // pictbox_novoAluno
             // 
+            this.pictbox_novoAluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictbox_novoAluno.Image = ((System.Drawing.Image)(resources.GetObject("pictbox_novoAluno.Image")));
             this.pictbox_novoAluno.Location = new System.Drawing.Point(3, 52);
             this.pictbox_novoAluno.Name = "pictbox_novoAluno";
@@ -92,6 +96,7 @@
             // 
             // btn_voltar
             // 
+            this.btn_voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
             this.btn_voltar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_voltar.ImageHover")));
@@ -116,6 +121,8 @@
             // 
             // cmbbox_aluno
             // 
+            this.cmbbox_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_aluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_aluno.FormattingEnabled = true;
             this.cmbbox_aluno.Items.AddRange(new object[] {
@@ -129,6 +136,8 @@
             // 
             // lbl_aluno
             // 
+            this.lbl_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_aluno.AutoSize = true;
             this.lbl_aluno.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_aluno.Location = new System.Drawing.Point(91, 34);
@@ -139,6 +148,9 @@
             // 
             // lbl_dtMatricula
             // 
+            this.lbl_dtMatricula.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_dtMatricula.AutoSize = true;
             this.lbl_dtMatricula.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dtMatricula.Location = new System.Drawing.Point(91, 85);
@@ -149,6 +161,9 @@
             // 
             // lbl_dtUltimoPagamento
             // 
+            this.lbl_dtUltimoPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_dtUltimoPagamento.AutoSize = true;
             this.lbl_dtUltimoPagamento.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dtUltimoPagamento.Location = new System.Drawing.Point(91, 187);
@@ -159,6 +174,9 @@
             // 
             // lbl_status
             // 
+            this.lbl_status.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_status.AutoSize = true;
             this.lbl_status.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_status.Location = new System.Drawing.Point(91, 255);
@@ -169,6 +187,9 @@
             // 
             // lbl_plano
             // 
+            this.lbl_plano.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_plano.AutoSize = true;
             this.lbl_plano.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_plano.Location = new System.Drawing.Point(91, 119);
@@ -179,6 +200,9 @@
             // 
             // lbl_próximoVenc
             // 
+            this.lbl_próximoVenc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_próximoVenc.AutoSize = true;
             this.lbl_próximoVenc.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_próximoVenc.Location = new System.Drawing.Point(91, 222);
@@ -189,6 +213,9 @@
             // 
             // chckbox_pagarProxFatura
             // 
+            this.chckbox_pagarProxFatura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chckbox_pagarProxFatura.AutoSize = true;
             this.chckbox_pagarProxFatura.Location = new System.Drawing.Point(95, 319);
             this.chckbox_pagarProxFatura.Name = "chckbox_pagarProxFatura";
@@ -244,6 +271,9 @@
             // 
             // lbl_valor
             // 
+            this.lbl_valor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_valor.AutoSize = true;
             this.lbl_valor.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_valor.Location = new System.Drawing.Point(91, 153);
@@ -254,6 +284,7 @@
             // 
             // lbl_idResult
             // 
+            this.lbl_idResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_idResult.AutoSize = true;
             this.lbl_idResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_idResult.Location = new System.Drawing.Point(455, 34);
@@ -265,6 +296,7 @@
             // 
             // lbl_id
             // 
+            this.lbl_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id.Location = new System.Drawing.Point(419, 34);
@@ -276,6 +308,9 @@
             // 
             // panel_resultado
             // 
+            this.panel_resultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_resultado.Controls.Add(this.lbl_frequenciaResult);
             this.panel_resultado.Controls.Add(this.msktbox_Valor);
             this.panel_resultado.Controls.Add(this.lbl_dtMatriculaResultado);
@@ -332,6 +367,10 @@
             this.dataGridView_DadosPagamento.AllowUserToDeleteRows = false;
             this.dataGridView_DadosPagamento.AllowUserToResizeColumns = false;
             this.dataGridView_DadosPagamento.AllowUserToResizeRows = false;
+            this.dataGridView_DadosPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_DadosPagamento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_DadosPagamento.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_DadosPagamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView_DadosPagamento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
@@ -355,6 +394,8 @@
             this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_DadosPagamento.EnableHeadersVisualStyles = false;
             this.dataGridView_DadosPagamento.Location = new System.Drawing.Point(393, 79);
+            this.dataGridView_DadosPagamento.MaximumSize = new System.Drawing.Size(968, 0);
+            this.dataGridView_DadosPagamento.MinimumSize = new System.Drawing.Size(380, 227);
             this.dataGridView_DadosPagamento.Name = "dataGridView_DadosPagamento";
             this.dataGridView_DadosPagamento.ReadOnly = true;
             this.dataGridView_DadosPagamento.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -365,6 +406,7 @@
             // 
             // btn_atualizar
             // 
+            this.btn_atualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.Image")));
             this.btn_atualizar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.ImageHover")));
@@ -379,6 +421,9 @@
             // 
             // lbl_frequencia
             // 
+            this.lbl_frequencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_frequencia.AutoSize = true;
             this.lbl_frequencia.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_frequencia.Location = new System.Drawing.Point(91, 285);
@@ -389,6 +434,9 @@
             // 
             // chckbox_ativo
             // 
+            this.chckbox_ativo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chckbox_ativo.AutoSize = true;
             this.chckbox_ativo.Location = new System.Drawing.Point(95, 342);
             this.chckbox_ativo.Name = "chckbox_ativo";
@@ -400,6 +448,7 @@
             // 
             // btn_frequencia
             // 
+            this.btn_frequencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_frequencia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_frequencia.Image = ((System.Drawing.Image)(resources.GetObject("btn_frequencia.Image")));
             this.btn_frequencia.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_frequencia.ImageHover")));
@@ -475,11 +524,11 @@
         private System.Windows.Forms.Panel panel_resultado;
         private System.Windows.Forms.ComboBox cmbbox_Plano;
         private System.Windows.Forms.MaskedTextBox msktbox_Valor;
-        private System.Windows.Forms.DataGridView dataGridView_DadosPagamento;
         private System.Windows.Forms.Label lbl_frequenciaResult;
         private System.Windows.Forms.Label lbl_frequencia;
         private System.Windows.Forms.CheckBox chckbox_ativo;
         private BotãoDinamico.CustomBotãoImage btn_frequencia;
         public System.Windows.Forms.ComboBox cmbbox_aluno;
+        private System.Windows.Forms.DataGridView dataGridView_DadosPagamento;
     }
 }

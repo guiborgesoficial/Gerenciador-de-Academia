@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cht_faturamento = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbbox_FaturamentoCht = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cht_faturamento)).BeginInit();
@@ -42,73 +42,77 @@
             // 
             // cht_faturamento
             // 
+            this.cht_faturamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cht_faturamento.BorderlineWidth = 5;
-            chartArea2.Name = "ChartArea1";
-            this.cht_faturamento.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.cht_faturamento.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.cht_faturamento.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.cht_faturamento.Legends.Add(legend3);
             this.cht_faturamento.Location = new System.Drawing.Point(0, 0);
             this.cht_faturamento.Name = "cht_faturamento";
-            series6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series6.BackImageTransparentColor = System.Drawing.Color.White;
-            series6.BackSecondaryColor = System.Drawing.Color.YellowGreen;
-            series6.BorderColor = System.Drawing.Color.Black;
-            series6.ChartArea = "ChartArea1";
-            series6.Color = System.Drawing.Color.Green;
-            series6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series6.Legend = "Legend1";
-            series6.MarkerBorderColor = System.Drawing.Color.Black;
-            series6.MarkerColor = System.Drawing.Color.Black;
-            series6.MarkerSize = 7;
-            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series6.Name = "Faturamento";
-            series6.ShadowColor = System.Drawing.Color.Silver;
-            series6.ShadowOffset = 5;
-            series6.YValuesPerPoint = 2;
-            series7.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series7.BackSecondaryColor = System.Drawing.Color.LightSeaGreen;
-            series7.BorderColor = System.Drawing.Color.Black;
-            series7.ChartArea = "ChartArea1";
-            series7.Color = System.Drawing.Color.MediumTurquoise;
-            series7.Legend = "Legend1";
-            series7.Name = "Faturamento Hoje";
-            series8.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series8.BackSecondaryColor = System.Drawing.Color.Indigo;
-            series8.BorderColor = System.Drawing.Color.Black;
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Ticket Médio";
-            series8.ShadowColor = System.Drawing.Color.Silver;
-            series8.ShadowOffset = 5;
-            series8.YValuesPerPoint = 2;
-            series9.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series9.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            series9.BackSecondaryColor = System.Drawing.Color.Yellow;
-            series9.BorderColor = System.Drawing.Color.Black;
-            series9.ChartArea = "ChartArea1";
-            series9.Color = System.Drawing.Color.DarkOrange;
-            series9.Legend = "Legend1";
-            series9.Name = "Contas a Receber";
-            series9.YValuesPerPoint = 2;
-            series10.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series10.BackSecondaryColor = System.Drawing.Color.Firebrick;
-            series10.BorderColor = System.Drawing.Color.Black;
-            series10.ChartArea = "ChartArea1";
-            series10.Color = System.Drawing.Color.Crimson;
-            series10.Legend = "Legend1";
-            series10.Name = "Vencimentos Hoje";
-            this.cht_faturamento.Series.Add(series6);
-            this.cht_faturamento.Series.Add(series7);
-            this.cht_faturamento.Series.Add(series8);
-            this.cht_faturamento.Series.Add(series9);
-            this.cht_faturamento.Series.Add(series10);
-            this.cht_faturamento.Size = new System.Drawing.Size(453, 268);
+            series11.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series11.BackImageTransparentColor = System.Drawing.Color.White;
+            series11.BackSecondaryColor = System.Drawing.Color.YellowGreen;
+            series11.BorderColor = System.Drawing.Color.Black;
+            series11.ChartArea = "ChartArea1";
+            series11.Color = System.Drawing.Color.Green;
+            series11.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series11.Legend = "Legend1";
+            series11.MarkerBorderColor = System.Drawing.Color.Black;
+            series11.MarkerColor = System.Drawing.Color.Black;
+            series11.MarkerSize = 7;
+            series11.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series11.Name = "Faturamento";
+            series11.ShadowColor = System.Drawing.Color.Silver;
+            series11.ShadowOffset = 5;
+            series11.YValuesPerPoint = 2;
+            series12.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series12.BackSecondaryColor = System.Drawing.Color.LightSeaGreen;
+            series12.BorderColor = System.Drawing.Color.Black;
+            series12.ChartArea = "ChartArea1";
+            series12.Color = System.Drawing.Color.MediumTurquoise;
+            series12.Legend = "Legend1";
+            series12.Name = "Faturamento Hoje";
+            series13.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series13.BackSecondaryColor = System.Drawing.Color.Indigo;
+            series13.BorderColor = System.Drawing.Color.Black;
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Ticket Médio";
+            series13.ShadowColor = System.Drawing.Color.Silver;
+            series13.ShadowOffset = 5;
+            series13.YValuesPerPoint = 2;
+            series14.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series14.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series14.BackSecondaryColor = System.Drawing.Color.Yellow;
+            series14.BorderColor = System.Drawing.Color.Black;
+            series14.ChartArea = "ChartArea1";
+            series14.Color = System.Drawing.Color.DarkOrange;
+            series14.Legend = "Legend1";
+            series14.Name = "Contas a Receber";
+            series14.YValuesPerPoint = 2;
+            series15.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series15.BackSecondaryColor = System.Drawing.Color.Firebrick;
+            series15.BorderColor = System.Drawing.Color.Black;
+            series15.ChartArea = "ChartArea1";
+            series15.Color = System.Drawing.Color.Crimson;
+            series15.Legend = "Legend1";
+            series15.Name = "Vencimentos Hoje";
+            this.cht_faturamento.Series.Add(series11);
+            this.cht_faturamento.Series.Add(series12);
+            this.cht_faturamento.Series.Add(series13);
+            this.cht_faturamento.Series.Add(series14);
+            this.cht_faturamento.Series.Add(series15);
+            this.cht_faturamento.Size = new System.Drawing.Size(437, 268);
             this.cht_faturamento.TabIndex = 0;
             this.cht_faturamento.Text = "cht_faturamento";
             this.cht_faturamento.UseWaitCursor = true;
             // 
             // cmbbox_FaturamentoCht
             // 
+            this.cmbbox_FaturamentoCht.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_FaturamentoCht.FormattingEnabled = true;
             this.cmbbox_FaturamentoCht.Items.AddRange(new object[] {
             "TOTAL",
@@ -117,9 +121,9 @@
             "TRIMESTRAL",
             "MENSAL",
             "SEMANAL"});
-            this.cmbbox_FaturamentoCht.Location = new System.Drawing.Point(307, 87);
+            this.cmbbox_FaturamentoCht.Location = new System.Drawing.Point(291, 93);
             this.cmbbox_FaturamentoCht.Name = "cmbbox_FaturamentoCht";
-            this.cmbbox_FaturamentoCht.Size = new System.Drawing.Size(116, 21);
+            this.cmbbox_FaturamentoCht.Size = new System.Drawing.Size(118, 21);
             this.cmbbox_FaturamentoCht.TabIndex = 1;
             this.cmbbox_FaturamentoCht.SelectedIndexChanged += new System.EventHandler(this.cmbbox_FaturamentoCht_SelectedIndexChanged);
             // 

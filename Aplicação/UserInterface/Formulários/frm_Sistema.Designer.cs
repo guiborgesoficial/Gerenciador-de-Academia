@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Sistema));
             this.pnl_menuLateral = new System.Windows.Forms.Panel();
-            this.customBotãoImage1 = new BotãoDinamico.CustomBotãoImage();
+            this.btnMinimizar = new BotãoDinamico.CustomBotãoImage();
+            this.btnMaximizar = new BotãoDinamico.CustomBotãoImage();
+            this.btnFechar = new BotãoDinamico.CustomBotãoImage();
             this.btn_emailSender = new BotãoDinamico.CustomBotãoImage();
             this.btn_alunoMatriculado = new BotãoDinamico.CustomBotãoImage();
             this.btn_fichaTreino = new BotãoDinamico.CustomBotãoImage();
@@ -54,7 +56,9 @@
             this.usC_novoAluno1 = new RCFitness.UserControls.USC_novoAluno();
             this.timer_dataCurta = new System.Windows.Forms.Timer(this.components);
             this.pnl_menuLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customBotãoImage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_emailSender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_alunoMatriculado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_fichaTreino)).BeginInit();
@@ -68,8 +72,12 @@
             // 
             // pnl_menuLateral
             // 
+            this.pnl_menuLateral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_menuLateral.BackColor = System.Drawing.Color.Goldenrod;
-            this.pnl_menuLateral.Controls.Add(this.customBotãoImage1);
+            this.pnl_menuLateral.Controls.Add(this.btnMinimizar);
+            this.pnl_menuLateral.Controls.Add(this.btnMaximizar);
+            this.pnl_menuLateral.Controls.Add(this.btnFechar);
             this.pnl_menuLateral.Controls.Add(this.btn_emailSender);
             this.pnl_menuLateral.Controls.Add(this.btn_alunoMatriculado);
             this.pnl_menuLateral.Controls.Add(this.btn_fichaTreino);
@@ -82,19 +90,50 @@
             this.pnl_menuLateral.Size = new System.Drawing.Size(126, 451);
             this.pnl_menuLateral.TabIndex = 0;
             // 
-            // customBotãoImage1
+            // btnMinimizar
             // 
-            this.customBotãoImage1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customBotãoImage1.Image = ((System.Drawing.Image)(resources.GetObject("customBotãoImage1.Image")));
-            this.customBotãoImage1.ImageHover = ((System.Drawing.Image)(resources.GetObject("customBotãoImage1.ImageHover")));
-            this.customBotãoImage1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customBotãoImage1.ImageNormal")));
-            this.customBotãoImage1.Location = new System.Drawing.Point(3, 417);
-            this.customBotãoImage1.Name = "customBotãoImage1";
-            this.customBotãoImage1.Size = new System.Drawing.Size(29, 31);
-            this.customBotãoImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customBotãoImage1.TabIndex = 8;
-            this.customBotãoImage1.TabStop = false;
-            this.customBotãoImage1.Click += new System.EventHandler(this.customBotãoImage1_Click);
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.ImageHover")));
+            this.btnMinimizar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.ImageNormal")));
+            this.btnMinimizar.Location = new System.Drawing.Point(63, 417);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(29, 31);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 10;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
+            this.btnMaximizar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.ImageHover")));
+            this.btnMaximizar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.ImageNormal")));
+            this.btnMaximizar.Location = new System.Drawing.Point(34, 417);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(29, 31);
+            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMaximizar.TabIndex = 9;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btnFechar.ImageHover")));
+            this.btnFechar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btnFechar.ImageNormal")));
+            this.btnFechar.Location = new System.Drawing.Point(3, 417);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(29, 31);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnFechar.TabIndex = 8;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btn_emailSender
             // 
@@ -194,6 +233,9 @@
             // 
             // pnl_UserControl
             // 
+            this.pnl_UserControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_UserControl.Controls.Add(this.btn_gerarPDF);
             this.pnl_UserControl.Controls.Add(this.usC_chtFaturamento1);
             this.pnl_UserControl.Controls.Add(this.usC_chtAlunos);
@@ -206,20 +248,22 @@
             this.pnl_UserControl.Controls.Add(this.usC_pesoAluno1);
             this.pnl_UserControl.Controls.Add(this.usC_matriculados1);
             this.pnl_UserControl.Controls.Add(this.usC_novoAluno1);
-            this.pnl_UserControl.Location = new System.Drawing.Point(125, 0);
+            this.pnl_UserControl.Location = new System.Drawing.Point(126, 0);
+            this.pnl_UserControl.MinimumSize = new System.Drawing.Size(782, 451);
             this.pnl_UserControl.Name = "pnl_UserControl";
             this.pnl_UserControl.Size = new System.Drawing.Size(782, 451);
             this.pnl_UserControl.TabIndex = 1;
             // 
             // btn_gerarPDF
             // 
+            this.btn_gerarPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_gerarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_gerarPDF.Image = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.Image")));
             this.btn_gerarPDF.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageHover")));
             this.btn_gerarPDF.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageNormal")));
-            this.btn_gerarPDF.Location = new System.Drawing.Point(681, 417);
+            this.btn_gerarPDF.Location = new System.Drawing.Point(661, 404);
             this.btn_gerarPDF.Name = "btn_gerarPDF";
-            this.btn_gerarPDF.Size = new System.Drawing.Size(89, 25);
+            this.btn_gerarPDF.Size = new System.Drawing.Size(103, 33);
             this.btn_gerarPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_gerarPDF.TabIndex = 73;
             this.btn_gerarPDF.TabStop = false;
@@ -227,17 +271,23 @@
             // 
             // usC_chtFaturamento1
             // 
+            this.usC_chtFaturamento1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usC_chtFaturamento1.Location = new System.Drawing.Point(3, 49);
+            this.usC_chtFaturamento1.MaximumSize = new System.Drawing.Size(858, 532);
             this.usC_chtFaturamento1.Name = "usC_chtFaturamento1";
             this.usC_chtFaturamento1.Size = new System.Drawing.Size(429, 266);
             this.usC_chtFaturamento1.TabIndex = 11;
             // 
             // usC_chtAlunos
             // 
+            this.usC_chtAlunos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usC_chtAlunos.Location = new System.Drawing.Point(435, 49);
-            this.usC_chtAlunos.MaximumSize = new System.Drawing.Size(545, 389);
+            this.usC_chtAlunos.MaximumSize = new System.Drawing.Size(770, 500);
             this.usC_chtAlunos.Name = "usC_chtAlunos";
-            this.usC_chtAlunos.Size = new System.Drawing.Size(335, 250);
+            this.usC_chtAlunos.Size = new System.Drawing.Size(335, 251);
             this.usC_chtAlunos.TabIndex = 9;
             // 
             // lbl_longData
@@ -254,6 +304,7 @@
             // 
             // lbl_datalonga
             // 
+            this.lbl_datalonga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_datalonga.AutoSize = true;
             this.lbl_datalonga.BackColor = System.Drawing.Color.Transparent;
             this.lbl_datalonga.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,45 +328,69 @@
             // 
             // USC_emailSender1
             // 
+            this.USC_emailSender1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.USC_emailSender1.Location = new System.Drawing.Point(0, 0);
+            this.USC_emailSender1.MinimumSize = new System.Drawing.Size(782, 451);
             this.USC_emailSender1.Name = "USC_emailSender1";
             this.USC_emailSender1.Size = new System.Drawing.Size(782, 451);
             this.USC_emailSender1.TabIndex = 5;
             // 
             // usC_medidasAluno1
             // 
+            this.usC_medidasAluno1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usC_medidasAluno1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
             this.usC_medidasAluno1.Location = new System.Drawing.Point(0, 0);
+            this.usC_medidasAluno1.MinimumSize = new System.Drawing.Size(782, 451);
             this.usC_medidasAluno1.Name = "usC_medidasAluno1";
-            this.usC_medidasAluno1.Size = new System.Drawing.Size(668, 451);
+            this.usC_medidasAluno1.Size = new System.Drawing.Size(782, 451);
             this.usC_medidasAluno1.TabIndex = 4;
             // 
             // usC_fichaTreino1
             // 
+            this.usC_fichaTreino1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usC_fichaTreino1.Location = new System.Drawing.Point(0, 0);
+            this.usC_fichaTreino1.MinimumSize = new System.Drawing.Size(782, 451);
             this.usC_fichaTreino1.Name = "usC_fichaTreino1";
             this.usC_fichaTreino1.Size = new System.Drawing.Size(782, 451);
             this.usC_fichaTreino1.TabIndex = 3;
             // 
             // usC_pesoAluno1
             // 
+            this.usC_pesoAluno1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usC_pesoAluno1.Location = new System.Drawing.Point(0, 0);
+            this.usC_pesoAluno1.MinimumSize = new System.Drawing.Size(782, 451);
             this.usC_pesoAluno1.Name = "usC_pesoAluno1";
-            this.usC_pesoAluno1.Size = new System.Drawing.Size(668, 451);
+            this.usC_pesoAluno1.Size = new System.Drawing.Size(782, 451);
             this.usC_pesoAluno1.TabIndex = 2;
             // 
             // usC_matriculados1
             // 
+            this.usC_matriculados1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usC_matriculados1.Location = new System.Drawing.Point(0, 0);
+            this.usC_matriculados1.MinimumSize = new System.Drawing.Size(782, 451);
             this.usC_matriculados1.Name = "usC_matriculados1";
             this.usC_matriculados1.Size = new System.Drawing.Size(782, 451);
             this.usC_matriculados1.TabIndex = 1;
             // 
             // usC_novoAluno1
             // 
+            this.usC_novoAluno1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usC_novoAluno1.Location = new System.Drawing.Point(0, 0);
+            this.usC_novoAluno1.MinimumSize = new System.Drawing.Size(782, 451);
             this.usC_novoAluno1.Name = "usC_novoAluno1";
-            this.usC_novoAluno1.Size = new System.Drawing.Size(668, 451);
+            this.usC_novoAluno1.Size = new System.Drawing.Size(782, 451);
             this.usC_novoAluno1.TabIndex = 0;
             // 
             // timer_dataCurta
@@ -333,7 +408,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Sistema";
             this.pnl_menuLateral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customBotãoImage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_emailSender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_alunoMatriculado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_fichaTreino)).EndInit();
@@ -356,7 +433,7 @@
         private BotãoDinamico.CustomBotãoImage btn_medidas;
         private BotãoDinamico.CustomBotãoImage btn_novoAluno;
         private BotãoDinamico.CustomBotãoImage btn_emailSender;
-        private BotãoDinamico.CustomBotãoImage customBotãoImage1;
+        private BotãoDinamico.CustomBotãoImage btnFechar;
         private UserControls.USC_novoAluno usC_novoAluno1;
         public System.Windows.Forms.Panel pnl_UserControl;
         private UserControls.USC_matriculados usC_matriculados1;
@@ -372,6 +449,8 @@
         protected System.Windows.Forms.Panel pnl_menuLateral;
         private UserControls.Charts.USC_chtFaturamento usC_chtFaturamento1;
         private BotãoDinamico.CustomBotãoImage btn_gerarPDF;
+        private BotãoDinamico.CustomBotãoImage btnMinimizar;
+        private BotãoDinamico.CustomBotãoImage btnMaximizar;
     }
 }
 

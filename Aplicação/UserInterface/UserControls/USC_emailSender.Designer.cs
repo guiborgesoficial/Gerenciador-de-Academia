@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USC_emailSender));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictbox_novoAluno = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new BotãoDinamico.CustomBotãoImage();
@@ -89,6 +89,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.pictbox_novoAluno);
             this.panel1.Controls.Add(this.btn_voltar);
@@ -100,6 +102,8 @@
             // 
             // pictbox_novoAluno
             // 
+            this.pictbox_novoAluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictbox_novoAluno.Image = ((System.Drawing.Image)(resources.GetObject("pictbox_novoAluno.Image")));
             this.pictbox_novoAluno.Location = new System.Drawing.Point(3, 52);
             this.pictbox_novoAluno.Name = "pictbox_novoAluno";
@@ -110,6 +114,7 @@
             // 
             // btn_voltar
             // 
+            this.btn_voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
             this.btn_voltar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_voltar.ImageHover")));
@@ -134,6 +139,8 @@
             // 
             // cmbbox_aluno
             // 
+            this.cmbbox_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_aluno.FormattingEnabled = true;
             this.cmbbox_aluno.Location = new System.Drawing.Point(147, 32);
             this.cmbbox_aluno.Name = "cmbbox_aluno";
@@ -144,6 +151,8 @@
             // 
             // lbl_aluno
             // 
+            this.lbl_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_aluno.AutoSize = true;
             this.lbl_aluno.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_aluno.Location = new System.Drawing.Point(82, 34);
@@ -154,6 +163,7 @@
             // 
             // btn_gerarPDF
             // 
+            this.btn_gerarPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_gerarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_gerarPDF.Image = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.Image")));
             this.btn_gerarPDF.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageHover")));
@@ -168,6 +178,7 @@
             // 
             // lbl_idResult
             // 
+            this.lbl_idResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_idResult.AutoSize = true;
             this.lbl_idResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_idResult.Location = new System.Drawing.Point(434, 32);
@@ -179,6 +190,7 @@
             // 
             // lbl_id
             // 
+            this.lbl_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_id.Location = new System.Drawing.Point(396, 32);
@@ -190,6 +202,8 @@
             // 
             // groupBox_Configurações
             // 
+            this.groupBox_Configurações.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox_Configurações.Controls.Add(this.btn_salvar);
             this.groupBox_Configurações.Controls.Add(this.pictureBox2);
             this.groupBox_Configurações.Controls.Add(this.textBox_senha);
@@ -265,6 +279,9 @@
             // 
             // groupBox_ConfigureSuaMensagem
             // 
+            this.groupBox_ConfigureSuaMensagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_enviar);
             this.groupBox_ConfigureSuaMensagem.Controls.Add(this.label1);
             this.groupBox_ConfigureSuaMensagem.Controls.Add(this.btn_salvarMsg);
@@ -289,6 +306,7 @@
             // 
             // btn_enviar
             // 
+            this.btn_enviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_enviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_enviar.Location = new System.Drawing.Point(443, 172);
             this.btn_enviar.Name = "btn_enviar";
@@ -300,6 +318,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(584, 20);
@@ -310,6 +329,7 @@
             // 
             // btn_salvarMsg
             // 
+            this.btn_salvarMsg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_salvarMsg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_salvarMsg.Location = new System.Drawing.Point(588, 172);
             this.btn_salvarMsg.Name = "btn_salvarMsg";
@@ -321,6 +341,7 @@
             // 
             // lbl_numeroMsgPersonalizada
             // 
+            this.lbl_numeroMsgPersonalizada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_numeroMsgPersonalizada.AutoSize = true;
             this.lbl_numeroMsgPersonalizada.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_numeroMsgPersonalizada.Location = new System.Drawing.Point(647, 20);
@@ -332,6 +353,7 @@
             // 
             // btn_msgPersonalizada4
             // 
+            this.btn_msgPersonalizada4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_msgPersonalizada4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_msgPersonalizada4.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada4.Image")));
             this.btn_msgPersonalizada4.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada4.ImageHover")));
@@ -346,6 +368,7 @@
             // 
             // btn_msgPersonalizada3
             // 
+            this.btn_msgPersonalizada3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_msgPersonalizada3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_msgPersonalizada3.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada3.Image")));
             this.btn_msgPersonalizada3.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada3.ImageHover")));
@@ -360,6 +383,7 @@
             // 
             // btn_msgPersonalizada2
             // 
+            this.btn_msgPersonalizada2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_msgPersonalizada2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_msgPersonalizada2.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada2.Image")));
             this.btn_msgPersonalizada2.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada2.ImageHover")));
@@ -374,6 +398,7 @@
             // 
             // btn_msgPersonalizada1
             // 
+            this.btn_msgPersonalizada1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_msgPersonalizada1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_msgPersonalizada1.Image = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada1.Image")));
             this.btn_msgPersonalizada1.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_msgPersonalizada1.ImageHover")));
@@ -416,6 +441,8 @@
             // 
             // textBox_escreverEmail
             // 
+            this.textBox_escreverEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_escreverEmail.Location = new System.Drawing.Point(117, 44);
             this.textBox_escreverEmail.Multiline = true;
             this.textBox_escreverEmail.Name = "textBox_escreverEmail";
@@ -425,6 +452,8 @@
             // 
             // textBox_assunto
             // 
+            this.textBox_assunto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_assunto.Location = new System.Drawing.Point(117, 21);
             this.textBox_assunto.Name = "textBox_assunto";
             this.textBox_assunto.Size = new System.Drawing.Size(408, 20);
@@ -452,6 +481,7 @@
             // 
             // bnt_config
             // 
+            this.bnt_config.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bnt_config.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bnt_config.Image = ((System.Drawing.Image)(resources.GetObject("bnt_config.Image")));
             this.bnt_config.ImageHover = ((System.Drawing.Image)(resources.GetObject("bnt_config.ImageHover")));
@@ -466,6 +496,7 @@
             // 
             // btn_porquinho
             // 
+            this.btn_porquinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_porquinho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_porquinho.Image = ((System.Drawing.Image)(resources.GetObject("btn_porquinho.Image")));
             this.btn_porquinho.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_porquinho.ImageHover")));
@@ -480,6 +511,9 @@
             // 
             // groupbox_inadimplentes
             // 
+            this.groupbox_inadimplentes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupbox_inadimplentes.Controls.Add(this.btn_enviarCobranças);
             this.groupbox_inadimplentes.Controls.Add(this.dataGridView_DadosPagamento);
             this.groupbox_inadimplentes.Location = new System.Drawing.Point(79, 68);
@@ -491,6 +525,7 @@
             // 
             // btn_enviarCobranças
             // 
+            this.btn_enviarCobranças.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_enviarCobranças.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_enviarCobranças.Location = new System.Drawing.Point(12, 298);
             this.btn_enviarCobranças.Name = "btn_enviarCobranças";
@@ -506,27 +541,31 @@
             this.dataGridView_DadosPagamento.AllowUserToDeleteRows = false;
             this.dataGridView_DadosPagamento.AllowUserToResizeColumns = false;
             this.dataGridView_DadosPagamento.AllowUserToResizeRows = false;
+            this.dataGridView_DadosPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_DadosPagamento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_DadosPagamento.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_DadosPagamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView_DadosPagamento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView_DadosPagamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_DadosPagamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_DadosPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DadosPagamento.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_DadosPagamento.EnableHeadersVisualStyles = false;
             this.dataGridView_DadosPagamento.Location = new System.Drawing.Point(12, 21);
             this.dataGridView_DadosPagamento.Name = "dataGridView_DadosPagamento";
@@ -552,9 +591,9 @@
             this.Controls.Add(this.cmbbox_aluno);
             this.Controls.Add(this.lbl_aluno);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox_ConfigureSuaMensagem);
             this.Controls.Add(this.groupBox_Configurações);
             this.Controls.Add(this.groupbox_inadimplentes);
+            this.Controls.Add(this.groupBox_ConfigureSuaMensagem);
             this.Name = "USC_emailSender";
             this.Size = new System.Drawing.Size(805, 453);
             this.Load += new System.EventHandler(this.USC_emailSender_Load);

@@ -87,6 +87,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.pictbox_novoAluno);
             this.panel1.Controls.Add(this.btn_voltar);
@@ -98,6 +100,8 @@
             // 
             // pictbox_novoAluno
             // 
+            this.pictbox_novoAluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictbox_novoAluno.Image = ((System.Drawing.Image)(resources.GetObject("pictbox_novoAluno.Image")));
             this.pictbox_novoAluno.Location = new System.Drawing.Point(3, 52);
             this.pictbox_novoAluno.Name = "pictbox_novoAluno";
@@ -108,6 +112,7 @@
             // 
             // btn_voltar
             // 
+            this.btn_voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
             this.btn_voltar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_voltar.ImageHover")));
@@ -528,6 +533,7 @@
             // 
             // btn_consultar
             // 
+            this.btn_consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_consultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_consultar.Image = ((System.Drawing.Image)(resources.GetObject("btn_consultar.Image")));
             this.btn_consultar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_consultar.ImageHover")));
@@ -542,6 +548,7 @@
             // 
             // btn_atualizar
             // 
+            this.btn_atualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.Image")));
             this.btn_atualizar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.ImageHover")));
@@ -556,6 +563,7 @@
             // 
             // btn_cadastrar
             // 
+            this.btn_cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
             this.btn_cadastrar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.ImageHover")));

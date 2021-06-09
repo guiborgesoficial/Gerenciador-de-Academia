@@ -70,6 +70,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.pictbox_novoAluno);
             this.panel1.Controls.Add(this.btn_voltar);
@@ -81,6 +83,8 @@
             // 
             // pictbox_novoAluno
             // 
+            this.pictbox_novoAluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictbox_novoAluno.Image = ((System.Drawing.Image)(resources.GetObject("pictbox_novoAluno.Image")));
             this.pictbox_novoAluno.Location = new System.Drawing.Point(3, 52);
             this.pictbox_novoAluno.Name = "pictbox_novoAluno";
@@ -91,6 +95,7 @@
             // 
             // btn_voltar
             // 
+            this.btn_voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
             this.btn_voltar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_voltar.ImageHover")));
@@ -115,6 +120,7 @@
             // 
             // btn_consultar
             // 
+            this.btn_consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_consultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_consultar.Image = ((System.Drawing.Image)(resources.GetObject("btn_consultar.Image")));
             this.btn_consultar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_consultar.ImageHover")));
@@ -129,6 +135,7 @@
             // 
             // btn_cadastrar
             // 
+            this.btn_cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
             this.btn_cadastrar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.ImageHover")));
@@ -143,13 +150,14 @@
             // 
             // btn_gerarPDF
             // 
+            this.btn_gerarPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_gerarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_gerarPDF.Image = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.Image")));
             this.btn_gerarPDF.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageHover")));
             this.btn_gerarPDF.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_gerarPDF.ImageNormal")));
-            this.btn_gerarPDF.Location = new System.Drawing.Point(584, 317);
+            this.btn_gerarPDF.Location = new System.Drawing.Point(619, 395);
             this.btn_gerarPDF.Name = "btn_gerarPDF";
-            this.btn_gerarPDF.Size = new System.Drawing.Size(118, 30);
+            this.btn_gerarPDF.Size = new System.Drawing.Size(144, 30);
             this.btn_gerarPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_gerarPDF.TabIndex = 80;
             this.btn_gerarPDF.TabStop = false;
@@ -157,6 +165,7 @@
             // 
             // btn_atualizar
             // 
+            this.btn_atualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.Image")));
             this.btn_atualizar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.ImageHover")));
@@ -202,10 +211,12 @@
             // 
             // cmbbox_aluno
             // 
+            this.cmbbox_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_aluno.FormattingEnabled = true;
             this.cmbbox_aluno.Location = new System.Drawing.Point(69, 11);
             this.cmbbox_aluno.Name = "cmbbox_aluno";
-            this.cmbbox_aluno.Size = new System.Drawing.Size(232, 21);
+            this.cmbbox_aluno.Size = new System.Drawing.Size(282, 21);
             this.cmbbox_aluno.TabIndex = 56;
             this.cmbbox_aluno.SelectedIndexChanged += new System.EventHandler(this.cmbbox_aluno_SelectedIndexChanged);
             this.cmbbox_aluno.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbbox_aluno_MouseClick);
@@ -422,9 +433,10 @@
             // 
             // lbl_id
             // 
+            this.lbl_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(316, 11);
+            this.lbl_id.Location = new System.Drawing.Point(366, 11);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(30, 21);
             this.lbl_id.TabIndex = 81;
@@ -433,9 +445,10 @@
             // 
             // lbl_idResult
             // 
+            this.lbl_idResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_idResult.AutoSize = true;
             this.lbl_idResult.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_idResult.Location = new System.Drawing.Point(354, 11);
+            this.lbl_idResult.Location = new System.Drawing.Point(404, 11);
             this.lbl_idResult.Name = "lbl_idResult";
             this.lbl_idResult.Size = new System.Drawing.Size(30, 21);
             this.lbl_idResult.TabIndex = 82;
@@ -444,6 +457,9 @@
             // 
             // pnl_print
             // 
+            this.pnl_print.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_print.BackColor = System.Drawing.Color.Transparent;
             this.pnl_print.Controls.Add(this.lbl_idResult);
             this.pnl_print.Controls.Add(this.lbl_id);
@@ -466,7 +482,7 @@
             this.pnl_print.Controls.Add(this.lbl_e);
             this.pnl_print.Location = new System.Drawing.Point(79, 6);
             this.pnl_print.Name = "pnl_print";
-            this.pnl_print.Size = new System.Drawing.Size(634, 305);
+            this.pnl_print.Size = new System.Drawing.Size(684, 305);
             this.pnl_print.TabIndex = 84;
             // 
             // USC_fichaTreino
