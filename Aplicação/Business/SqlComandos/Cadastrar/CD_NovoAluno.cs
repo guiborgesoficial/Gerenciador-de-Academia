@@ -21,7 +21,7 @@ namespace Business.SqlComandos.Cadastrar
                 SqlCommand objComando = new SqlCommand(strInserçãoNovoAluno, conectar.con);
 
                 objComando.Parameters.Add(new SqlParameter("@NOME", txtbox_nome.ToUpper()));
-                objComando.Parameters.Add(new SqlParameter("@DT_NASC", DateTime.Parse(msktbox_dtMatricula)));
+                objComando.Parameters.Add(new SqlParameter("@DT_NASC", DateTime.Parse(msktbox_dtNascimento)));
                 objComando.Parameters.Add(new SqlParameter("@SEXO", cmbbox_sexo));
                 objComando.Parameters.Add(new SqlParameter("@RG", msktbox_rg));
                 objComando.Parameters.Add(new SqlParameter("@CPF", mstkbox_cpf));

@@ -89,6 +89,9 @@
             this.pnl_menuLateral.Name = "pnl_menuLateral";
             this.pnl_menuLateral.Size = new System.Drawing.Size(126, 451);
             this.pnl_menuLateral.TabIndex = 0;
+            this.pnl_menuLateral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.pnl_menuLateral.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.pnl_menuLateral.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // btnMinimizar
             // 
@@ -236,6 +239,7 @@
             this.pnl_UserControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_UserControl.BackColor = System.Drawing.Color.White;
             this.pnl_UserControl.Controls.Add(this.btn_gerarPDF);
             this.pnl_UserControl.Controls.Add(this.usC_chtFaturamento1);
             this.pnl_UserControl.Controls.Add(this.usC_chtAlunos);
@@ -253,6 +257,9 @@
             this.pnl_UserControl.Name = "pnl_UserControl";
             this.pnl_UserControl.Size = new System.Drawing.Size(782, 451);
             this.pnl_UserControl.TabIndex = 1;
+            this.pnl_UserControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.pnl_UserControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.pnl_UserControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // btn_gerarPDF
             // 
@@ -284,11 +291,15 @@
             // 
             this.usC_chtAlunos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.usC_chtAlunos.BackColor = System.Drawing.Color.White;
             this.usC_chtAlunos.Location = new System.Drawing.Point(435, 49);
             this.usC_chtAlunos.MaximumSize = new System.Drawing.Size(770, 500);
             this.usC_chtAlunos.Name = "usC_chtAlunos";
             this.usC_chtAlunos.Size = new System.Drawing.Size(335, 251);
             this.usC_chtAlunos.TabIndex = 9;
+            this.usC_chtAlunos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.usC_chtAlunos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.usC_chtAlunos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // lbl_longData
             // 
@@ -336,6 +347,9 @@
             this.USC_emailSender1.Name = "USC_emailSender1";
             this.USC_emailSender1.Size = new System.Drawing.Size(782, 451);
             this.USC_emailSender1.TabIndex = 5;
+            this.USC_emailSender1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.USC_emailSender1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.USC_emailSender1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // usC_medidasAluno1
             // 
@@ -348,6 +362,9 @@
             this.usC_medidasAluno1.Name = "usC_medidasAluno1";
             this.usC_medidasAluno1.Size = new System.Drawing.Size(782, 451);
             this.usC_medidasAluno1.TabIndex = 4;
+            this.usC_medidasAluno1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.usC_medidasAluno1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.usC_medidasAluno1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // usC_fichaTreino1
             // 
@@ -359,6 +376,9 @@
             this.usC_fichaTreino1.Name = "usC_fichaTreino1";
             this.usC_fichaTreino1.Size = new System.Drawing.Size(782, 451);
             this.usC_fichaTreino1.TabIndex = 3;
+            this.usC_fichaTreino1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.usC_fichaTreino1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.usC_fichaTreino1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // usC_pesoAluno1
             // 
@@ -370,6 +390,9 @@
             this.usC_pesoAluno1.Name = "usC_pesoAluno1";
             this.usC_pesoAluno1.Size = new System.Drawing.Size(782, 451);
             this.usC_pesoAluno1.TabIndex = 2;
+            this.usC_pesoAluno1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.usC_pesoAluno1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.usC_pesoAluno1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // usC_matriculados1
             // 
@@ -381,6 +404,9 @@
             this.usC_matriculados1.Name = "usC_matriculados1";
             this.usC_matriculados1.Size = new System.Drawing.Size(782, 451);
             this.usC_matriculados1.TabIndex = 1;
+            this.usC_matriculados1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.usC_matriculados1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.usC_matriculados1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // usC_novoAluno1
             // 
@@ -392,6 +418,9 @@
             this.usC_novoAluno1.Name = "usC_novoAluno1";
             this.usC_novoAluno1.Size = new System.Drawing.Size(782, 451);
             this.usC_novoAluno1.TabIndex = 0;
+            this.usC_novoAluno1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.usC_novoAluno1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.usC_novoAluno1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             // 
             // timer_dataCurta
             // 
@@ -407,6 +436,9 @@
             this.Controls.Add(this.pnl_menuLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Sistema";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frm_Sistema_MouseUp);
             this.pnl_menuLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();

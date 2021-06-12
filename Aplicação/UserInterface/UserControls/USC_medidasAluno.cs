@@ -200,8 +200,9 @@ namespace RCFitness.UserControls
         {
             using (var image = new Bitmap(pnl_print.Width, pnl_print.Height))
             {
+                string caminho = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\";
                 pnl_print.DrawToBitmap(image, new Rectangle(0, 0, image.Width, image.Height));
-                image.Save(@"C:\Users\PICHAU\Desktop\" + "Medidas Aluno - " + cmbbox_aluno.Text + ".png", ImageFormat.Png);
+                image.Save(caminho + "Medidas Aluno - " + cmbbox_aluno.Text + ".png", ImageFormat.Png);
             }
         }
         private void LimpaCampos()

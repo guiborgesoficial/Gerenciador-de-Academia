@@ -9,9 +9,14 @@ namespace RCFitness
     public partial class frm_Sistema : Form
     {
         private bool statusMaxForm = false;
+        Point DragCursor;
+        Point DragForm;
+        bool Dragging;
         public frm_Sistema()
         {
             InitializeComponent();
+            this.MouseDown += new MouseEventHandler(frm_Sistema_MouseDown);
+            this.MouseMove += new MouseEventHandler(frm_Sistema_MouseMove);
         }
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -108,11 +113,11 @@ namespace RCFitness
         {
             using (var image = new Bitmap(pnl_UserControl.Width, pnl_UserControl.Height))
             {
+                string caminho = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\";
                 pnl_UserControl.DrawToBitmap(image, new Rectangle(0, 0, image.Width, image.Height));
-                image.Save(@"C:\Users\PICHAU\Desktop\" + "Gráficos" + ".png", ImageFormat.Png);
+                image.Save(caminho + "Gráficos" + ".png", ImageFormat.Png);
             }
         }
-
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             if(statusMaxForm)
@@ -130,6 +135,27 @@ namespace RCFitness
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void frm_Sistema_MouseDown(object sender, MouseEventArgs e)
+        {
+            Dragging = true;
+            DragCursor = Cursor.Position;
+            DragForm = this.Location;
+        }
+
+        private void frm_Sistema_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Dragging == true)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(DragCursor));
+                this.Location = Point.Add(DragForm, new Size(dif));
+            }
+        }
+
+        private void frm_Sistema_MouseUp(object sender, MouseEventArgs e)
+        {
+            Dragging = false;
         }
     }
 }

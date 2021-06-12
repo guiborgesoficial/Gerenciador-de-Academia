@@ -95,7 +95,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(73, 480);
+            this.panel1.Size = new System.Drawing.Size(73, 478);
             this.panel1.TabIndex = 0;
             // 
             // pictbox_novoAluno
@@ -105,7 +105,7 @@
             this.pictbox_novoAluno.Image = ((System.Drawing.Image)(resources.GetObject("pictbox_novoAluno.Image")));
             this.pictbox_novoAluno.Location = new System.Drawing.Point(3, 52);
             this.pictbox_novoAluno.Name = "pictbox_novoAluno";
-            this.pictbox_novoAluno.Size = new System.Drawing.Size(67, 339);
+            this.pictbox_novoAluno.Size = new System.Drawing.Size(67, 337);
             this.pictbox_novoAluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictbox_novoAluno.TabIndex = 1;
             this.pictbox_novoAluno.TabStop = false;
@@ -117,7 +117,7 @@
             this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
             this.btn_voltar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_voltar.ImageHover")));
             this.btn_voltar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_voltar.ImageNormal")));
-            this.btn_voltar.Location = new System.Drawing.Point(7, 395);
+            this.btn_voltar.Location = new System.Drawing.Point(7, 393);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(57, 55);
             this.btn_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,6 +147,8 @@
             // 
             // blb_endereco
             // 
+            this.blb_endereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.blb_endereco.AutoSize = true;
             this.blb_endereco.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blb_endereco.Location = new System.Drawing.Point(88, 207);
@@ -177,6 +179,7 @@
             // 
             // lbl_bairro
             // 
+            this.lbl_bairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_bairro.AutoSize = true;
             this.lbl_bairro.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_bairro.Location = new System.Drawing.Point(430, 207);
@@ -187,6 +190,7 @@
             // 
             // lbl_numero
             // 
+            this.lbl_numero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_numero.AutoSize = true;
             this.lbl_numero.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_numero.Location = new System.Drawing.Point(354, 207);
@@ -197,6 +201,7 @@
             // 
             // lbl_DataDeNascimento
             // 
+            this.lbl_DataDeNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_DataDeNascimento.AutoSize = true;
             this.lbl_DataDeNascimento.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DataDeNascimento.Location = new System.Drawing.Point(349, 113);
@@ -227,6 +232,8 @@
             // 
             // lbl_marketing
             // 
+            this.lbl_marketing.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_marketing.AutoSize = true;
             this.lbl_marketing.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_marketing.Location = new System.Drawing.Point(284, 272);
@@ -237,6 +244,7 @@
             // 
             // lbl_sexo
             // 
+            this.lbl_sexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_sexo.AutoSize = true;
             this.lbl_sexo.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sexo.Location = new System.Drawing.Point(519, 114);
@@ -247,6 +255,8 @@
             // 
             // lbl_cidade
             // 
+            this.lbl_cidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_cidade.AutoSize = true;
             this.lbl_cidade.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cidade.Location = new System.Drawing.Point(284, 238);
@@ -277,6 +287,8 @@
             // 
             // lbl_plano
             // 
+            this.lbl_plano.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_plano.AutoSize = true;
             this.lbl_plano.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_plano.Location = new System.Drawing.Point(90, 301);
@@ -287,6 +299,7 @@
             // 
             // lbl_valor
             // 
+            this.lbl_valor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_valor.AutoSize = true;
             this.lbl_valor.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_valor.Location = new System.Drawing.Point(242, 301);
@@ -297,6 +310,9 @@
             // 
             // txtbox_nome
             // 
+            this.txtbox_nome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbox_nome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbox_nome.Location = new System.Drawing.Point(146, 114);
             this.txtbox_nome.Name = "txtbox_nome";
@@ -306,6 +322,7 @@
             // msktbox_dtNascimento
             // 
             this.msktbox_dtNascimento.AllowPromptAsInput = false;
+            this.msktbox_dtNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.msktbox_dtNascimento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msktbox_dtNascimento.Location = new System.Drawing.Point(430, 114);
             this.msktbox_dtNascimento.Mask = "00/00/0000";
@@ -317,6 +334,7 @@
             // 
             // cmbbox_sexo
             // 
+            this.cmbbox_sexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_sexo.BackColor = System.Drawing.SystemColors.Window;
             this.cmbbox_sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_sexo.FormattingEnabled = true;
@@ -332,6 +350,8 @@
             // 
             // txtbox_endereco
             // 
+            this.txtbox_endereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbox_endereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbox_endereco.Location = new System.Drawing.Point(176, 207);
             this.txtbox_endereco.Name = "txtbox_endereco";
@@ -372,6 +392,7 @@
             // 
             // txtbox_numero
             // 
+            this.txtbox_numero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbox_numero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbox_numero.Location = new System.Drawing.Point(386, 207);
             this.txtbox_numero.Name = "txtbox_numero";
@@ -380,6 +401,7 @@
             // 
             // txtbox_bairro
             // 
+            this.txtbox_bairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbox_bairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbox_bairro.Location = new System.Drawing.Point(500, 207);
             this.txtbox_bairro.Name = "txtbox_bairro";
@@ -435,6 +457,8 @@
             // 
             // cmbbox_cidade
             // 
+            this.cmbbox_cidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_cidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_cidade.FormattingEnabled = true;
             this.cmbbox_cidade.Items.AddRange(new object[] {
@@ -460,6 +484,8 @@
             // 
             // cmbbox_marketing
             // 
+            this.cmbbox_marketing.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_marketing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_marketing.FormattingEnabled = true;
             this.cmbbox_marketing.Items.AddRange(new object[] {
@@ -473,6 +499,8 @@
             // 
             // cmbbox_plano
             // 
+            this.cmbbox_plano.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_plano.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_plano.FormattingEnabled = true;
             this.cmbbox_plano.Items.AddRange(new object[] {
@@ -487,6 +515,7 @@
             // 
             // cmbbox_valor
             // 
+            this.cmbbox_valor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbbox_valor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_valor.FormattingEnabled = true;
             this.cmbbox_valor.Items.AddRange(new object[] {
@@ -502,6 +531,9 @@
             // 
             // chckbox_pago
             // 
+            this.chckbox_pago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chckbox_pago.AutoSize = true;
             this.chckbox_pago.Location = new System.Drawing.Point(94, 327);
             this.chckbox_pago.Name = "chckbox_pago";
@@ -522,6 +554,7 @@
             // 
             // msktbox_outroValor
             // 
+            this.msktbox_outroValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.msktbox_outroValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msktbox_outroValor.Location = new System.Drawing.Point(392, 302);
             this.msktbox_outroValor.Mask = "99.99";
@@ -538,7 +571,7 @@
             this.btn_consultar.Image = ((System.Drawing.Image)(resources.GetObject("btn_consultar.Image")));
             this.btn_consultar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_consultar.ImageHover")));
             this.btn_consultar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_consultar.ImageNormal")));
-            this.btn_consultar.Location = new System.Drawing.Point(443, 395);
+            this.btn_consultar.Location = new System.Drawing.Point(443, 393);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(174, 30);
             this.btn_consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -553,7 +586,7 @@
             this.btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.Image")));
             this.btn_atualizar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.ImageHover")));
             this.btn_atualizar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.ImageNormal")));
-            this.btn_atualizar.Location = new System.Drawing.Point(261, 395);
+            this.btn_atualizar.Location = new System.Drawing.Point(261, 393);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(176, 30);
             this.btn_atualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -568,7 +601,7 @@
             this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
             this.btn_cadastrar.ImageHover = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.ImageHover")));
             this.btn_cadastrar.ImageNormal = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.ImageNormal")));
-            this.btn_cadastrar.Location = new System.Drawing.Point(79, 395);
+            this.btn_cadastrar.Location = new System.Drawing.Point(79, 393);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(176, 30);
             this.btn_cadastrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -600,6 +633,8 @@
             // 
             // txtbox_email
             // 
+            this.txtbox_email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbox_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbox_email.Location = new System.Drawing.Point(146, 144);
             this.txtbox_email.Name = "txtbox_email";
@@ -609,6 +644,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(88, 145);
@@ -619,6 +656,7 @@
             // 
             // lbl_emailVálido
             // 
+            this.lbl_emailVálido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_emailVálido.AutoSize = true;
             this.lbl_emailVálido.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_emailVálido.ForeColor = System.Drawing.Color.Red;
@@ -678,7 +716,7 @@
             this.Controls.Add(this.lbl_nome);
             this.Controls.Add(this.panel1);
             this.Name = "USC_novoAluno";
-            this.Size = new System.Drawing.Size(951, 453);
+            this.Size = new System.Drawing.Size(782, 451);
             this.Load += new System.EventHandler(this.USC_novoAluno_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictbox_novoAluno)).EndInit();

@@ -332,8 +332,9 @@ namespace RCFitness.UserControls
         {
             using (var image = new Bitmap(groupbox_inadimplentes.Width, groupbox_inadimplentes.Height))
             {
+                string caminho = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\";
                 groupbox_inadimplentes.DrawToBitmap(image, new Rectangle(0, 0, image.Width, image.Height));
-                image.Save(@"C:\Users\PICHAU\Desktop\" + "Alunos Inadimplentes" + ".png", ImageFormat.Png);
+                image.Save(caminho + "Alunos Inadimplentes" + ".png", ImageFormat.Png);
             }
         }
 
