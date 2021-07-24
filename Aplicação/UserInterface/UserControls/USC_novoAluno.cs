@@ -72,6 +72,19 @@ namespace RCFitness.UserControls
 		}
 		private void btn_cadastrar_Click(object sender, EventArgs e)
 		{
+
+			DialogResult msg = MessageBox.Show("Deseja Cadastrar as medidas do Aluno?", "Medidas", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (msg == DialogResult.Yes)
+			{
+				this.Visible = false;
+
+				var TelaMedidas = new frm_Sistema();
+				TelaMedidas.usC_medidasAluno1.lbl_idResult.Visible = true;
+				TelaMedidas.usC_medidasAluno1.lbl_id.Visible = true;
+				TelaMedidas.usC_medidasAluno1.cmbbox_aluno.Text = txtbox_nome.Text.ToUpper();
+				this.Parent.Controls.Add(TelaMedidas.usC_medidasAluno1);
+				TelaMedidas.usC_medidasAluno1.Visible = true;
+			}
 			verificador.verificadorDeCamposPreenchidos = 0;
 			verificador.VerificaCamposPreenchidos(this);
 
@@ -134,12 +147,11 @@ namespace RCFitness.UserControls
 					if (msg == DialogResult.Yes)
 					{
 						this.Visible = false;
-						USC_medidasAluno TelaMedidas = new USC_medidasAluno();
-						this.Parent.Controls.Add(TelaMedidas);
-						TelaMedidas.lbl_idResult.Text = cadastrarNovoAluno.IdRetorno.ToString();
-						TelaMedidas.lbl_idResult.Visible = true;
-						TelaMedidas.lbl_id.Visible = true;
-						TelaMedidas.cmbbox_aluno.Text = txtbox_nome.Text.ToUpper();
+						var TelaMedidas = new frm_Sistema();
+						TelaMedidas.usC_medidasAluno1.lbl_idResult.Text = cadastrarNovoAluno.IdRetorno.ToString();
+						TelaMedidas.usC_medidasAluno1.lbl_idResult.Visible = true;
+						TelaMedidas.usC_medidasAluno1.lbl_id.Visible = true;
+						TelaMedidas.usC_medidasAluno1.cmbbox_aluno.Text = txtbox_nome.Text.ToUpper();
 						TelaMedidas.Visible = true;
 					}
 				}
@@ -229,9 +241,7 @@ namespace RCFitness.UserControls
 				MessageBox.Show("É necessário informar um RG ou CPF para consultar um cliente cadastrado!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
 		}			
-		
 		public string Whatsaap;
-
 		private void btn_atualizar_Click(object sender, EventArgs e)
 		{
 			UP_NovoAluno atualizarCadastrados = new UP_NovoAluno();
@@ -306,10 +316,5 @@ namespace RCFitness.UserControls
 				lbl_emailVálido.Visible = false;
             }
 		}
-
-        private void cmbbox_sexo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }   
 }

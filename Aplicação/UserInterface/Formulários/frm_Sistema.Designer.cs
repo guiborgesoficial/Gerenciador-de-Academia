@@ -471,7 +471,6 @@
         private UserControls.USC_matriculados usC_matriculados1;
         private UserControls.USC_pesoAluno usC_pesoAluno1;
         private UserControls.USC_fichaTreino usC_fichaTreino1;
-        private UserControls.USC_medidasAluno usC_medidasAluno1;
         private UserControls.USC_emailSender USC_emailSender1;
         private System.Windows.Forms.Label lbl_dataCurta;
         private System.Windows.Forms.Timer timer_dataCurta;
@@ -483,6 +482,7 @@
         private BotãoDinamico.CustomBotãoImage btn_gerarPDF;
         private BotãoDinamico.CustomBotãoImage btnMinimizar;
         private BotãoDinamico.CustomBotãoImage btnMaximizar;
+        public UserControls.USC_medidasAluno usC_medidasAluno1;
     }
 }
 

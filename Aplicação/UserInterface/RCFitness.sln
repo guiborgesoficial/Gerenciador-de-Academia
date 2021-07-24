@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotãoDinamico", "..\BotãoDinamico\BotãoDinamico.csproj", "{F92174EC-E7CF-45B6-B5D7-1CA2AECD8276}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorDoGerenciador", "..\Instalador\InstaladorDoGerenciador\InstaladorDoGerenciador.vdproj", "{8F285167-099B-4539-8EE4-2BFBCB6C8993}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{F92174EC-E7CF-45B6-B5D7-1CA2AECD8276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F92174EC-E7CF-45B6-B5D7-1CA2AECD8276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F92174EC-E7CF-45B6-B5D7-1CA2AECD8276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F285167-099B-4539-8EE4-2BFBCB6C8993}.Debug|Any CPU.ActiveCfg = Debug
+		{8F285167-099B-4539-8EE4-2BFBCB6C8993}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
