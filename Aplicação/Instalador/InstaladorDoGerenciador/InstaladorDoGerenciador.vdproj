@@ -163,6 +163,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 e x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.14.0"
+                    {
+                    "Name" = "8:SQL Server 2017 Express LocalDB"
+                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.14.0"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -420,7 +441,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Gerenciador de Academia"
         "ProductCode" = "8:{1E0C04DA-C5E5-4463-933B-5EA398F21B2B}"
-        "PackageCode" = "8:{14C62DE9-788E-4113-857B-0270C111003B}"
+        "PackageCode" = "8:{10B5694F-5E06-470E-A59C-1BC34EA991A8}"
         "UpgradeCode" = "8:{12D3388D-6FD1-4AF1-B4C9-AE4100F13D43}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -540,6 +561,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_592B144D8F8A44C3BDA152FE5B6C5BAF"
+            {
+            "Name" = "8:RC Fitness Gerenciador"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_1D569649AFD348A3A34FB7C5B2D87004"
+            "Folder" = "8:_1D569649AFD348A3A34FB7C5B2D87004"
+            "WorkingFolder" = "8:_1D569649AFD348A3A34FB7C5B2D87004"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D57FBFF1E91F4EDFB64840FDAD69FDCC"
+            {
+            "Name" = "8:RC Fitness Gerenciador"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_EFCC6DB4F98B46A6AC6CAF2C6B5C4AD8"
+            "Folder" = "8:_EFCC6DB4F98B46A6AC6CAF2C6B5C4AD8"
+            "WorkingFolder" = "8:_EFCC6DB4F98B46A6AC6CAF2C6B5C4AD8"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

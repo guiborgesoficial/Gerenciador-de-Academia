@@ -157,6 +157,9 @@
     <EmbeddedResource Include="UserControls\USC_pesoAluno.resx">
       <DependentUpon>USC_pesoAluno.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DBTemplate.bak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
